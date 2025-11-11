@@ -54,7 +54,9 @@ module waveform_generator(Clock, nStart, phase_increment, amplitude);
 	numerically_controlled_oscillator N1 (Clock, nStart, phase_increment, phase_angle);
 
 	// sine lookup table
-	rom256x16 U1 (phase_angle[31:24], Clock, amplitude);
+	// phase dither (slightly different lookup address)
+	rom256x16 U1 (phase_angle[31:24] ^ phase_angle[15:8], Clock, amplitude); 
+	//rom256x16 U1 (phase_angle[31:24], Clock, amplitude);
 endmodule
 
 module numerically_controlled_oscillator(Clock, nStart, phase_increment, phase_angle);
