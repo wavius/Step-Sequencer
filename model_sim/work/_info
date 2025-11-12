@@ -8,387 +8,455 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dD:/UofT/Y2/S1/ece241/final_project/model_sim
+Z0 dD:/GitHub/ECE241-Project/model_sim
 vAltera_UP_Audio_Bit_Counter
-Z0 !s110 1762798578
+Z1 !s110 1762943224
 !i10b 1
 !s100 [`V_MP:J8Che`kgja9LkR2
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
 I`l6lS:`lfF9O30MUY67DY0
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dD:/uofT/y2/s1/ece241/final_project/model_sim
-Z4 w1762728323
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1762820932
 8Audio_Controller/Altera_UP_Audio_Bit_Counter.v
 FAudio_Controller/Altera_UP_Audio_Bit_Counter.v
-!i122 18
+!i122 12
 L0 11 99
-Z5 OV;L;2020.1;71
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1762798578.000000
-Z7 !s107 avconf/avconf.v|avconf/I2C_Controller.v|Audio_Controller/Audio_Controller.v|Audio_Controller/Audio_Clock.v|Audio_Controller/Altera_UP_SYNC_FIFO.v|Audio_Controller/Altera_UP_Clock_Edge.v|Audio_Controller/Altera_UP_Audio_Out_Serializer.v|Audio_Controller/Altera_UP_Audio_In_Deserializer.v|Audio_Controller/Altera_UP_Audio_Bit_Counter.v|
-Z8 !s90 -reportprogress|300|Audio_Controller/Altera_UP_Audio_Bit_Counter.v|Audio_Controller/Altera_UP_Audio_In_Deserializer.v|Audio_Controller/Altera_UP_Audio_Out_Serializer.v|Audio_Controller/Altera_UP_Clock_Edge.v|Audio_Controller/Altera_UP_SYNC_FIFO.v|Audio_Controller/Audio_Clock.v|Audio_Controller/Audio_Controller.v|avconf/I2C_Controller.v|avconf/avconf.v|
+Z5 !s108 1762943224.000000
+!s107 loop_counter/loop_counter.v|avconf/avconf.v|avconf/I2C_Controller.v|audio_interface/audio_interface_module.v|audio_generator/audio_generator.v|DAC_controller/I2C_Controller_DAC.v|DAC_controller/DAC_controller.v|BPM_counter/BPM_counter.v|Audio_Controller/Audio_Controller.v|Audio_Controller/Audio_Clock.v|Audio_Controller/Altera_UP_SYNC_FIFO.v|Audio_Controller/Altera_UP_Clock_Edge.v|Audio_Controller/Altera_UP_Audio_Out_Serializer.v|Audio_Controller/Altera_UP_Audio_In_Deserializer.v|Audio_Controller/Altera_UP_Audio_Bit_Counter.v|
+Z6 !s90 -reportprogress|300|Audio_Controller/Altera_UP_Audio_Bit_Counter.v|Audio_Controller/Altera_UP_Audio_In_Deserializer.v|Audio_Controller/Altera_UP_Audio_Out_Serializer.v|Audio_Controller/Altera_UP_Clock_Edge.v|Audio_Controller/Altera_UP_SYNC_FIFO.v|Audio_Controller/Audio_Clock.v|Audio_Controller/Audio_Controller.v|BPM_counter/BPM_counter.v|DAC_controller/DAC_controller.v|DAC_controller/I2C_Controller_DAC.v|audio_generator/audio_generator.v|audio_interface/audio_interface_module.v|avconf/I2C_Controller.v|avconf/avconf.v|loop_counter/loop_counter.v|
 !i113 1
-Z9 tCvgOpt 0
+Z7 tCvgOpt 0
 n@altera_@u@p_@audio_@bit_@counter
 vAltera_UP_Audio_In_Deserializer
-R0
+R1
 !i10b 1
 !s100 ;97d@o4L8JageM:4eJONa2
-R1
-Ie;7^z_mNWTB78<1n9La:=1
 R2
+Ie;7^z_mNWTB78<1n9La:=1
 R3
-R4
+R0
+Z8 w1762820934
 8Audio_Controller/Altera_UP_Audio_In_Deserializer.v
 FAudio_Controller/Altera_UP_Audio_In_Deserializer.v
-!i122 18
+!i122 12
 L0 9 203
-R5
+R4
 r1
 !s85 0
 31
+R5
+Z9 !s107 loop_counter/loop_counter.v|avconf/avconf.v|avconf/I2C_Controller.v|audio_interface/audio_interface_module.v|audio_generator/audio_generator.v|DAC_controller/I2C_Controller_DAC.v|DAC_controller/DAC_controller.v|BPM_counter/BPM_counter.v|Audio_Controller/Audio_Controller.v|Audio_Controller/Audio_Clock.v|Audio_Controller/Altera_UP_SYNC_FIFO.v|Audio_Controller/Altera_UP_Clock_Edge.v|Audio_Controller/Altera_UP_Audio_Out_Serializer.v|Audio_Controller/Altera_UP_Audio_In_Deserializer.v|Audio_Controller/Altera_UP_Audio_Bit_Counter.v|
 R6
-R7
-R8
 !i113 1
-R9
+R7
 n@altera_@u@p_@audio_@in_@deserializer
 vAltera_UP_Audio_Out_Serializer
-R0
+R1
 !i10b 1
 !s100 VC>^Lbj7=;5P:FzH6mEQ>1
-R1
-IazNz8W3ZOWcb:T6j13FTW1
 R2
+IazNz8W3ZOWcb:T6j13FTW1
 R3
-R4
+R0
+R8
 8Audio_Controller/Altera_UP_Audio_Out_Serializer.v
 FAudio_Controller/Altera_UP_Audio_Out_Serializer.v
-!i122 18
+!i122 12
 L0 9 208
-R5
+R4
 r1
 !s85 0
 31
-R6
-R7
-R8
-!i113 1
+R5
 R9
+R6
+!i113 1
+R7
 n@altera_@u@p_@audio_@out_@serializer
 vAltera_UP_Clock_Edge
-R0
+Z10 !s110 1762943225
 !i10b 1
 !s100 1@XNR3Jza7P54O^5M9abU3
-R1
-IjP53gFUfUNF:SXldB86Cm2
 R2
+IjP53gFUfUNF:SXldB86Cm2
 R3
-R4
+R0
+R8
 8Audio_Controller/Altera_UP_Clock_Edge.v
 FAudio_Controller/Altera_UP_Clock_Edge.v
-!i122 18
+!i122 12
 L0 10 83
-R5
+R4
 r1
 !s85 0
 31
-R6
-R7
-R8
-!i113 1
+R5
 R9
+R6
+!i113 1
+R7
 n@altera_@u@p_@clock_@edge
 vAltera_UP_SYNC_FIFO
-R0
-!i10b 1
-!s100 `R?2A?ZWVLnQXKcU4EKGF2
-R1
-I52:dSdhCDW2:0PURBUdN01
-R2
-R3
-R4
-8Audio_Controller/Altera_UP_SYNC_FIFO.v
-FAudio_Controller/Altera_UP_SYNC_FIFO.v
-!i122 18
-L0 9 120
-R5
-r1
-!s85 0
-31
-R6
-R7
-R8
-!i113 1
-R9
-n@altera_@u@p_@s@y@n@c_@f@i@f@o
-vAudio_Clock
-R0
-!i10b 1
-!s100 CfQCi>X2^mG[5F^HCNkHm1
-R1
-I[HIY67dGKRF5@66mOB_d91
-R2
-R3
-R4
-8Audio_Controller/Audio_Clock.v
-FAudio_Controller/Audio_Clock.v
-!i122 18
-L0 39 114
-R5
-r1
-!s85 0
-31
-R6
-R7
-R8
-!i113 1
-R9
-n@audio_@clock
-vAudio_Controller
-R0
-!i10b 1
-!s100 WPTKh6PlKI5?m?=CbHAa_3
-R1
-I8T?MJlH_QU?VCOh^Ci0W;0
-R2
-R3
-R4
-8Audio_Controller/Audio_Controller.v
-FAudio_Controller/Audio_Controller.v
-!i122 18
-L0 11 269
-R5
-r1
-!s85 0
-31
-R6
-R7
-R8
-!i113 1
-R9
-n@audio_@controller
-vaudio_generator
-Z10 !s110 1762810195
-!i10b 1
-!s100 DPP8Z6Bk[`:6Jg_2W0I530
-R1
-InnCf`Mmk?bFH]2V0Q<bi90
-R2
-R3
-Z11 w1762807664
-Z12 8audio_generator.v
-Z13 Faudio_generator.v
-!i122 29
-L0 1 46
-R5
-r1
-!s85 0
-31
-Z14 !s108 1762810195.000000
-!s107 testbench.v|rom256x16_sim.v|loop_counter.v|audio_interface.v|audio_generator.v|BPM_counter.v|
-Z15 !s90 -reportprogress|300|BPM_counter.v|audio_generator.v|audio_interface.v|loop_counter.v|rom256x16_sim.v|testbench.v|
-!i113 1
-R9
-vaudio_interface
 R10
 !i10b 1
-!s100 aE]M7loQESBYDGMTkK]AR3
-R1
-IU8h0mogVLVC<4^J`k]dJd1
+!s100 `R?2A?ZWVLnQXKcU4EKGF2
 R2
+I52:dSdhCDW2:0PURBUdN01
 R3
-w1762805566
+R0
+R8
+8Audio_Controller/Altera_UP_SYNC_FIFO.v
+FAudio_Controller/Altera_UP_SYNC_FIFO.v
+!i122 12
+L0 9 120
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@altera_@u@p_@s@y@n@c_@f@i@f@o
+vAudio_Clock
+R10
+!i10b 1
+!s100 CfQCi>X2^mG[5F^HCNkHm1
+R2
+I[HIY67dGKRF5@66mOB_d91
+R3
+R0
+Z11 w1762820938
+8Audio_Controller/Audio_Clock.v
+FAudio_Controller/Audio_Clock.v
+!i122 12
+L0 39 114
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@audio_@clock
+vAudio_Controller
+R10
+!i10b 1
+!s100 WPTKh6PlKI5?m?=CbHAa_3
+R2
+I8T?MJlH_QU?VCOh^Ci0W;0
+R3
+R0
+R11
+8Audio_Controller/Audio_Controller.v
+FAudio_Controller/Audio_Controller.v
+!i122 12
+L0 11 269
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@audio_@controller
+vaudio_generator
+R10
+!i10b 1
+!s100 M0XdOn>B]FEIM?]6a1m?^1
+R2
+IC=kJ_<K2<G_RSZLjjBjO32
+R3
+R0
+Z12 w1762842889
+Z13 8audio_generator/audio_generator.v
+Z14 Faudio_generator/audio_generator.v
+!i122 12
+L0 1 46
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vaudio_interface
+Z15 !s110 1762943219
+!i10b 1
+!s100 oGD;AlNOLB4P>>H2Jb<So3
+R2
+Ib4@ea89E[D@YNDMMZFBlm0
+R3
+R0
+w1762943203
 8audio_interface.v
 Faudio_interface.v
-!i122 29
-L0 1 141
-R5
+!i122 11
+L0 1 168
+R4
 r1
 !s85 0
 31
-R14
-Z16 !s107 testbench.v|rom256x16_sim.v|loop_counter.v|audio_interface.v|audio_generator.v|BPM_counter.v|
-R15
+Z16 !s108 1762943219.000000
+Z17 !s107 testbench.v|rom256x16_sim.v|audio_interface.v|
+Z18 !s90 -reportprogress|300|audio_interface.v|rom256x16_sim.v|testbench.v|
 !i113 1
-R9
-vavconf
+R7
+vaudio_interface_module
+R10
+!i10b 1
+!s100 :Ud;N6UQQC^7Ne@];<gW11
+R2
+IB9Db6Ci43ez6`K`F1VgC?2
+R3
 R0
+w1762918518
+8audio_interface/audio_interface_module.v
+Faudio_interface/audio_interface_module.v
+!i122 12
+L0 1 158
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vavconf
+R10
 !i10b 1
 !s100 ^zKzQJGK`?>0a>fbBW7eA0
-R1
-I[HdD4>iF?S49lfOH<CL0n3
 R2
+I[HdD4>iF?S49lfOH<CL0n3
 R3
-R4
+R0
+w1762894944
 8avconf/avconf.v
 Favconf/avconf.v
-!i122 18
+!i122 12
 L0 1 187
-R5
+R4
 r1
 !s85 0
 31
-R6
-R7
-R8
-!i113 1
+R5
 R9
+R6
+!i113 1
+R7
 vBPM_counter
 R10
 !i10b 1
-!s100 hJ4F?TV;Rz08Q;3LEM77:0
-R1
-I?Ei8fYM3=YE`61hidRD1i0
+!s100 F99QKDKBSfThMD4bj9][`2
 R2
+I::]fiI91kcWCKOhaP?kNP1
 R3
-w1762806483
-8BPM_counter.v
-FBPM_counter.v
-!i122 29
+R0
+w1762820914
+8BPM_counter/BPM_counter.v
+FBPM_counter/BPM_counter.v
+!i122 12
 L0 1 33
-R5
+R4
 r1
 !s85 0
 31
-R14
-R16
-R15
-!i113 1
+R5
 R9
+R6
+!i113 1
+R7
 n@b@p@m_counter
-vI2C_Controller
+vDAC_controller
+R10
+!i10b 1
+!s100 jPE@5=V2^IL?k25aU3i?93
+R2
+I:XQ]>jbUYW=OaCM:AZ[]Z3
+R3
 R0
+w1762943195
+8DAC_controller/DAC_controller.v
+FDAC_controller/DAC_controller.v
+!i122 12
+L0 3 90
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@d@a@c_controller
+vI2C_Controller
+R10
 !i10b 1
 !s100 LeHfgzQF>8V>JRWal]l?c1
-R1
-IIAVFNk[fekXhWe4e^OV<c1
 R2
+IIAVFNk[fekXhWe4e^OV<c1
 R3
-R4
+R0
+w1762843502
 8avconf/I2C_Controller.v
 Favconf/I2C_Controller.v
-!i122 18
+!i122 12
 L0 43 106
-R5
+R4
 r1
 !s85 0
 31
-R6
-R7
-R8
-!i113 1
+R5
 R9
+R6
+!i113 1
+R7
 n@i2@c_@controller
+vI2C_Controller_DAC
+R10
+!i10b 1
+!s100 ^SX_]WSC=GVGbDci:@Ob^3
+R2
+IKMP90@ggPk3D;ZFdk<5^o1
+R3
+R0
+w1762911720
+8DAC_controller/I2C_Controller_DAC.v
+FDAC_controller/I2C_Controller_DAC.v
+!i122 12
+L0 3 120
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@i2@c_@controller_@d@a@c
 vloop_counter
 R10
 !i10b 1
-!s100 ]4KehLlh^nlETbHK0k0aY2
-R1
-I@Ob_PF_EOLeeF4d@Rg6[n1
+!s100 VeEYl3`gFj9NE;N9;l=mH0
 R2
+I56g6DGiQ=45IBd>m;djCE2
 R3
-w1762733402
-8loop_counter.v
-Floop_counter.v
-!i122 29
-L0 1 42
-R5
+R0
+w1762839235
+8loop_counter/loop_counter.v
+Floop_counter/loop_counter.v
+!i122 12
+L0 1 49
+R4
 r1
 !s85 0
 31
-R14
-R16
-R15
-!i113 1
+R5
 R9
+R6
+!i113 1
+R7
 vnumerically_controlled_oscillator
 R10
 !i10b 1
-!s100 EXL;MH4m2jbjB>[dGQ55_0
-R1
-I:nc?79QLkYdleI:0dS4R<1
+!s100 z;PV66XaG9g_SUQ_g1<9<0
 R2
+II<UgAKF0[[ohh^KjHl88n2
 R3
-R11
+R0
 R12
 R13
-!i122 29
-L0 60 11
-R5
+R14
+!i122 12
+L0 62 11
+R4
 r1
 !s85 0
 31
-R14
-R16
-R15
-!i113 1
+R5
 R9
+R6
+!i113 1
+R7
 vrom256x16
-R10
+R15
 !i10b 1
 !s100 :a@gADMjjoKW?61Kb9BnN0
-R1
-IgbFNZMiC70mkEo@V5SnU82
 R2
+IgbFNZMiC70mkEo@V5SnU82
 R3
+R0
 w1762803166
 8rom256x16_sim.v
 From256x16_sim.v
-!i122 29
+!i122 11
 L0 1 11
-R5
+R4
 r1
 !s85 0
 31
-R14
 R16
-R15
+R17
+R18
 !i113 1
-R9
+R7
 vtestbench
-R10
+R15
 !i10b 1
-!s100 l5n@6?CXg`LYQnO>j811M2
-R1
-I6h]EOG_mFiRMC2F?=MYk:2
+!s100 93EMX<dNIQ3AzK0_m`EbL1
 R2
+I]@4bW<f9d9[R=>k?a1;=S1
 R3
-w1762810099
+R0
+w1762941468
 8testbench.v
 Ftestbench.v
-!i122 29
+!i122 11
 L0 3 65
-R5
+R4
 r1
 !s85 0
 31
-R14
 R16
-R15
+R17
+R18
 !i113 1
-R9
+R7
 vwaveform_generator
 R10
 !i10b 1
-!s100 ]o^`5GhT:c1n5ILX]0MM03
-R1
-IMEElL?j34Z1Yd]ee5bC;G3
+!s100 BhFf^K`VR5EUakDUFLj<Q0
 R2
+ISVYTY96^531@ZZIoV0kV22
 R3
-R11
+R0
 R12
 R13
-!i122 29
-L0 48 11
-R5
+R14
+!i122 12
+L0 48 13
+R4
 r1
 !s85 0
 31
-R14
-R16
-R15
-!i113 1
+R5
 R9
+R6
+!i113 1
+R7

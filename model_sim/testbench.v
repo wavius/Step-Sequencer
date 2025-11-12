@@ -31,7 +31,7 @@ module testbench ( );
     end // initial
 
     initial begin
-    SW <= 10'b0000000011; 
+    SW <= 10'b0010000011; 
     KEY[1] = 1; // not pressed;
     #20 KEY[1] <= 0; // pressed
     #10 KEY[1] <= 1; // not pressed

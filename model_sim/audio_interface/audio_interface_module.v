@@ -1,8 +1,11 @@
-module audio_interface (
+module audio_interface_module (
 	// Inputs
-	CLOCK_50,
-	KEY,
-	SW,
+	Clock,
+	nReset,
+	nStart,
+	Select,
+	BPM,
+	Loops,
 
 	// Bidirectionals
 	AUD_BCLK,
@@ -10,22 +13,24 @@ module audio_interface (
 	AUD_DACLRCK,
 
 	FPGA_I2C_SDAT,
-	DAC_I2C_SDAT, // PIN_AC18, GPIO_0[0]
+	DAC_I2C_SDAT,
 
 	// Outputs
 	AUD_XCK,
 	AUD_DACDAT,
 
 	FPGA_I2C_SCLK,
-	DAC_I2C_SCLK, // PIN_Y17,  GPIO_0[1]
-	DAC_I2C_A0,   // PIN_AD17, GPIO_0[2]
-	LEDR
+	DAC_I2C_SCLK,
+	DAC_I2C_A0
 );
 
 	// Inputs
-	input		   CLOCK_50;
-	input	[1:0]	KEY;
-	input	[9:0]	SW;
+	input		    Clock;  // 50MHz clock
+	input        nReset; // Reset
+	input        nStart; // Start playback
+	input [11:0] Select; // Tone select
+	input [31:0] BPM;    // Beats per minute
+	input [7:0]  Loops;  // Number of playback loops
 
 	// Bidirectionals
 	inout		   AUD_BCLK;
@@ -33,7 +38,7 @@ module audio_interface (
 	inout			AUD_DACLRCK;
 
 	inout			FPGA_I2C_SDAT;
-	inout			DAC_I2C_SDAT;
+	inout       DAC_I2C_SDAT;
 
 	// Outputs
 	output	   AUD_XCK;
@@ -42,17 +47,12 @@ module audio_interface (
 	output	   FPGA_I2C_SCLK;
 	output      DAC_I2C_SCLK;
 	output      DAC_I2C_A0;
-	output [9:0] LEDR;
 
 	// Internal Wires
 	wire        audio_out_allowed;
 	wire        write_audio_out;
 
-	wire [11:0]  Select; // Tone select
 	wire        Step;   // Step pulse
-	wire        nStart; // Start playback
-	wire [31:0]  BPM;    // Beats per minute
-	wire [7:0]  Loops;  // Number of playback loops
 	wire        Play;   // Playback enable
 	wire [15:0] Out;    // Audio output
 
@@ -62,7 +62,7 @@ module audio_interface (
 	reg  [15:0] audio_signed;
 
 	// Sequential Logic
-	always@(posedge CLOCK_50) // Clock with 48kHz
+	always@(posedge Clock) // Clock with 48kHz
 	begin
 		if (Play)
 		begin
@@ -80,29 +80,20 @@ module audio_interface (
 	end
 
 	// Combinational Logic
-	assign A0 = 0;
+	assign DAC_I2C_A0 = 0;
 
 	assign write_audio_out = audio_out_allowed;
 
-	assign Select = {5'b0, SW[6:0]};
-	assign nStart = KEY[1];
-	assign BPM    = 32'd60_000_000;
-	assign Loops  = {5'b0, SW[9:7]};
-
-	assign LEDR[7:0] = Out[7:0];
-	assign LEDR[9] = Step;
-	assign LEDR[8] = Play;
-
 	// Internal Modules
 	BPM_counter B1 (
-		.Clock  (CLOCK_50), 
+		.Clock  (Clock), 
 		.nStart (nStart), 
 		.BPM    (BPM), 
 		.Step   (Step)
 	);
 
 	loop_counter L1 (
-		.nReset (KEY[0]),
+		.nReset (nReset),
 		.nStart (nStart), 
 		.Step   (Step), 
 		.Loops  (Loops), 
@@ -110,7 +101,7 @@ module audio_interface (
 	);
 
 	audio_generator A1 (
-		.Clock  (CLOCK_50),
+		.Clock  (Clock),
 		.nStart (nStart),
 		.Select (Select),
 		.Out    (Out)
@@ -125,11 +116,11 @@ module audio_interface (
 			.DAC_I2C_SCLK     (DAC_I2C_SCLK),
 			.DAC_I2C_SDAT	   (DAC_I2C_SDAT)
 	);
-	/*
+
 	Audio_Controller AC1 (
 		// Inputs
-		.CLOCK_50				    (CLOCK_50),
-		.reset						 (~KEY[0]),
+		.CLOCK_50				    (Clock),
+		.reset						 (~nReset),
 
 		.clear_audio_in_memory	 (),
 		.read_audio_in				 (),
@@ -161,8 +152,7 @@ module audio_interface (
 		.FPGA_I2C_SCLK (FPGA_I2C_SCLK),
 		.FPGA_I2C_SDAT (FPGA_I2C_SDAT),
 		.CLOCK_50      (CLOCK_50),
-		.reset		   (~KEY[0])
+		.reset		   (~nReset)
 	);
-	*/
 
 endmodule
