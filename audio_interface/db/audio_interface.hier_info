@@ -17,21 +17,21 @@ AUD_ADCLRCK <> Audio_Controller:AC1.AUD_ADCLRCK
 AUD_DACLRCK <> Audio_Controller:AC1.AUD_DACLRCK
 FPGA_I2C_SDAT <> avconf:AVC1.FPGA_I2C_SDAT
 DAC_I2C_SDAT <> DAC_controller:DC1.DAC_I2C_SDAT
-AUD_XCK <= Audio_Controller:AC1.AUD_XCK
-AUD_DACDAT <= Audio_Controller:AC1.AUD_DACDAT
-FPGA_I2C_SCLK <= avconf:AVC1.FPGA_I2C_SCLK
-DAC_I2C_SCLK <= DAC_controller:DC1.DAC_I2C_SCLK
-DAC_I2C_A0 <= <GND>
-LEDR[0] <= audio_generator:A1.Out
-LEDR[1] <= audio_generator:A1.Out
-LEDR[2] <= audio_generator:A1.Out
-LEDR[3] <= audio_generator:A1.Out
-LEDR[4] <= audio_generator:A1.Out
-LEDR[5] <= audio_generator:A1.Out
-LEDR[6] <= audio_generator:A1.Out
-LEDR[7] <= audio_generator:A1.Out
-LEDR[8] <= loop_counter:L1.Play
-LEDR[9] <= Step.DB_MAX_OUTPUT_PORT_TYPE
+AUD_XCK << Audio_Controller:AC1.AUD_XCK
+AUD_DACDAT << Audio_Controller:AC1.AUD_DACDAT
+FPGA_I2C_SCLK << avconf:AVC1.FPGA_I2C_SCLK
+DAC_I2C_SCLK << DAC_controller:DC1.DAC_I2C_SCLK
+DAC_I2C_A0 << <GND>
+LEDR[0] << audio_generator:A1.Out
+LEDR[1] << audio_generator:A1.Out
+LEDR[2] << audio_generator:A1.Out
+LEDR[3] << audio_generator:A1.Out
+LEDR[4] << audio_generator:A1.Out
+LEDR[5] << audio_generator:A1.Out
+LEDR[6] << audio_generator:A1.Out
+LEDR[7] << audio_generator:A1.Out
+LEDR[8] << loop_counter:L1.Play
+LEDR[9] << Step.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |audio_interface|BPM_counter:B1

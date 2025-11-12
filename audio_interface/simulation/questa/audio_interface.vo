@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition"
 
-// DATE "11/11/2025 22:38:29"
+// DATE "11/12/2025 14:59:08"
 
 // 
 // Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -47,11 +47,11 @@ module audio_interface (
 input 	CLOCK_50;
 input 	[1:0] KEY;
 input 	[9:0] SW;
-inout 	AUD_BCLK;
-inout 	AUD_ADCLRCK;
-inout 	AUD_DACLRCK;
-inout 	FPGA_I2C_SDAT;
-inout 	DAC_I2C_SDAT;
+output 	AUD_BCLK;
+output 	AUD_ADCLRCK;
+output 	AUD_DACLRCK;
+output 	FPGA_I2C_SDAT;
+output 	DAC_I2C_SDAT;
 output 	AUD_XCK;
 output 	AUD_DACDAT;
 output 	FPGA_I2C_SCLK;

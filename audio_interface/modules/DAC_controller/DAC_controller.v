@@ -68,7 +68,7 @@ module DAC_controller (
 		else
 		if (!mI2C_GO && mI2C_END)
 		begin
-			mI2C_DATA  = {SLAVE_ADDR, CMD_WRITE_DAC, audio_in_12b[11:4], {audio_in_12b[3:0], 4'b0000}};
+			mI2C_DATA <= {SLAVE_ADDR, CMD_WRITE_DAC, audio_in_12b[11:4], {audio_in_12b[3:0], 4'b0000}};
 			mI2C_GO   <= 1;
 		end
 		else if (mI2C_END)
