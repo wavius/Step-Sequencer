@@ -2,7 +2,7 @@ import numpy as np
 
 N = 4096
 A = (2**32) / 2 - 1        # 32-bit signed max amplitude
-sine = (A * (np.sin(2 * np.pi * np.arange(N) / N) / 128)).astype(int)  # 1/4 scale
+sine = (A * (np.sin(2 * np.pi * np.arange(N) / N) / 64)).astype(int)  # 1/4 scale
 
 with open("sine4096.mif", "w") as f:
     f.write("WIDTH = 32;\nDEPTH = 4096;\nADDRESS_RADIX = UNS;\nDATA_RADIX = DEC;\nCONTENT BEGIN\n")
