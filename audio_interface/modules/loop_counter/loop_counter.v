@@ -1,12 +1,12 @@
 module loop_counter (nReset, nStart, Step, Loops, Play);
     input nReset, nStart, Step;
-    input [7:0] Loops; // Max 255 Loops
+    input [6:0] Loops; // Max 255 Loops
     output reg Play;
 
     reg [11:0] Q;
     reg [11:0] total_steps;
     reg done;
-	 reg [7:0] Loops_latched;
+	 reg [6:0] Loops_latched;
 	 
 	 always@(posedge Step, negedge nReset, negedge nStart)
 	 begin

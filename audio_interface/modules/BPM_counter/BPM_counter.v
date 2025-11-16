@@ -1,6 +1,6 @@
 module BPM_counter (Clock, nStart, BPM, Step);
 	input Clock, nStart;
-   input [31:0] BPM; // Max 511 BPM [8:0]
+   input [9:0] BPM; // Max 511 BPM [8:0]
 	output reg Step;
 
    reg [31:0] Q;

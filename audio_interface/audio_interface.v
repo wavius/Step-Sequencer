@@ -51,8 +51,8 @@ module audio_interface (
 	wire [11:0]   Select; // Tone select
 	wire          Step;   // Step pulse
 	wire          nStart; // Start playback
-	wire [31:0]   BPM;    // Beats per minute
-	wire [7:0]    Loops;  // Number of playback loops
+	wire [9:0]   BPM;    // Beats per minute
+	wire [6:0]    Loops;  // Number of playback loops
 	wire          Play;   // Playback enable
 	wire [31:0]   Audio_out;    // Audio output
 
@@ -98,8 +98,8 @@ module audio_interface (
 
 	assign Select = {5'b0, SW[6:0]};
 	assign nStart = KEY[1];
-	assign BPM    = 32'd100;
-	assign Loops  = {5'b0, SW[9:7]};
+	assign BPM    = 10'd100;
+	assign Loops  = {4'b0, SW[9:7]};
 
 	assign LEDR[7:0] = Audio_out[7:0];
 	assign LEDR[9]   = Step;
