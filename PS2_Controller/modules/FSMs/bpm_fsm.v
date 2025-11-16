@@ -98,9 +98,9 @@ module bpm_fsm (
         end
         else if (!Enable)
         begin
-            num1 <= 0;
-            num2 <= 0;
-            num3 <= 0;
+            num1 <= num1;
+            num2 <= num2;
+            num3 <= num3;
             set  <= set;
             BPM  <= BPM;
         end

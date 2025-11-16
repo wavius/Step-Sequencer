@@ -1,6 +1,7 @@
 module loop_fsm (
     input            Clock,
     input            nReset,
+    input            Enable,
     input      [7:0] data, 
     input            data_en,
 
@@ -42,7 +43,9 @@ module loop_fsm (
     // state logic
     always @(*) 
     begin
-        if (!data_en)
+        if (!Enable)
+            next_state = current_state;
+        else if (!data_en)
             next_state = current_state;
         else if (data == RELEASE)
             next_state = current_state;
@@ -89,6 +92,13 @@ module loop_fsm (
             num2  <= 0;
             Loops <= 1;
             set   <= 1;  
+        end
+        else if (!Enable)
+        begin
+            num1  <= num1;
+            num2  <= num2;
+            Loops <= Loops;
+            set   <= set;
         end
         else if (data_en && (data != RELEASE)) 
         begin
