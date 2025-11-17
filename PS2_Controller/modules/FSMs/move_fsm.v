@@ -5,9 +5,13 @@ module move_input (
     input      [7:0] data, 
     input            data_en,
 
-    output reg [3:0] Direction,  // 1-cycle movement command
-    output reg       Command     // 1-cycle ENTER pulse
+    output reg [3:0] Direction,  // movement command
+    output reg       Command     // pulse
 );  
+
+    // Internal registers
+    reg [1:0] current_state, next_state;
+    reg break_code;
 
     // States
     localparam IDLE = 2'b01,
@@ -21,23 +25,33 @@ module move_input (
                ENTER = 8'h5A,
                RELEASE = 8'hF0;
 
-    reg [1:0] current_state, next_state;
+    // Input decoder
+    always @(posedge Clock, negedge nReset) begin
+        if (!nReset)
+            break_code <= 0;
+        else if (data_en) begin
+            if (data == RELEASE)
+                break_code <= 1;
+            else if (break_code)
+                break_code <= 0;
+            else
+                break_code <= 0;  
+        end
+    end
 
-    // Next-state logic
+    // State logic
     always @(*) 
     begin
         if (!Enable)
             next_state = IDLE;
         else if (!data_en)
             next_state = current_state;
-        else if (data == RELEASE)
-            next_state = IDLE;
-        else 
-            next_state = MOVE; 
+        else if (data_en && !break_code) 
+            next_state = MOVE;
     end
 
     // State register
-    always @(posedge Clock or negedge nReset)
+    always @(posedge Clock, negedge nReset)
     begin
         if (!nReset)
             current_state <= IDLE;
@@ -46,7 +60,7 @@ module move_input (
     end
 
     // Output logic
-    always @(posedge Clock or negedge nReset)
+    always @(posedge Clock, negedge nReset)
     begin
         if (!nReset) 
         begin
@@ -64,7 +78,7 @@ module move_input (
             Direction <= 4'd0;
             Command   <= 1'b0;
 
-            if (data_en && (data != RELEASE))
+            if (data_en && (data != RELEASE) && !break_code)
             begin
                 case (data)
                     UP:       Direction <= 4'b0001;  // up
