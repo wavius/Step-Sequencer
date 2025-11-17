@@ -1,0 +1,71 @@
+
+State Machine - |step_sequencer|input_interface:I1|current_state
+Name current_state.MODE_MOVE current_state.MODE_BPM current_state.MODE_LOOP current_state.IDLE 
+current_state.IDLE 0 0 0 0 
+current_state.MODE_LOOP 0 0 1 1 
+current_state.MODE_BPM 0 1 0 1 
+current_state.MODE_MOVE 1 0 0 1 
+
+State Machine - |step_sequencer|input_interface:I1|bpm_fsm:BPM_FSM|current_state
+Name current_state.INPUT3 current_state.INPUT2 current_state.INPUT1 current_state.IDLE 
+current_state.IDLE 0 0 0 0 
+current_state.INPUT1 0 0 1 1 
+current_state.INPUT2 0 1 0 1 
+current_state.INPUT3 1 0 0 1 
+
+State Machine - |step_sequencer|input_interface:I1|loop_fsm:LOOP_FSM|current_state
+Name current_state.INPUT2 current_state.INPUT1 current_state.IDLE 
+current_state.IDLE 0 0 0 
+current_state.INPUT1 0 1 1 
+current_state.INPUT2 1 0 1 
+
+State Machine - |step_sequencer|input_interface:I1|PS2_Controller:P1|s_ps2_transceiver
+Name s_ps2_transceiver.PS2_STATE_3_END_TRANSFER s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT s_ps2_transceiver.PS2_STATE_1_DATA_IN s_ps2_transceiver.PS2_STATE_0_IDLE s_ps2_transceiver.PS2_STATE_4_END_DELAYED 
+s_ps2_transceiver.PS2_STATE_0_IDLE 0 0 0 0 0 
+s_ps2_transceiver.PS2_STATE_1_DATA_IN 0 0 1 1 0 
+s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT 0 1 0 1 0 
+s_ps2_transceiver.PS2_STATE_3_END_TRANSFER 1 0 0 1 0 
+s_ps2_transceiver.PS2_STATE_4_END_DELAYED 0 0 0 1 1 
+
+State Machine - |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter
+Name s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION s_ps2_transmitter.PS2_STATE_0_IDLE 
+s_ps2_transmitter.PS2_STATE_0_IDLE 0 0 0 0 0 0 0 0 
+s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION 0 0 0 0 0 0 1 1 
+s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK 0 0 0 0 0 1 0 1 
+s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA 0 0 0 0 1 0 0 1 
+s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT 0 0 0 1 0 0 0 1 
+s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT 0 0 1 0 0 0 0 1 
+s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT 0 1 0 0 0 0 0 1 
+s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR 1 0 0 0 0 0 0 1 
+
+State Machine - |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver
+Name s_ps2_receiver.PS2_STATE_3_PARITY_IN s_ps2_receiver.PS2_STATE_2_DATA_IN s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA s_ps2_receiver.PS2_STATE_0_IDLE s_ps2_receiver.PS2_STATE_4_STOP_IN 
+s_ps2_receiver.PS2_STATE_0_IDLE 0 0 0 0 0 
+s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA 0 0 1 1 0 
+s_ps2_receiver.PS2_STATE_2_DATA_IN 0 1 0 1 0 
+s_ps2_receiver.PS2_STATE_3_PARITY_IN 1 0 0 1 0 
+s_ps2_receiver.PS2_STATE_4_STOP_IN 0 0 0 1 1 
+
+State Machine - |step_sequencer|audio_interface:A1|DAC_controller:DC1|state
+Name state.WRITEMEM state.READMEM state.UPDATE state.IDLE 
+state.IDLE 0 0 0 0 
+state.UPDATE 0 0 1 1 
+state.READMEM 0 1 0 1 
+state.WRITEMEM 1 0 0 1 
+
+State Machine - |step_sequencer|audio_interface:A1|DAC_controller:DC1|i2cState
+Name i2cState.I2CREAD i2cState.I2CWRITE i2cState.I2CREAD_ACK i2cState.I2CSTOP i2cState.I2CADDRS i2cState.I2CWRITE_ACK i2cState.I2CSTART i2cState.I2CREADY 
+i2cState.I2CREADY 0 0 0 0 0 0 0 0 
+i2cState.I2CSTART 0 0 0 0 0 0 1 1 
+i2cState.I2CWRITE_ACK 0 0 0 0 0 1 0 1 
+i2cState.I2CADDRS 0 0 0 0 1 0 0 1 
+i2cState.I2CSTOP 0 0 0 1 0 0 0 1 
+i2cState.I2CREAD_ACK 0 0 1 0 0 0 0 1 
+i2cState.I2CWRITE 0 1 0 0 0 0 0 1 
+i2cState.I2CREAD 1 0 0 0 0 0 0 1 
+
+State Machine - |step_sequencer|audio_interface:A1|avconf:AVC1|mSetup_ST
+Name mSetup_ST.0000 mSetup_ST.0010 mSetup_ST.0001 
+mSetup_ST.0000 0 0 0 
+mSetup_ST.0001 1 0 1 
+mSetup_ST.0010 1 1 0 
