@@ -79,7 +79,7 @@ module display_interface (
     reg [3:0] dir_prev;
     reg       cmd_prev;
 
-    wire dir_pulse = (DIR != 0) && (dir_prev == 0);
+    wire dir_pulse = (DIR != 0) && (dir_prev != DIR);
     wire cmd_pulse = CMD && !cmd_prev;
 
     always @(posedge CLOCK_50, negedge nReset) 

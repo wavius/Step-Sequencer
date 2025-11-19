@@ -49,7 +49,7 @@ module loop_input (
         next_state = current_state; 
         if (!Enable)
             next_state = IDLE;
-        else if (data_en && (data != RELEASE) && !break_code) 
+        else if (data_en && !break_code) 
         begin
             case (current_state)
                 IDLE:
@@ -93,7 +93,7 @@ module loop_input (
             num1  <= num1;
             Loops <= Loops;
         end
-        else if (data_en && (data != RELEASE) && !break_code) 
+        else if (data_en && !break_code) 
         begin
             case (current_state)
                 IDLE: 

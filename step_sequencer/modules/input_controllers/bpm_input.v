@@ -31,7 +31,7 @@ module bpm_input (
                RELEASE = 8'hF0;
 
     // Input decoder
-    always @(posedge Clock or negedge nReset) 
+    always @(posedge Clock, negedge nReset) 
     begin
         if (!nReset)
             break_code <= 0;
@@ -50,7 +50,7 @@ module bpm_input (
         next_state = current_state; 
         if (!Enable)
             next_state = IDLE;
-        else if (data_en && (data != RELEASE) && !break_code) 
+        else if (data_en && !break_code) 
         begin
             case (current_state)
                 IDLE:
@@ -102,7 +102,7 @@ module bpm_input (
             num3 <= num3;
             BPM  <= BPM;
         end
-        else if (data_en && (data != RELEASE) && !break_code) 
+        else if (data_en && !break_code) 
         begin
             case (current_state)
                 IDLE: 

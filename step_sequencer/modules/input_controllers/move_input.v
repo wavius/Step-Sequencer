@@ -47,7 +47,7 @@ module move_input (
             Direction <= 4'd0;
             Command   <= 1'b0;
         end
-        else if (data_en && (data != RELEASE) && !break_code)
+        else if (data_en && !break_code)
         begin
             case (data)
                 UP:       Direction <= 4'b0001;  // up
