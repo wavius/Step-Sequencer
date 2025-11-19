@@ -100,7 +100,7 @@ module input_interface (
             Command   <= 0;
             Start     <= 0;
         end
-        else if (data_en) 
+        else /*if (data_en)*/ 
         begin
             case (current_state)
                 MODE_LOOP:
