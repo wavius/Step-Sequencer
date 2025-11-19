@@ -316,34 +316,6 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity a
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity audio_interface -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity audio_interface -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -entity audio_interface -section_id Top
-set_global_assignment -name VERILOG_FILE modules/rom/rom4096x32.v
-set_global_assignment -name QIP_FILE modules/rom/rom4096x32.qip
-set_global_assignment -name VERILOG_FILE modules/rom/rom256x12.v
-set_global_assignment -name QIP_FILE modules/rom/rom256x12.qip
-set_global_assignment -name VERILOG_FILE modules/PS2_controller/PS2_Controller.v
-set_global_assignment -name VERILOG_FILE modules/PS2_controller/Altera_UP_PS2_Data_In.v
-set_global_assignment -name VERILOG_FILE modules/PS2_controller/Altera_UP_PS2_Command_Out.v
-set_global_assignment -name VERILOG_FILE modules/loop_counter/loop_counter.v
-set_global_assignment -name VERILOG_FILE modules/input_FSMs/sevenseg.v
-set_global_assignment -name VERILOG_FILE modules/input_FSMs/move_fsm.v
-set_global_assignment -name VERILOG_FILE modules/input_FSMs/loop_fsm.v
-set_global_assignment -name VERILOG_FILE modules/input_FSMs/bpm_fsm.v
-set_global_assignment -name VERILOG_FILE modules/DAC_controller/DAC_controller.v
-set_global_assignment -name VERILOG_FILE modules/BPM_counter/BPM_counter.v
-set_global_assignment -name VERILOG_FILE modules/avconf/I2C_Controller.v
-set_global_assignment -name VERILOG_FILE modules/avconf/avconf.v
-set_global_assignment -name VERILOG_FILE modules/audio_generators/audio_generator_16b_signed.v
-set_global_assignment -name VERILOG_FILE modules/audio_generators/audio_generator_12b_unsigned.v
-set_global_assignment -name VERILOG_FILE modules/Audio_Controller/Audio_Controller.v
-set_global_assignment -name VERILOG_FILE modules/Audio_Controller/Audio_Clock.v
-set_global_assignment -name VERILOG_FILE modules/Audio_Controller/Altera_UP_SYNC_FIFO.v
-set_global_assignment -name VERILOG_FILE modules/Audio_Controller/Altera_UP_Clock_Edge.v
-set_global_assignment -name VERILOG_FILE modules/Audio_Controller/Altera_UP_Audio_Out_Serializer.v
-set_global_assignment -name VERILOG_FILE modules/Audio_Controller/Altera_UP_Audio_In_Deserializer.v
-set_global_assignment -name VERILOG_FILE modules/Audio_Controller/Altera_UP_Audio_Bit_Counter.v
-set_global_assignment -name VERILOG_FILE input_interface.v
-set_global_assignment -name VERILOG_FILE audio_interface.v
-set_global_assignment -name VERILOG_FILE step_sequencer.v
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
@@ -351,4 +323,38 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE modules/rom/rom512x16.v
+set_global_assignment -name QIP_FILE modules/rom/rom512x16.qip
+set_global_assignment -name VERILOG_FILE modules/vga_adapter/vga_pll.v
+set_global_assignment -name VERILOG_FILE modules/vga_adapter/vga_display.v
+set_global_assignment -name VERILOG_FILE modules/vga_adapter/vga_controller.v
+set_global_assignment -name VERILOG_FILE modules/vga_adapter/vga_address_translator.v
+set_global_assignment -name VERILOG_FILE modules/vga_adapter/vga_adapter.v
+set_global_assignment -name VERILOG_FILE modules/ps2_controller/PS2_Controller.v
+set_global_assignment -name VERILOG_FILE modules/ps2_controller/Altera_UP_PS2_Data_In.v
+set_global_assignment -name VERILOG_FILE modules/ps2_controller/Altera_UP_PS2_Command_Out.v
+set_global_assignment -name VERILOG_FILE modules/input_controllers/sevenseg.v
+set_global_assignment -name VERILOG_FILE modules/input_controllers/move_input.v
+set_global_assignment -name VERILOG_FILE modules/input_controllers/loop_input.v
+set_global_assignment -name VERILOG_FILE modules/input_controllers/bpm_input.v
+set_global_assignment -name VERILOG_FILE modules/dac_controller/DAC_controller.v
+set_global_assignment -name VERILOG_FILE modules/avconf/I2C_Controller.v
+set_global_assignment -name VERILOG_FILE modules/avconf/avconf.v
+set_global_assignment -name VERILOG_FILE modules/audio_generators/loop_counter.v
+set_global_assignment -name VERILOG_FILE modules/audio_generators/BPM_counter.v
+set_global_assignment -name VERILOG_FILE modules/audio_generators/audio_generator_16b_signed.v
+set_global_assignment -name VERILOG_FILE modules/audio_generators/audio_generator_12b_unsigned.v
+set_global_assignment -name VERILOG_FILE modules/audio_controller/Audio_Controller.v
+set_global_assignment -name VERILOG_FILE modules/audio_controller/Audio_Clock.v
+set_global_assignment -name VERILOG_FILE modules/audio_controller/Altera_UP_SYNC_FIFO.v
+set_global_assignment -name VERILOG_FILE modules/audio_controller/Altera_UP_Clock_Edge.v
+set_global_assignment -name VERILOG_FILE modules/audio_controller/Altera_UP_Audio_Out_Serializer.v
+set_global_assignment -name VERILOG_FILE modules/audio_controller/Altera_UP_Audio_In_Deserializer.v
+set_global_assignment -name VERILOG_FILE modules/audio_controller/Altera_UP_Audio_Bit_Counter.v
+set_global_assignment -name VERILOG_FILE step_sequencer.v
+set_global_assignment -name VERILOG_FILE input_interface.v
+set_global_assignment -name VERILOG_FILE display_interface.v
+set_global_assignment -name VERILOG_FILE audio_interface.v
+set_global_assignment -name VERILOG_FILE modules/rom/rom256x12.v
+set_global_assignment -name QIP_FILE modules/rom/rom256x12.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

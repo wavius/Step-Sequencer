@@ -54,7 +54,7 @@ module waveform_generator_12b (Clock, nStart, phase_increment, amplitude);
 	numerically_controlled_oscillator_12b N1 (Clock, nStart, phase_increment, phase_angle);
 
 	// sine lookup table
-	rom256x12 U1 (phase_angle[31:20], Clock, amplitude);
+	rom256x12 U1 (phase_angle[31:24], Clock, amplitude);
 endmodule
 
 module numerically_controlled_oscillator_12b (Clock, nStart, phase_increment, phase_angle);

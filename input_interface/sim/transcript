@@ -1,0 +1,13 @@
+# vsim -pli "D:\Documents\FPGA_EDAs\DESim\modelsim.vpi" -Lf 220model -Lf altera_mf_ver -Lf verilog -t 1ns -c -do "run -all" tb 
+# Start time: 04:05:20 on Nov 18,2025
+# Loading work.tb
+# ** Error: (vsim-3033) Instantiation of 'top' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: ../tb/tb.v Line: 45
+#         Searched libraries:
+#             C:/intelFPGA/20.1/modelsim_ase/altera/vhdl/220model
+#             C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA/20.1/modelsim_ase/verilog
+#             D:/GitHub/ECE241-Project/input_interface/sim/work
+# Error loading design
+# End time: 04:05:20 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

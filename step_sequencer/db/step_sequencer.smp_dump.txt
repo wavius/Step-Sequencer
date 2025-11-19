@@ -1,19 +1,25 @@
 
-State Machine - |step_sequencer|input_interface:I1|current_state
-Name current_state.MODE_MOVE current_state.MODE_BPM current_state.MODE_LOOP current_state.IDLE 
-current_state.IDLE 0 0 0 0 
-current_state.MODE_LOOP 0 0 1 1 
-current_state.MODE_BPM 0 1 0 1 
-current_state.MODE_MOVE 1 0 0 1 
+State Machine - |step_sequencer|display_interface:D1|vga_display:V1|current_state
+Name current_state.DRAW 
+current_state.IDLE 0 
+current_state.DRAW 1 
 
-State Machine - |step_sequencer|input_interface:I1|bpm_fsm:BPM_FSM|current_state
+State Machine - |step_sequencer|input_interface:I1|current_state
+Name current_state.MODE_PLAY current_state.MODE_MOVE current_state.MODE_BPM current_state.MODE_LOOP current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 
+current_state.MODE_LOOP 0 0 0 1 1 
+current_state.MODE_BPM 0 0 1 0 1 
+current_state.MODE_MOVE 0 1 0 0 1 
+current_state.MODE_PLAY 1 0 0 0 1 
+
+State Machine - |step_sequencer|input_interface:I1|bpm_input:BPM_IN|current_state
 Name current_state.INPUT3 current_state.INPUT2 current_state.INPUT1 current_state.IDLE 
 current_state.IDLE 0 0 0 0 
 current_state.INPUT1 0 0 1 1 
 current_state.INPUT2 0 1 0 1 
 current_state.INPUT3 1 0 0 1 
 
-State Machine - |step_sequencer|input_interface:I1|loop_fsm:LOOP_FSM|current_state
+State Machine - |step_sequencer|input_interface:I1|loop_input:LOOP_IN|current_state
 Name current_state.INPUT2 current_state.INPUT1 current_state.IDLE 
 current_state.IDLE 0 0 0 
 current_state.INPUT1 0 1 1 

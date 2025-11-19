@@ -1,7 +1,7 @@
 module audio_generator_16b_signed (Clock, nStart, Select, Out);
 	input Clock, nStart;
 	input 		   	  [11:0] Select;
-	output reg signed [31:0] Out;
+	output reg signed [15:0] Out;
 
 	// Phase increment = freq_note/freq_clock * 2^N
 	parameter C    = 32'd22474, C_sh = 32'd23810, D    = 32'd25225, D_sh = 32'd26726, E    = 32'd28315, F = 32'd29999, 
@@ -16,7 +16,7 @@ module audio_generator_16b_signed (Clock, nStart, Select, Out);
 			sum = sum + Select[i];
 	end
 
-	wire signed [31:0] amplitude [11:0];
+	wire signed [15:0] amplitude [11:0];
 	
 	waveform_generator_16b W1  (Clock, nStart, C,    amplitude[0]);
 	waveform_generator_16b W2  (Clock, nStart, C_sh, amplitude[1]);
@@ -31,7 +31,7 @@ module audio_generator_16b_signed (Clock, nStart, Select, Out);
 	waveform_generator_16b W11 (Clock, nStart, A_sh, amplitude[10]);
 	waveform_generator_16b W12 (Clock, nStart, B,    amplitude[11]);
 
-	reg signed [63:0] amplitude_sum;
+	reg signed [31:0] amplitude_sum;
 	integer j;
 	always@(posedge Clock)
 	begin
@@ -48,13 +48,13 @@ endmodule
 module waveform_generator_16b (Clock, nStart, phase_increment, amplitude);
 	input Clock, nStart;
 	input [31:0] phase_increment;
-	output signed [31:0] amplitude;
+	output signed [15:0] amplitude;
 
 	wire [31:0] phase_angle;
 	numerically_controlled_oscillator_16b N1 (Clock, nStart, phase_increment, phase_angle);
 
 	// sine lookup table
-	rom4096x32 U1 (phase_angle[31:20], Clock, amplitude);
+	rom512x16 U1 (phase_angle[31:23], Clock, amplitude);
 endmodule
 
 module numerically_controlled_oscillator_16b (Clock, nStart, phase_increment, phase_angle);

@@ -3,7 +3,7 @@ module audio_interface (
 	input        CLOCK_50,
 	input 		 nStart,   // Start playback
 	input        nReset,   // Reset
-	input [11:0] Select,	  // Tone select
+	input [11:0] Select,   // Tone select
 	input [6:0]  Loops,    // Number of playback loops
 	input [9:0]  BPM,      // Beats per minute
 	
@@ -17,6 +17,9 @@ module audio_interface (
 	inout 		 DAC_I2C_SDAT, // PIN_AC18, GPIO_0[0
 
 	// Outputs
+	output 	     bpm_step,
+	output       play_en,     // audio is playing ?
+	
 	output 		 AUD_XCK,
 	output 		 AUD_DACDAT,
 
@@ -32,7 +35,7 @@ module audio_interface (
 	wire          Step;   		 // Step pulse
 	
 	wire          Play;   		 // Playback enable
-	wire [31:0]   Audio_out;    // Audio output
+	wire [15:0]   Audio_out;    // Audio output
 
 	// DAC clock signals
 	wire clk781_250kHz;
@@ -57,8 +60,8 @@ module audio_interface (
 	begin
 		if (Play)
 		begin
-			left_channel_audio_out	<= Audio_out;
-			right_channel_audio_out <= Audio_out;
+			left_channel_audio_out	<= {Audio_out, 16'b0};
+			right_channel_audio_out <= {Audio_out, 16'b0};
 		end
 		else
 		begin
@@ -73,6 +76,8 @@ module audio_interface (
 	assign DAC_I2C_A0   = 1'b0;
 
 	assign write_audio_out = audio_out_allowed;
+	assign bpm_step 	   = Step;
+	assign play_en         = Play;
 
 	// Internal Modules
 	BPM_counter B1 (
@@ -83,6 +88,7 @@ module audio_interface (
 	);
 
 	loop_counter L1 (
+		.Clock  (CLOCK_50),
 		.nReset (nReset),
 		.nStart (nStart), 
 		.Step   (Step), 
