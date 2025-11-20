@@ -19,107 +19,156 @@ module vga_display (
     output wire       VGA_CLK   
 );
 
+    // States
+    localparam RESET_WAIT  = 4'b0001,
+               RESET_DRAW  = 4'b0010,
+               IDLE        = 4'b0100,
+               DRAW        = 4'b1000;
+
+    localparam WHITE = 9'h1FF,
+               BLUE  = 9'd7;
+
+    localparam X0 = 10'd214;
+    localparam Y0 = 9'd32;
+
+    // Internal wires
+    wire reset_grid; 
+
     // Internal registers
+    reg [3:0] current_state, next_state;
+    reg [5:0] dx, dy;         
+    reg [3:0] grid_x, grid_y;  
     reg [9:0] current_x;
     reg [8:0] current_y;
+    reg [8:0] color;
     reg       write;
 
-    reg [1:0] current_state, next_state;
+    // Combinational
+    assign reset_grid = (grid_x == 11 && grid_y == 11 && dx == 30 && dy == 30);
 
-    reg [4:0] dx; 
-    reg [4:0] dy;  
+    always @(*) 
+    begin
+        case (current_state)
+            RESET_WAIT:  next_state = VGA_SYNC_N  ? RESET_DRAW : RESET_WAIT;
+            RESET_DRAW:  next_state = reset_grid  ? IDLE       : RESET_DRAW;
+            IDLE:        next_state = draw_enable ? DRAW       : IDLE;
+            DRAW:        next_state = (!drawing)  ? IDLE       : DRAW;
+            default:     next_state =               RESET_WAIT;
+        endcase
+    end
 
-    reg [8:0] color;  
-    wire      VGA_SYNC = VGA_SYNC_N;
-
-    // State parameters
-    localparam IDLE = 2'b01,
-               DRAW = 2'b10;
-
-    always @(posedge CLOCK_50 or negedge nReset) begin
-        if (!nReset) 
+    // Sequential
+    always@(posedge CLOCK_50, negedge nReset)
+    begin
+        if (!nReset)
         begin
-            color <= 9'd0;
-        end 
-        else if (draw_enable) 
+            current_state <= RESET_WAIT;
+        end
+        else
         begin
-            color <= state ? 9'h1FF : 9'd7;
+            current_state <= next_state;
         end
     end
 
-    // State logic
-    always @(*) begin
-        next_state = current_state; 
-        if (!VGA_SYNC)
-            next_state = IDLE;
-        else begin
-            case (current_state)
-                IDLE:
-                    next_state = draw_enable ? DRAW : IDLE;
-                DRAW:
-                    next_state = (!drawing) ? IDLE : DRAW;
-
-                default:
-                    next_state = IDLE;
-            endcase
-        end
-    end
-    
-    // Drawing logic
-    always @(posedge CLOCK_50 or negedge nReset) begin
+    // Draw logic
+    always @(posedge CLOCK_50, negedge nReset) 
+    begin
         if (!nReset) 
         begin
-            current_state <= IDLE;
-            drawing       <= 0;
-            write         <= 0;
-            current_x     <= 0;
-            current_y     <= 0;
-            dx            <= 0;
-            dy            <= 0;
-        end 
-        else if (!VGA_SYNC) 
-        begin
-            current_state <= IDLE;
-            drawing       <= 0;
-            write         <= 0;
-            dx            <= 0;
-            dy            <= 0;
+            drawing <= 0;
+            write   <= 0;
+            
+            dx        <= 0; 
+            dy        <= 0;
+            grid_x    <= 0; 
+            grid_y    <= 0;
+            current_x <= X0;
+            current_y <= Y0;
+            
+            color <= 9'h1FF;
         end 
         else 
         begin
-            current_state <= next_state;
-            case (next_state)
+            case (current_state)
+                RESET_WAIT: 
+                begin
+                    write   <= 0;
+                    drawing <= 0;
+                    color   <= WHITE;
+
+                    dx     <= 0; 
+                    dy     <= 0;
+                    grid_x <= 0; 
+                    grid_y <= 0;
+                end
+
+                RESET_DRAW: 
+                begin
+                    drawing <= 1;
+                    write   <= 1;
+                    color   <= WHITE;
+
+                    current_y <= Y0 + grid_y * 33 + dy;
+
+                    if (dx < 30)
+                        dx <= dx + 1;
+                    else 
+                    begin
+                        dx <= 0;
+                        if (dy < 30)
+                            dy <= dy + 1;
+                        else 
+                        begin
+                            dy <= 0;
+                            if (grid_x < 11)
+                                grid_x <= grid_x + 1;
+                            else 
+                            begin
+                                grid_x <= 0;
+                                if (grid_y < 11)
+                                    grid_y <= grid_y + 1;
+                            end
+                        end
+                    end
+                end
+
                 IDLE: 
                 begin
-                    drawing   <= 0;
-                    write     <= 0;
-                    dx        <= 0;
-                    dy        <= 0;
-                   
-                    current_x <= X;
-                    current_y <= Y;
+                    dx <= 0; 
+                    dy <= 0;
+                    if (draw_enable)
+                        drawing <= 1;
+                    else
+                        drawing <= 0;
                 end
+
                 DRAW: 
                 begin
                     drawing <= 1;
                     write   <= 1;
+                    color   <= state ? WHITE : BLUE;
 
                     current_x <= X + dx;
                     current_y <= Y + dy;
 
-                    if (dx < 30) begin
+                    if (dx < 30)
                         dx <= dx + 1;
-                    end else begin
+                    else 
+                    begin
                         dx <= 0;
                         if (dy < 30)
                             dy <= dy + 1;
-                        else
-                            drawing <= 0; 
+                        else 
+                        begin
+                            dy <= 0;
+                            drawing <= 0;
+                        end
                     end
                 end
             endcase
         end
     end
+
 
     // VGA adapter
     `define VGA_MEMORY

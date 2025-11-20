@@ -1,8 +1,10 @@
 
 State Machine - |step_sequencer|display_interface:D1|vga_display:V1|current_state
-Name current_state.DRAW 
-current_state.IDLE 0 
-current_state.DRAW 1 
+Name current_state.DRAW current_state.IDLE current_state.RESET_DRAW current_state.RESET_WAIT 
+current_state.RESET_WAIT 0 0 0 0 
+current_state.RESET_DRAW 0 0 1 1 
+current_state.IDLE 0 1 0 1 
+current_state.DRAW 1 0 0 1 
 
 State Machine - |step_sequencer|input_interface:I1|current_state
 Name current_state.MODE_PLAY current_state.MODE_MOVE current_state.MODE_BPM current_state.MODE_LOOP current_state.IDLE 
