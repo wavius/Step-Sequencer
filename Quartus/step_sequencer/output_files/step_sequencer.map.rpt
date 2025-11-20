@@ -1,5 +1,5 @@
 Analysis & Synthesis report for step_sequencer
-Thu Nov 20 11:52:45 2025
+Thu Nov 20 18:45:39 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -181,13 +181,13 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 20 11:52:45 2025           ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 20 18:45:39 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; step_sequencer                                  ;
 ; Top-level Entity Name           ; step_sequencer                                  ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 1193                                            ;
+; Total registers                 ; 1203                                            ;
 ; Total pins                      ; 98                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 2,908,160                                       ;
@@ -301,11 +301,13 @@ on the Quartus Prime software download page.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
-;     Processors 6-10        ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processors 8-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -408,16 +410,16 @@ on the Quartus Prime software download page.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1948           ;
+; Estimate of Logic utilization (ALMs needed) ; 1958           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 3431           ;
-;     -- 7 input functions                    ; 6              ;
-;     -- 6 input functions                    ; 444            ;
-;     -- 5 input functions                    ; 422            ;
-;     -- 4 input functions                    ; 759            ;
-;     -- <=3 input functions                  ; 1800           ;
+; Combinational ALUT usage for logic          ; 3452           ;
+;     -- 7 input functions                    ; 5              ;
+;     -- 6 input functions                    ; 445            ;
+;     -- 5 input functions                    ; 425            ;
+;     -- 4 input functions                    ; 754            ;
+;     -- <=3 input functions                  ; 1823           ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 1193           ;
+; Dedicated logic registers                   ; 1203           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 98             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -429,9 +431,9 @@ on the Quartus Prime software download page.
 ;     -- PLLs                                 ; 2              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 1822           ;
-; Total fan-out                               ; 31348          ;
-; Average fan-out                             ; 5.62           ;
+; Maximum fan-out                             ; 1832           ;
+; Total fan-out                               ; 31440          ;
+; Average fan-out                             ; 5.61           ;
 +---------------------------------------------+----------------+
 
 
@@ -440,8 +442,8 @@ on the Quartus Prime software download page.
 +----------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+--------------+
 ; Compilation Hierarchy Node                                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                   ; Entity Name                           ; Library Name ;
 +----------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+--------------+
-; |step_sequencer                                                ; 3431 (1)            ; 1193 (0)                  ; 2908160           ; 2          ; 98   ; 0            ; |step_sequencer                                                                                                                                                                                                                                       ; step_sequencer                        ; work         ;
-;    |audio_interface:A1|                                        ; 2109 (0)            ; 739 (28)                  ; 143360            ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1                                                                                                                                                                                                                    ; audio_interface                       ; work         ;
+; |step_sequencer                                                ; 3452 (2)            ; 1203 (1)                  ; 2908160           ; 2          ; 98   ; 0            ; |step_sequencer                                                                                                                                                                                                                                       ; step_sequencer                        ; work         ;
+;    |audio_interface:A1|                                        ; 2113 (0)            ; 747 (28)                  ; 143360            ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1                                                                                                                                                                                                                    ; audio_interface                       ; work         ;
 ;       |Audio_Controller:AC1|                                   ; 154 (2)             ; 110 (2)                   ; 8192              ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|Audio_Controller:AC1                                                                                                                                                                                               ; Audio_Controller                      ; work         ;
 ;          |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer| ; 151 (57)            ; 104 (38)                  ; 8192              ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|Audio_Controller:AC1|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                           ; Altera_UP_Audio_Out_Serializer        ; work         ;
 ;             |Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|  ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|Audio_Controller:AC1|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO                                                                                           ; Altera_UP_SYNC_FIFO                   ; work         ;
@@ -465,7 +467,7 @@ on the Quartus Prime software download page.
 ;          |Audio_Clock:Audio_Clock|                             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|Audio_Controller:AC1|Audio_Clock:Audio_Clock                                                                                                                                                                       ; Audio_Clock                           ; work         ;
 ;             |altpll:altpll_component|                          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|Audio_Controller:AC1|Audio_Clock:Audio_Clock|altpll:altpll_component                                                                                                                                               ; altpll                                ; work         ;
 ;                |Audio_Clock_altpll:auto_generated|             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|Audio_Controller:AC1|Audio_Clock:Audio_Clock|altpll:altpll_component|Audio_Clock_altpll:auto_generated                                                                                                             ; Audio_Clock_altpll                    ; work         ;
-;       |BPM_counter:B1|                                         ; 751 (83)            ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|BPM_counter:B1                                                                                                                                                                                                     ; BPM_counter                           ; work         ;
+;       |BPM_counter:B1|                                         ; 743 (75)            ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|BPM_counter:B1                                                                                                                                                                                                     ; BPM_counter                           ; work         ;
 ;          |lpm_divide:Div0|                                     ; 668 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|BPM_counter:B1|lpm_divide:Div0                                                                                                                                                                                     ; lpm_divide                            ; work         ;
 ;             |lpm_divide_vcm:auto_generated|                    ; 668 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|BPM_counter:B1|lpm_divide:Div0|lpm_divide_vcm:auto_generated                                                                                                                                                       ; lpm_divide_vcm                        ; work         ;
 ;                |sign_div_unsign_5nh:divider|                   ; 668 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|BPM_counter:B1|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider                                                                                                                           ; sign_div_unsign_5nh                   ; work         ;
@@ -584,7 +586,7 @@ on the Quartus Prime software download page.
 ;       |avconf:AVC1|                                            ; 97 (54)             ; 75 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|avconf:AVC1                                                                                                                                                                                                        ; avconf                                ; work         ;
 ;          |I2C_Controller:u0|                                   ; 43 (43)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|avconf:AVC1|I2C_Controller:u0                                                                                                                                                                                      ; I2C_Controller                        ; work         ;
 ;       |clkGen50MHz_781kHz:CG1|                                 ; 6 (6)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|clkGen50MHz_781kHz:CG1                                                                                                                                                                                             ; clkGen50MHz_781kHz                    ; work         ;
-;       |loop_counter:L1|                                        ; 34 (34)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|loop_counter:L1                                                                                                                                                                                                    ; loop_counter                          ; work         ;
+;       |loop_counter:L1|                                        ; 46 (46)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|audio_interface:A1|loop_counter:L1                                                                                                                                                                                                    ; loop_counter                          ; work         ;
 ;    |display_interface:D1|                                      ; 662 (325)           ; 267 (185)                 ; 2764800           ; 0          ; 0    ; 0            ; |step_sequencer|display_interface:D1                                                                                                                                                                                                                  ; display_interface                     ; work         ;
 ;       |vga_display:V1|                                         ; 337 (69)            ; 82 (44)                   ; 2764800           ; 0          ; 0    ; 0            ; |step_sequencer|display_interface:D1|vga_display:V1                                                                                                                                                                                                   ; vga_display                           ; work         ;
 ;          |vga_adapter:VGA|                                     ; 268 (2)             ; 38 (0)                    ; 2764800           ; 0          ; 0    ; 0            ; |step_sequencer|display_interface:D1|vga_display:V1|vga_adapter:VGA                                                                                                                                                                                   ; vga_adapter                           ; work         ;
@@ -599,7 +601,7 @@ on the Quartus Prime software download page.
 ;             |vga_pll:mypll|                                    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|display_interface:D1|vga_display:V1|vga_adapter:VGA|vga_pll:mypll                                                                                                                                                                     ; vga_pll                               ; work         ;
 ;                |altpll:altpll_component|                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|display_interface:D1|vga_display:V1|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component                                                                                                                                             ; altpll                                ; work         ;
 ;                   |altpll_80u:auto_generated|                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|display_interface:D1|vga_display:V1|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated                                                                                                                   ; altpll_80u                            ; work         ;
-;    |input_interface:I1|                                        ; 659 (60)            ; 187 (47)                  ; 0                 ; 2          ; 0    ; 0            ; |step_sequencer|input_interface:I1                                                                                                                                                                                                                    ; input_interface                       ; work         ;
+;    |input_interface:I1|                                        ; 675 (73)            ; 188 (48)                  ; 0                 ; 2          ; 0    ; 0            ; |step_sequencer|input_interface:I1                                                                                                                                                                                                                    ; input_interface                       ; work         ;
 ;       |PS2_Controller:P1|                                      ; 106 (7)             ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|PS2_Controller:P1                                                                                                                                                                                                  ; PS2_Controller                        ; work         ;
 ;          |Altera_UP_PS2_Command_Out:PS2_Command_Out|           ; 85 (85)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Command_Out:PS2_Command_Out                                                                                                                                                        ; Altera_UP_PS2_Command_Out             ; work         ;
 ;          |Altera_UP_PS2_Data_In:PS2_Data_In|                   ; 14 (14)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Data_In:PS2_Data_In                                                                                                                                                                ; Altera_UP_PS2_Data_In                 ; work         ;
@@ -623,7 +625,7 @@ on the Quartus Prime software download page.
 ;          |sevenseg:H3|                                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|bpm_input:BPM_IN|sevenseg:H3                                                                                                                                                                                       ; sevenseg                              ; work         ;
 ;          |sevenseg:H4|                                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|bpm_input:BPM_IN|sevenseg:H4                                                                                                                                                                                       ; sevenseg                              ; work         ;
 ;          |sevenseg:H5|                                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|bpm_input:BPM_IN|sevenseg:H5                                                                                                                                                                                       ; sevenseg                              ; work         ;
-;       |loop_input:LOOP_IN|                                     ; 128 (34)            ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN                                                                                                                                                                                                 ; loop_input                            ; work         ;
+;       |loop_input:LOOP_IN|                                     ; 129 (35)            ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN                                                                                                                                                                                                 ; loop_input                            ; work         ;
 ;          |lpm_divide:Div0|                                     ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|lpm_divide:Div0                                                                                                                                                                                 ; lpm_divide                            ; work         ;
 ;             |lpm_divide_4am:auto_generated|                    ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|lpm_divide:Div0|lpm_divide_4am:auto_generated                                                                                                                                                   ; lpm_divide_4am                        ; work         ;
 ;                |sign_div_unsign_akh:divider|                   ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                                                                                                                       ; sign_div_unsign_akh                   ; work         ;
@@ -634,7 +636,7 @@ on the Quartus Prime software download page.
 ;                   |alt_u_div_qse:divider|                      ; 42 (42)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|lpm_divide:Mod0|lpm_divide_72m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider                                                                                                 ; alt_u_div_qse                         ; work         ;
 ;          |sevenseg:S0|                                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|sevenseg:S0                                                                                                                                                                                     ; sevenseg                              ; work         ;
 ;          |sevenseg:S1|                                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|sevenseg:S1                                                                                                                                                                                     ; sevenseg                              ; work         ;
-;       |move_input:MOVE_IN|                                     ; 14 (14)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|move_input:MOVE_IN                                                                                                                                                                                                 ; move_input                            ; work         ;
+;       |move_input:MOVE_IN|                                     ; 16 (16)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |step_sequencer|input_interface:I1|move_input:MOVE_IN                                                                                                                                                                                                 ; move_input                            ; work         ;
 +----------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -869,7 +871,7 @@ Encoding Type:  One-Hot
 ; audio_interface:A1|Audio_Controller:AC1|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|right_audio_fifo_read_space[6,7]                                                                                                                              ; Lost fanout                                                                                                                                        ;
 ; audio_interface:A1|Audio_Controller:AC1|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|empty_dff                                     ; Lost fanout                                                                                                                                        ;
 ; audio_interface:A1|Audio_Controller:AC1|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|empty_dff                                    ; Lost fanout                                                                                                                                        ;
-; audio_interface:A1|loop_counter:L1|total_steps[0..3,11]                                                                                                                                                                                                     ; Stuck at GND due to stuck port data_in                                                                                                             ;
+; audio_interface:A1|loop_counter:L1|total_steps[0,1,11]                                                                                                                                                                                                      ; Stuck at GND due to stuck port data_in                                                                                                             ;
 ; input_interface:I1|PS2_Controller:P1|idle_counter[0..7]                                                                                                                                                                                                     ; Lost fanout                                                                                                                                        ;
 ; audio_interface:A1|Audio_Controller:AC1|done_adc_channel_sync                                                                                                                                                                                               ; Lost fanout                                                                                                                                        ;
 ; audio_interface:A1|Audio_Controller:AC1|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[1..32]                                                                                                                                      ; Lost fanout                                                                                                                                        ;
@@ -933,13 +935,8 @@ Encoding Type:  One-Hot
 ; audio_interface:A1|audio_generator_16b_signed:A1|waveform_generator_16b:W4|numerically_controlled_oscillator_16b:N1|phase_angle[0]                                                                                                                          ; Merged with audio_interface:A1|audio_generator_12b_unsigned:A2|waveform_generator_12b:W12|numerically_controlled_oscillator_12b:N1|phase_angle[0]  ;
 ; audio_interface:A1|audio_generator_12b_unsigned:A2|waveform_generator_12b:W12|numerically_controlled_oscillator_12b:N1|phase_angle[2]                                                                                                                       ; Merged with audio_interface:A1|audio_generator_12b_unsigned:A2|waveform_generator_12b:W12|numerically_controlled_oscillator_12b:N1|phase_angle[0]  ;
 ; audio_interface:A1|audio_generator_12b_unsigned:A2|waveform_generator_12b:W9|numerically_controlled_oscillator_12b:N1|phase_angle[0]                                                                                                                        ; Merged with audio_interface:A1|audio_generator_12b_unsigned:A2|waveform_generator_12b:W12|numerically_controlled_oscillator_12b:N1|phase_angle[0]  ;
-; audio_interface:A1|loop_counter:L1|total_steps[4]                                                                                                                                                                                                           ; Merged with audio_interface:A1|loop_counter:L1|Loops_latched[0]                                                                                    ;
-; audio_interface:A1|loop_counter:L1|Loops_latched[6]                                                                                                                                                                                                         ; Merged with audio_interface:A1|loop_counter:L1|total_steps[10]                                                                                     ;
-; audio_interface:A1|loop_counter:L1|Loops_latched[5]                                                                                                                                                                                                         ; Merged with audio_interface:A1|loop_counter:L1|total_steps[9]                                                                                      ;
-; audio_interface:A1|loop_counter:L1|Loops_latched[4]                                                                                                                                                                                                         ; Merged with audio_interface:A1|loop_counter:L1|total_steps[8]                                                                                      ;
-; audio_interface:A1|loop_counter:L1|Loops_latched[3]                                                                                                                                                                                                         ; Merged with audio_interface:A1|loop_counter:L1|total_steps[7]                                                                                      ;
-; audio_interface:A1|loop_counter:L1|Loops_latched[2]                                                                                                                                                                                                         ; Merged with audio_interface:A1|loop_counter:L1|total_steps[6]                                                                                      ;
-; audio_interface:A1|loop_counter:L1|Loops_latched[1]                                                                                                                                                                                                         ; Merged with audio_interface:A1|loop_counter:L1|total_steps[5]                                                                                      ;
+; audio_interface:A1|loop_counter:L1|total_steps[2]                                                                                                                                                                                                           ; Merged with audio_interface:A1|loop_counter:L1|Loops_latched[0]                                                                                    ;
+; input_interface:I1|led_play[1,2]                                                                                                                                                                                                                            ; Merged with input_interface:I1|led_play[0]                                                                                                         ;
 ; input_interface:I1|loop_input:LOOP_IN|break_code                                                                                                                                                                                                            ; Merged with input_interface:I1|bpm_input:BPM_IN|break_code                                                                                         ;
 ; input_interface:I1|move_input:MOVE_IN|break_code                                                                                                                                                                                                            ; Merged with input_interface:I1|bpm_input:BPM_IN|break_code                                                                                         ;
 ; display_interface:D1|vga_display:V1|color[4..8]                                                                                                                                                                                                             ; Merged with display_interface:D1|vga_display:V1|color[3]                                                                                           ;
@@ -1363,7 +1360,7 @@ Encoding Type:  One-Hot
 ; audio_interface:A1|DAC_controller:DC1|mode_reg[0,1]                                                                                                                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                             ;
 ; display_interface:D1|vga_display:V1|dx[5]                                                                                                                                                                                                                   ; Stuck at GND due to stuck port data_in                                                                                                             ;
 ; display_interface:D1|vga_display:V1|dy[5]                                                                                                                                                                                                                   ; Stuck at GND due to stuck port data_in                                                                                                             ;
-; Total Number of Removed Registers = 684                                                                                                                                                                                                                     ;                                                                                                                                                    ;
+; Total Number of Removed Registers = 678                                                                                                                                                                                                                     ;                                                                                                                                                    ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1421,12 +1418,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1193  ;
+; Total registers                              ; 1203  ;
 ; Number of registers using Synchronous Clear  ; 348   ;
 ; Number of registers using Synchronous Load   ; 2     ;
-; Number of registers using Asynchronous Clear ; 791   ;
+; Number of registers using Asynchronous Clear ; 800   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 338   ;
+; Number of registers using Clock Enable       ; 346   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1465,42 +1462,42 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|Direction[3]                                                                                                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[3]                                                     ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |step_sequencer|display_interface:D1|vga_display:V1|vga_adapter:VGA|vga_controller:controller|yCounter[9]                                                   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[7]                                                    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|Command                                                                                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[4]                                                     ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |step_sequencer|display_interface:D1|vga_display:V1|vga_adapter:VGA|vga_controller:controller|yCounter[0]                                                   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[3]                                                    ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |step_sequencer|audio_interface:A1|DAC_controller:DC1|data_reg[10]                                                                                          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |step_sequencer|audio_interface:A1|DAC_controller:DC1|mode_reg[0]                                                                                           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |step_sequencer|audio_interface:A1|DAC_controller:DC1|mode_reg[1]                                                                                           ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |step_sequencer|audio_interface:A1|DAC_controller:DC1|data_reg[7]                                                                                           ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |step_sequencer|audio_interface:A1|loop_counter:L1|Q[3]                                                                                                     ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |step_sequencer|audio_interface:A1|audio_generator_16b_signed:A1|Out[7]                                                                                     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |step_sequencer|display_interface:D1|count[0]                                                                                                               ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |step_sequencer|audio_interface:A1|loop_counter:L1|Q[5]                                                                                                     ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |step_sequencer|audio_interface:A1|audio_generator_16b_signed:A1|Out[15]                                                                                    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |step_sequencer|display_interface:D1|count[1]                                                                                                               ;
 ; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[13]                                 ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[2]                                           ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[5]                                           ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[1]                                                   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[2]                                                        ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[5]                                          ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |step_sequencer|audio_interface:A1|BPM_counter:B1|Q[0]                                                                                                      ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |step_sequencer|audio_interface:A1|Audio_Controller:AC1|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[17]                          ;
-; 13:1               ; 12 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |step_sequencer|display_interface:D1|select_note[6]                                                                                                         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|num2[1]                                                                                               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0]                                                        ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[3]                                          ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |step_sequencer|audio_interface:A1|BPM_counter:B1|Q[12]                                                                                                     ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |step_sequencer|audio_interface:A1|Audio_Controller:AC1|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[26]                          ;
+; 13:1               ; 12 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |step_sequencer|display_interface:D1|select_note[7]                                                                                                         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|num2[0]                                                                                               ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; Yes        ; |step_sequencer|audio_interface:A1|DAC_controller:DC1|SDA_i_buff[5]                                                                                         ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |step_sequencer|audio_interface:A1|DAC_controller:DC1|SDA_i_buff[2]                                                                                         ;
-; 18:1               ; 4 bits    ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |step_sequencer|display_interface:D1|grid_x[1]                                                                                                              ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |step_sequencer|audio_interface:A1|DAC_controller:DC1|SDA_i_buff[3]                                                                                         ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |step_sequencer|display_interface:D1|grid_x[0]                                                                                                              ;
 ; 18:1               ; 4 bits    ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |step_sequencer|display_interface:D1|grid_y[0]                                                                                                              ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 0 LEs                ; 21 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|Loops[3]                                                                                              ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|num1[0]                                                                                               ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|bpm_input:BPM_IN|BPM[0]                                                                                                  ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|bpm_input:BPM_IN|num3[0]                                                                                                 ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|bpm_input:BPM_IN|num2[2]                                                                                                 ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|bpm_input:BPM_IN|num1[0]                                                                                                 ;
-; 259:1              ; 4 bits    ; 688 LEs       ; 64 LEs               ; 624 LEs                ; Yes        ; |step_sequencer|input_interface:I1|move_input:MOVE_IN|Direction[0]                                                                                          ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |step_sequencer|audio_interface:A1|avconf:AVC1|I2C_Controller:u0|SD_COUNTER[0]                                                                              ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 0 LEs                ; 21 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|Loops[2]                                                                                              ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|num1[1]                                                                                               ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|bpm_input:BPM_IN|BPM[5]                                                                                                  ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|bpm_input:BPM_IN|num3[1]                                                                                                 ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |step_sequencer|input_interface:I1|bpm_input:BPM_IN|num2[3]                                                                                                 ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |step_sequencer|input_interface:I1|bpm_input:BPM_IN|num1[2]                                                                                                 ;
+; 259:1              ; 4 bits    ; 688 LEs       ; 64 LEs               ; 624 LEs                ; Yes        ; |step_sequencer|input_interface:I1|move_input:MOVE_IN|Direction[3]                                                                                          ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |step_sequencer|audio_interface:A1|avconf:AVC1|I2C_Controller:u0|SD_COUNTER[1]                                                                              ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |step_sequencer|display_interface:D1|vga_display:V1|dy                                                                                                      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |step_sequencer|display_interface:D1|vga_display:V1|grid_x                                                                                                  ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 27 LEs               ; 0 LEs                  ; No         ; |step_sequencer|display_interface:D1|vga_display:V1|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_rlm1:auto_generated|mux_khb:mux3|l3_w3_n4_mux_dataout ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|next_state.IDLE                                                                                       ;
-; 33:1               ; 9 bits    ; 198 LEs       ; 198 LEs              ; 0 LEs                  ; No         ; |step_sequencer|display_interface:D1|vga_display:V1|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_rlm1:auto_generated|mux_khb:mux3|l6_w6_n0_mux_dataout ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 27 LEs               ; 0 LEs                  ; No         ; |step_sequencer|display_interface:D1|vga_display:V1|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_rlm1:auto_generated|mux_khb:mux3|l3_w7_n4_mux_dataout ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |step_sequencer|input_interface:I1|loop_input:LOOP_IN|next_state.INPUT1                                                                                     ;
+; 33:1               ; 9 bits    ; 198 LEs       ; 198 LEs              ; 0 LEs                  ; No         ; |step_sequencer|display_interface:D1|vga_display:V1|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_rlm1:auto_generated|mux_khb:mux3|l6_w1_n0_mux_dataout ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -5463,36 +5460,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1193                        ;
-;     CLR               ; 606                         ;
+; arriav_ff             ; 1203                        ;
+;     CLR               ; 607                         ;
 ;     CLR SCLR          ; 70                          ;
 ;     CLR SLD           ; 1                           ;
 ;     ENA               ; 87                          ;
-;     ENA CLR           ; 92                          ;
+;     ENA CLR           ; 100                         ;
 ;     ENA CLR SCLR      ; 22                          ;
 ;     ENA SCLR          ; 137                         ;
 ;     SCLR              ; 118                         ;
 ;     SCLR SLD          ; 1                           ;
-;     plain             ; 59                          ;
+;     plain             ; 60                          ;
 ; arriav_io_obuf        ; 8                           ;
-; arriav_lcell_comb     ; 3437                        ;
-;     arith             ; 1482                        ;
-;         0 data inputs ; 95                          ;
-;         1 data inputs ; 637                         ;
-;         2 data inputs ; 97                          ;
+; arriav_lcell_comb     ; 3458                        ;
+;     arith             ; 1492                        ;
+;         0 data inputs ; 96                          ;
+;         1 data inputs ; 640                         ;
+;         2 data inputs ; 103                         ;
 ;         3 data inputs ; 134                         ;
 ;         4 data inputs ; 362                         ;
 ;         5 data inputs ; 157                         ;
-;     extend            ; 6                           ;
-;         7 data inputs ; 6                           ;
-;     normal            ; 1868                        ;
+;     extend            ; 5                           ;
+;         7 data inputs ; 5                           ;
+;     normal            ; 1880                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 48                          ;
-;         2 data inputs ; 303                         ;
-;         3 data inputs ; 415                         ;
-;         4 data inputs ; 391                         ;
-;         5 data inputs ; 265                         ;
-;         6 data inputs ; 444                         ;
+;         2 data inputs ; 311                         ;
+;         3 data inputs ; 420                         ;
+;         4 data inputs ; 386                         ;
+;         5 data inputs ; 268                         ;
+;         6 data inputs ; 445                         ;
 ;     shared            ; 81                          ;
 ;         0 data inputs ; 11                          ;
 ;         1 data inputs ; 34                          ;
@@ -5505,7 +5502,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 742                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 76.20                       ;
-; Average LUT depth     ; 15.51                       ;
+; Average LUT depth     ; 15.44                       ;
 +-----------------------+-----------------------------+
 
 
@@ -5514,7 +5511,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:13     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -5524,7 +5521,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Thu Nov 20 11:52:10 2025
+    Info: Processing started: Thu Nov 20 18:45:27 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off step_sequencer -c step_sequencer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -5598,7 +5595,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file audio_i
 Info (12021): Found 1 design units, including 1 entities, in source file modules/rom/rom256x12.v
     Info (12023): Found entity 1: rom256x12 File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/rom/rom256x12.v Line: 40
 Info (12127): Elaborating entity "step_sequencer" for the top level hierarchy
-Info (12128): Elaborating entity "audio_interface" for hierarchy "audio_interface:A1" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 86
+Info (12128): Elaborating entity "audio_interface" for hierarchy "audio_interface:A1" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 102
 Info (12128): Elaborating entity "BPM_counter" for hierarchy "audio_interface:A1|BPM_counter:B1" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/audio_interface.v Line: 92
 Info (12128): Elaborating entity "loop_counter" for hierarchy "audio_interface:A1|loop_counter:L1" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/audio_interface.v Line: 101
 Warning (10230): Verilog HDL assignment warning at loop_counter.v(81): truncated value with size 32 to match size of target (12) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/audio_generators/loop_counter.v Line: 81
@@ -5775,12 +5772,11 @@ Info (10264): Verilog HDL Case Statement information at DAC_controller.v(200): a
 Info (10264): Verilog HDL Case Statement information at DAC_controller.v(206): all case item expressions in this case statement are onehot File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/dac_controller/DAC_controller.v Line: 206
 Warning (10230): Verilog HDL assignment warning at DAC_controller.v(233): truncated value with size 9 to match size of target (8) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/dac_controller/DAC_controller.v Line: 233
 Warning (10030): Net "SCL_d" at DAC_controller.v(87) has no driver or initial value, using a default initial value '0' File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/dac_controller/DAC_controller.v Line: 87
-Info (12128): Elaborating entity "input_interface" for hierarchy "input_interface:I1" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 112
-Info (10264): Verilog HDL Case Statement information at input_interface.v(231): all case item expressions in this case statement are onehot File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/input_interface.v Line: 231
-Info (12128): Elaborating entity "PS2_Controller" for hierarchy "input_interface:I1|PS2_Controller:P1" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/input_interface.v Line: 162
+Info (12128): Elaborating entity "input_interface" for hierarchy "input_interface:I1" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 128
+Info (12128): Elaborating entity "PS2_Controller" for hierarchy "input_interface:I1|PS2_Controller:P1" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/input_interface.v Line: 165
 Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Data_In:PS2_Data_In" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/PS2_controller/PS2_Controller.v Line: 246
 Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "input_interface:I1|PS2_Controller:P1|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/PS2_controller/PS2_Controller.v Line: 266
-Info (12128): Elaborating entity "loop_input" for hierarchy "input_interface:I1|loop_input:LOOP_IN" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/input_interface.v Line: 174
+Info (12128): Elaborating entity "loop_input" for hierarchy "input_interface:I1|loop_input:LOOP_IN" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/input_interface.v Line: 177
 Warning (10230): Verilog HDL assignment warning at loop_input.v(108): truncated value with size 32 to match size of target (7) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/input_controllers/loop_input.v Line: 108
 Warning (10230): Verilog HDL assignment warning at loop_input.v(126): truncated value with size 32 to match size of target (7) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/input_controllers/loop_input.v Line: 126
 Warning (10230): Verilog HDL assignment warning at loop_input.v(139): truncated value with size 32 to match size of target (7) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/input_controllers/loop_input.v Line: 139
@@ -5788,7 +5784,7 @@ Warning (10230): Verilog HDL assignment warning at loop_input.v(179): truncated 
 Warning (10230): Verilog HDL assignment warning at loop_input.v(181): truncated value with size 32 to match size of target (4) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/input_controllers/loop_input.v Line: 181
 Warning (10230): Verilog HDL assignment warning at loop_input.v(182): truncated value with size 32 to match size of target (4) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/input_controllers/loop_input.v Line: 182
 Info (12128): Elaborating entity "sevenseg" for hierarchy "input_interface:I1|loop_input:LOOP_IN|sevenseg:S0" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/input_controllers/loop_input.v Line: 183
-Info (12128): Elaborating entity "bpm_input" for hierarchy "input_interface:I1|bpm_input:BPM_IN" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/input_interface.v Line: 187
+Info (12128): Elaborating entity "bpm_input" for hierarchy "input_interface:I1|bpm_input:BPM_IN" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/input_interface.v Line: 190
 Warning (10230): Verilog HDL assignment warning at bpm_input.v(118): truncated value with size 32 to match size of target (10) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/input_controllers/bpm_input.v Line: 118
 Warning (10230): Verilog HDL assignment warning at bpm_input.v(138): truncated value with size 32 to match size of target (10) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/input_controllers/bpm_input.v Line: 138
 Warning (10230): Verilog HDL assignment warning at bpm_input.v(158): truncated value with size 32 to match size of target (10) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/input_controllers/bpm_input.v Line: 158
@@ -5797,8 +5793,8 @@ Warning (10230): Verilog HDL assignment warning at bpm_input.v(211): truncated v
 Warning (10230): Verilog HDL assignment warning at bpm_input.v(213): truncated value with size 32 to match size of target (4) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/input_controllers/bpm_input.v Line: 213
 Warning (10230): Verilog HDL assignment warning at bpm_input.v(214): truncated value with size 32 to match size of target (4) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/input_controllers/bpm_input.v Line: 214
 Warning (10230): Verilog HDL assignment warning at bpm_input.v(215): truncated value with size 32 to match size of target (4) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/modules/input_controllers/bpm_input.v Line: 215
-Info (12128): Elaborating entity "move_input" for hierarchy "input_interface:I1|move_input:MOVE_IN" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/input_interface.v Line: 198
-Info (12128): Elaborating entity "display_interface" for hierarchy "display_interface:D1" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 132
+Info (12128): Elaborating entity "move_input" for hierarchy "input_interface:I1|move_input:MOVE_IN" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/input_interface.v Line: 201
+Info (12128): Elaborating entity "display_interface" for hierarchy "display_interface:D1" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 148
 Warning (10230): Verilog HDL assignment warning at display_interface.v(48): truncated value with size 32 to match size of target (10) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/display_interface.v Line: 48
 Warning (10230): Verilog HDL assignment warning at display_interface.v(49): truncated value with size 32 to match size of target (9) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/display_interface.v Line: 49
 Warning (10230): Verilog HDL assignment warning at display_interface.v(110): truncated value with size 32 to match size of target (4) File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/display_interface.v Line: 110
@@ -6018,12 +6014,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX2[4]" is stuck at VCC File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 9
     Warning (13410): Pin "HEX2[5]" is stuck at VCC File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 9
     Warning (13410): Pin "HEX2[6]" is stuck at VCC File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 9
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 13
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 13
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 13
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 13
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 13
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 13
     Warning (13410): Pin "DAC_I2C_A0" is stuck at GND File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 20
     Warning (13410): Pin "VGA_R[0]" is stuck at GND File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 22
     Warning (13410): Pin "VGA_R[1]" is stuck at GND File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 22
@@ -6045,19 +6035,19 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 4
     Warning (15610): No output dependent on input pin "KEY[2]" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 4
     Warning (15610): No output dependent on input pin "KEY[3]" File: D:/GitHub/ECE241-Project/Quartus/step_sequencer/step_sequencer.v Line: 4
-Info (21057): Implemented 4410 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4431 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 86 output pins
     Info (21060): Implemented 7 bidirectional pins
-    Info (21061): Implemented 3566 logic cells
+    Info (21061): Implemented 3587 logic cells
     Info (21064): Implemented 742 RAM segments
     Info (21065): Implemented 2 PLLs
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 143 warnings
-    Info: Peak virtual memory: 5044 megabytes
-    Info: Processing ended: Thu Nov 20 11:52:45 2025
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:47
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 137 warnings
+    Info: Peak virtual memory: 5048 megabytes
+    Info: Processing ended: Thu Nov 20 18:45:39 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+

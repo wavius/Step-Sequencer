@@ -104,6 +104,7 @@ module bpm_input (
         end
         else if (data_en && !break_code) 
         begin
+            BPM <= num3*100 + num2*10 + num1;
             case (current_state)
                 IDLE: 
                 begin
@@ -112,10 +113,6 @@ module bpm_input (
                         num1 <= decodeDigit(data);
                         num2 <= 0;
                         num3 <= 0;
-                    end
-                    else if (data == ENTER)
-                    begin
-                        BPM <= num3*100 + num2*10 + num1;
                     end
                 end
 

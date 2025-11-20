@@ -1,5 +1,5 @@
 Timing Analyzer report for step_sequencer
-Thu Nov 20 11:57:18 2025
+Thu Nov 20 18:49:33 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -102,20 +102,20 @@ on the Quartus Prime software download page.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 3.59        ;
+; Average used               ; 3.65        ;
 ; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  30.4%      ;
-;     Processor 3            ;  29.8%      ;
-;     Processor 4            ;  29.2%      ;
-;     Processor 5            ;  28.2%      ;
-;     Processor 6            ;  28.2%      ;
-;     Processor 7            ;  28.2%      ;
-;     Processor 8            ;  28.2%      ;
-;     Processor 9            ;  28.2%      ;
-;     Processor 10           ;  28.2%      ;
+;     Processor 2            ;  30.9%      ;
+;     Processor 3            ;  30.4%      ;
+;     Processor 4            ;  30.2%      ;
+;     Processor 5            ;  28.9%      ;
+;     Processor 6            ;  28.9%      ;
+;     Processor 7            ;  28.9%      ;
+;     Processor 8            ;  28.9%      ;
+;     Processor 9            ;  28.9%      ;
+;     Processor 10           ;  28.9%      ;
 +----------------------------+-------------+
 
 
@@ -139,11 +139,11 @@ on the Quartus Prime software download page.
 +------------+-----------------+----------------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                             ; Note ;
 +------------+-----------------+----------------------------------------------------------------------------------------+------+
-; 16.0 MHz   ; 16.0 MHz        ; CLOCK_50                                                                               ;      ;
-; 80.23 MHz  ; 80.23 MHz       ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 310.85 MHz ; 310.85 MHz      ; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ;      ;
-; 350.88 MHz ; 350.88 MHz      ; audio_interface:A1|BPM_counter:B1|Step                                                 ;      ;
-; 431.59 MHz ; 431.59 MHz      ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ;      ;
+; 15.68 MHz  ; 15.68 MHz       ; CLOCK_50                                                                               ;      ;
+; 70.76 MHz  ; 70.76 MHz       ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 305.25 MHz ; 305.25 MHz      ; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ;      ;
+; 340.72 MHz ; 340.72 MHz      ; audio_interface:A1|BPM_counter:B1|Step                                                 ;      ;
+; 469.7 MHz  ; 469.7 MHz       ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ;      ;
 +------------+-----------------+----------------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -159,11 +159,11 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                  ; Slack   ; End Point TNS ;
 +----------------------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                                               ; -42.507 ; -923.118      ;
-; audio_interface:A1|BPM_counter:B1|Step                                                 ; -4.010  ; -58.673       ;
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -2.217  ; -120.050      ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -1.317  ; -2.948        ;
-; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 27.536  ; 0.000         ;
+; CLOCK_50                                                                               ; -43.778 ; -917.959      ;
+; audio_interface:A1|BPM_counter:B1|Step                                                 ; -4.409  ; -63.584       ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -2.276  ; -131.172      ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -1.129  ; -4.145        ;
+; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 25.867  ; 0.000         ;
 +----------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -172,11 +172,11 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                  ; Slack ; End Point TNS ;
 +----------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                               ; 0.094 ; 0.000         ;
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 0.378 ; 0.000         ;
-; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.429 ; 0.000         ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 0.568 ; 0.000         ;
-; audio_interface:A1|BPM_counter:B1|Step                                                 ; 0.581 ; 0.000         ;
+; CLOCK_50                                                                               ; 0.130 ; 0.000         ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 0.256 ; 0.000         ;
+; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.391 ; 0.000         ;
+; audio_interface:A1|BPM_counter:B1|Step                                                 ; 0.774 ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 0.796 ; 0.000         ;
 +----------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -185,8 +185,8 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------------------+--------+---------------+
 ; Clock                                                      ; Slack  ; End Point TNS ;
 +------------------------------------------------------------+--------+---------------+
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; -2.869 ; -8.597        ;
-; CLOCK_50                                                   ; 15.879 ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; -3.010 ; -12.027       ;
+; CLOCK_50                                                   ; 15.722 ; 0.000         ;
 +------------------------------------------------------------+--------+---------------+
 
 
@@ -195,8 +195,8 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------------------+-------+---------------+
 ; Clock                                                      ; Slack ; End Point TNS ;
 +------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                   ; 1.067 ; 0.000         ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; 2.361 ; 0.000         ;
+; CLOCK_50                                                   ; 1.177 ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; 2.513 ; 0.000         ;
 +------------------------------------------------------------+-------+---------------+
 
 
@@ -205,9 +205,9 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                  ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------------+--------+---------------+
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -0.394 ; -37.708       ;
-; audio_interface:A1|BPM_counter:B1|Step                                                 ; -0.394 ; -9.802        ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -0.394 ; -1.698        ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -0.394 ; -36.652       ;
+; audio_interface:A1|BPM_counter:B1|Step                                                 ; -0.394 ; -10.127       ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -0.394 ; -2.104        ;
 ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; CLOCK_50                                                                               ; 8.858  ; 0.000         ;
 ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.757 ; 0.000         ;
@@ -221,7 +221,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 33
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 32.958 ns
+Worst Case Available Settling Time: 33.099 ns
 
 
 
@@ -231,11 +231,11 @@ Worst Case Available Settling Time: 32.958 ns
 +------------+-----------------+----------------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                             ; Note ;
 +------------+-----------------+----------------------------------------------------------------------------------------+------+
-; 15.74 MHz  ; 15.74 MHz       ; CLOCK_50                                                                               ;      ;
-; 83.63 MHz  ; 83.63 MHz       ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 314.37 MHz ; 314.37 MHz      ; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ;      ;
-; 356.89 MHz ; 356.89 MHz      ; audio_interface:A1|BPM_counter:B1|Step                                                 ;      ;
-; 443.07 MHz ; 443.07 MHz      ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ;      ;
+; 15.5 MHz   ; 15.5 MHz        ; CLOCK_50                                                                               ;      ;
+; 73.64 MHz  ; 73.64 MHz       ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 308.45 MHz ; 308.45 MHz      ; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ;      ;
+; 344.59 MHz ; 344.59 MHz      ; audio_interface:A1|BPM_counter:B1|Step                                                 ;      ;
+; 469.04 MHz ; 469.04 MHz      ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ;      ;
 +------------+-----------------+----------------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -245,11 +245,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                  ; Slack   ; End Point TNS ;
 +----------------------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                                               ; -43.526 ; -936.539      ;
-; audio_interface:A1|BPM_counter:B1|Step                                                 ; -4.188  ; -61.152       ;
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -2.181  ; -116.147      ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -1.257  ; -2.878        ;
-; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 28.043  ; 0.000         ;
+; CLOCK_50                                                                               ; -44.519 ; -928.903      ;
+; audio_interface:A1|BPM_counter:B1|Step                                                 ; -4.521  ; -65.847       ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -2.242  ; -128.270      ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -1.132  ; -4.156        ;
+; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 26.420  ; 0.000         ;
 +----------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -258,11 +258,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                  ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                               ; -0.262 ; -0.764        ;
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 0.379  ; 0.000         ;
-; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.397  ; 0.000         ;
-; audio_interface:A1|BPM_counter:B1|Step                                                 ; 0.527  ; 0.000         ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 0.552  ; 0.000         ;
+; CLOCK_50                                                                               ; -0.210 ; -0.210        ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 0.240  ; 0.000         ;
+; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.358  ; 0.000         ;
+; audio_interface:A1|BPM_counter:B1|Step                                                 ; 0.717  ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 0.758  ; 0.000         ;
 +----------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -271,8 +271,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------------+--------+---------------+
 ; Clock                                                      ; Slack  ; End Point TNS ;
 +------------------------------------------------------------+--------+---------------+
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; -2.943 ; -8.819        ;
-; CLOCK_50                                                   ; 16.050 ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; -3.133 ; -12.519       ;
+; CLOCK_50                                                   ; 15.831 ; 0.000         ;
 +------------------------------------------------------------+--------+---------------+
 
 
@@ -281,8 +281,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------------+-------+---------------+
 ; Clock                                                      ; Slack ; End Point TNS ;
 +------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                   ; 1.001 ; 0.000         ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; 2.449 ; 0.000         ;
+; CLOCK_50                                                   ; 1.122 ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; 2.641 ; 0.000         ;
 +------------------------------------------------------------+-------+---------------+
 
 
@@ -291,12 +291,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                  ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------------+--------+---------------+
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -0.394 ; -36.711       ;
-; audio_interface:A1|BPM_counter:B1|Step                                                 ; -0.394 ; -9.470        ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -0.394 ; -1.689        ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -0.394 ; -36.259       ;
+; audio_interface:A1|BPM_counter:B1|Step                                                 ; -0.394 ; -9.874        ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -0.394 ; -2.076        ;
 ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; CLOCK_50                                                                               ; 8.807  ; 0.000         ;
-; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.735 ; 0.000         ;
+; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.730 ; 0.000         ;
 +----------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -307,7 +307,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 33
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 33.051 ns
+Worst Case Available Settling Time: 33.330 ns
 
 
 
@@ -317,11 +317,11 @@ Worst Case Available Settling Time: 33.051 ns
 +----------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                  ; Slack   ; End Point TNS ;
 +----------------------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                                               ; -14.696 ; -354.521      ;
-; audio_interface:A1|BPM_counter:B1|Step                                                 ; -1.937  ; -28.396       ;
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -1.038  ; -51.087       ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -0.479  ; -0.878        ;
-; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 31.071  ; 0.000         ;
+; CLOCK_50                                                                               ; -15.953 ; -360.323      ;
+; audio_interface:A1|BPM_counter:B1|Step                                                 ; -2.273  ; -31.755       ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -1.134  ; -55.425       ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -0.374  ; -1.238        ;
+; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 29.925  ; 0.000         ;
 +----------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -330,11 +330,11 @@ Worst Case Available Settling Time: 33.051 ns
 +----------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                  ; Slack ; End Point TNS ;
 +----------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                               ; 0.104 ; 0.000         ;
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 0.136 ; 0.000         ;
-; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.239 ; 0.000         ;
-; audio_interface:A1|BPM_counter:B1|Step                                                 ; 0.272 ; 0.000         ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 0.288 ; 0.000         ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 0.084 ; 0.000         ;
+; CLOCK_50                                                                               ; 0.131 ; 0.000         ;
+; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.242 ; 0.000         ;
+; audio_interface:A1|BPM_counter:B1|Step                                                 ; 0.316 ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 0.426 ; 0.000         ;
 +----------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -343,8 +343,8 @@ Worst Case Available Settling Time: 33.051 ns
 +------------------------------------------------------------+--------+---------------+
 ; Clock                                                      ; Slack  ; End Point TNS ;
 +------------------------------------------------------------+--------+---------------+
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; -1.304 ; -3.908        ;
-; CLOCK_50                                                   ; 17.073 ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; -1.368 ; -5.468        ;
+; CLOCK_50                                                   ; 17.212 ; 0.000         ;
 +------------------------------------------------------------+--------+---------------+
 
 
@@ -353,8 +353,8 @@ Worst Case Available Settling Time: 33.051 ns
 +------------------------------------------------------------+-------+---------------+
 ; Clock                                                      ; Slack ; End Point TNS ;
 +------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                   ; 0.599 ; 0.000         ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; 1.212 ; 0.000         ;
+; CLOCK_50                                                   ; 0.656 ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; 1.265 ; 0.000         ;
 +------------------------------------------------------------+-------+---------------+
 
 
@@ -363,9 +363,9 @@ Worst Case Available Settling Time: 33.051 ns
 +----------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                  ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------------+--------+---------------+
-; audio_interface:A1|BPM_counter:B1|Step                                                 ; -0.048 ; -0.108        ;
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -0.004 ; -0.039        ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 0.133  ; 0.000         ;
+; audio_interface:A1|BPM_counter:B1|Step                                                 ; -0.082 ; -0.476        ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 0.048  ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 0.108  ; 0.000         ;
 ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; CLOCK_50                                                                               ; 8.789  ; 0.000         ;
 ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.876 ; 0.000         ;
@@ -379,7 +379,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 33
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 35.359 ns
+Worst Case Available Settling Time: 35.245 ns
 
 
 
@@ -389,11 +389,11 @@ Worst Case Available Settling Time: 35.359 ns
 +----------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                  ; Slack   ; End Point TNS ;
 +----------------------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                                               ; -12.631 ; -301.624      ;
-; audio_interface:A1|BPM_counter:B1|Step                                                 ; -1.899  ; -27.789       ;
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -0.903  ; -42.837       ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -0.374  ; -0.680        ;
-; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 32.216  ; 0.000         ;
+; CLOCK_50                                                                               ; -13.689 ; -306.485      ;
+; audio_interface:A1|BPM_counter:B1|Step                                                 ; -2.176  ; -30.715       ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -0.986  ; -47.999       ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -0.286  ; -0.946        ;
+; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 31.244  ; 0.000         ;
 +----------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -402,11 +402,11 @@ Worst Case Available Settling Time: 35.359 ns
 +----------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                  ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                               ; -0.090 ; -0.809        ;
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 0.126  ; 0.000         ;
+; CLOCK_50                                                                               ; -0.052 ; -0.197        ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 0.064  ; 0.000         ;
 ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.220  ; 0.000         ;
-; audio_interface:A1|BPM_counter:B1|Step                                                 ; 0.230  ; 0.000         ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 0.258  ; 0.000         ;
+; audio_interface:A1|BPM_counter:B1|Step                                                 ; 0.288  ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 0.377  ; 0.000         ;
 +----------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -415,8 +415,8 @@ Worst Case Available Settling Time: 35.359 ns
 +------------------------------------------------------------+--------+---------------+
 ; Clock                                                      ; Slack  ; End Point TNS ;
 +------------------------------------------------------------+--------+---------------+
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; -1.276 ; -3.824        ;
-; CLOCK_50                                                   ; 17.417 ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; -1.351 ; -5.400        ;
+; CLOCK_50                                                   ; 17.468 ; 0.000         ;
 +------------------------------------------------------------+--------+---------------+
 
 
@@ -425,8 +425,8 @@ Worst Case Available Settling Time: 35.359 ns
 +------------------------------------------------------------+-------+---------------+
 ; Clock                                                      ; Slack ; End Point TNS ;
 +------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                   ; 0.543 ; 0.000         ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; 1.197 ; 0.000         ;
+; CLOCK_50                                                   ; 0.584 ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; 1.264 ; 0.000         ;
 +------------------------------------------------------------+-------+---------------+
 
 
@@ -435,11 +435,11 @@ Worst Case Available Settling Time: 35.359 ns
 +----------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                  ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------------+--------+---------------+
-; audio_interface:A1|BPM_counter:B1|Step                                                 ; 0.001  ; 0.000         ;
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 0.037  ; 0.000         ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 0.135  ; 0.000         ;
+; audio_interface:A1|BPM_counter:B1|Step                                                 ; -0.021 ; -0.059        ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 0.073  ; 0.000         ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 0.123  ; 0.000         ;
 ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                               ; 8.781  ; 0.000         ;
+; CLOCK_50                                                                               ; 8.783  ; 0.000         ;
 ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.880 ; 0.000         ;
 +----------------------------------------------------------------------------------------+--------+---------------+
 
@@ -451,7 +451,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 33
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 35.818 ns
+Worst Case Available Settling Time: 35.723 ns
 
 
 
@@ -461,20 +461,20 @@ Worst Case Available Settling Time: 35.818 ns
 +-----------------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 ; Clock                                                                                   ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +-----------------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                                        ; -43.526   ; -0.262 ; -2.943   ; 0.543   ; -0.394              ;
-;  CLOCK_50                                                                               ; -43.526   ; -0.262 ; 15.879   ; 0.543   ; 8.781               ;
+; Worst-case Slack                                                                        ; -44.519   ; -0.210 ; -3.133   ; 0.584   ; -0.394              ;
+;  CLOCK_50                                                                               ; -44.519   ; -0.210 ; 15.722   ; 0.584   ; 8.783               ;
 ;  D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 1.666               ;
-;  D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 27.536    ; 0.220  ; N/A      ; N/A     ; 18.735              ;
-;  audio_interface:A1|BPM_counter:B1|Step                                                 ; -4.188    ; 0.230  ; N/A      ; N/A     ; -0.394              ;
-;  audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -1.317    ; 0.258  ; -2.943   ; 1.197   ; -0.394              ;
-;  audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -2.217    ; 0.126  ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS                                                                         ; -1116.716 ; -0.809 ; -8.819   ; 0.0     ; -49.208             ;
-;  CLOCK_50                                                                               ; -936.539  ; -0.809 ; 0.000    ; 0.000   ; 0.000               ;
+;  D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 25.867    ; 0.220  ; N/A      ; N/A     ; 18.730              ;
+;  audio_interface:A1|BPM_counter:B1|Step                                                 ; -4.521    ; 0.288  ; N/A      ; N/A     ; -0.394              ;
+;  audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -1.132    ; 0.377  ; -3.133   ; 1.264   ; -0.394              ;
+;  audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -2.276    ; 0.064  ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS                                                                         ; -1127.176 ; -0.21  ; -12.519  ; 0.0     ; -48.883             ;
+;  CLOCK_50                                                                               ; -928.903  ; -0.210 ; 0.000    ; 0.000   ; 0.000               ;
 ;  D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 0.000               ;
 ;  D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.000     ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-;  audio_interface:A1|BPM_counter:B1|Step                                                 ; -61.152   ; 0.000  ; N/A      ; N/A     ; -9.802              ;
-;  audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -2.948    ; 0.000  ; -8.819   ; 0.000   ; -1.698              ;
-;  audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -120.050  ; 0.000  ; N/A      ; N/A     ; -37.708             ;
+;  audio_interface:A1|BPM_counter:B1|Step                                                 ; -65.847   ; 0.000  ; N/A      ; N/A     ; -10.127             ;
+;  audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; -4.156    ; 0.000  ; -12.519  ; 0.000   ; -2.104              ;
+;  audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; -131.172  ; 0.000  ; N/A      ; N/A     ; -36.652             ;
 +-----------------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 
 
@@ -1008,15 +1008,15 @@ Worst Case Available Settling Time: 35.818 ns
 +----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                                             ; To Clock                                                                               ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+--------------+----------+----------+----------+
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 769          ; 0        ; 0        ; 0        ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 779          ; 0        ; 0        ; 0        ;
 ; audio_interface:A1|BPM_counter:B1|Step                                                 ; audio_interface:A1|BPM_counter:B1|Step                                                 ; 107          ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                               ; audio_interface:A1|BPM_counter:B1|Step                                                 ; 160          ; 0        ; 0        ; 0        ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 6            ; 0        ; 0        ; 0        ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 9            ; 0        ; 0        ; 0        ;
 ; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; CLOCK_50                                                                               ; 1            ; 1        ; 0        ; 0        ;
 ; audio_interface:A1|BPM_counter:B1|Step                                                 ; CLOCK_50                                                                               ; 1884400578   ; 1        ; 0        ; 0        ;
 ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; CLOCK_50                                                                               ; 46           ; 4        ; 0        ; 0        ;
 ; CLOCK_50                                                                               ; CLOCK_50                                                                               ; > 2147483647 ; 0        ; 0        ; 0        ;
-; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 95444        ; 0        ; 0        ; 0        ;
+; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 95394        ; 0        ; 0        ; 0        ;
 +----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1026,15 +1026,15 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                                             ; To Clock                                                                               ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+--------------+----------+----------+----------+
-; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 769          ; 0        ; 0        ; 0        ;
+; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; 779          ; 0        ; 0        ; 0        ;
 ; audio_interface:A1|BPM_counter:B1|Step                                                 ; audio_interface:A1|BPM_counter:B1|Step                                                 ; 107          ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                               ; audio_interface:A1|BPM_counter:B1|Step                                                 ; 160          ; 0        ; 0        ; 0        ;
-; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 6            ; 0        ; 0        ; 0        ;
+; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; 9            ; 0        ; 0        ; 0        ;
 ; audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK                                           ; CLOCK_50                                                                               ; 1            ; 1        ; 0        ; 0        ;
 ; audio_interface:A1|BPM_counter:B1|Step                                                 ; CLOCK_50                                                                               ; 1884400578   ; 1        ; 0        ; 0        ;
 ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK                             ; CLOCK_50                                                                               ; 46           ; 4        ; 0        ; 0        ;
 ; CLOCK_50                                                                               ; CLOCK_50                                                                               ; > 2147483647 ; 0        ; 0        ; 0        ;
-; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 95444        ; 0        ; 0        ; 0        ;
+; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 95394        ; 0        ; 0        ; 0        ;
 +----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1044,8 +1044,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock ; To Clock                                                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+------------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50   ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; 3        ; 0        ; 0        ; 0        ;
-; CLOCK_50   ; CLOCK_50                                                   ; 375      ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; 4        ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50                                                   ; 744      ; 0        ; 0        ; 0        ;
 +------------+------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1055,8 +1055,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock ; To Clock                                                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+------------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50   ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; 3        ; 0        ; 0        ; 0        ;
-; CLOCK_50   ; CLOCK_50                                                   ; 375      ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK ; 4        ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50                                                   ; 744      ; 0        ; 0        ; 0        ;
 +------------+------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1081,9 +1081,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 7     ; 7    ;
-; Unconstrained Input Port Paths  ; 821   ; 821  ;
-; Unconstrained Output Ports      ; 69    ; 69   ;
-; Unconstrained Output Port Paths ; 1437  ; 1437 ;
+; Unconstrained Input Port Paths  ; 829   ; 829  ;
+; Unconstrained Output Ports      ; 75    ; 75   ;
+; Unconstrained Output Port Paths ; 1423  ; 1423 ;
 +---------------------------------+-------+------+
 
 
@@ -1164,8 +1164,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX5[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX5[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[8]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[9]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1256,8 +1262,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX5[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX5[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[8]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[9]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1292,7 +1304,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Thu Nov 20 11:57:09 2025
+    Info: Processing started: Thu Nov 20 18:49:25 2025
 Info: Command: quartus_sta step_sequencer -c step_sequencer
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1322,38 +1334,38 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -42.507
+Info (332146): Worst-case setup slack is -43.778
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -42.507            -923.118 CLOCK_50 
-    Info (332119):    -4.010             -58.673 audio_interface:A1|BPM_counter:B1|Step 
-    Info (332119):    -2.217            -120.050 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
-    Info (332119):    -1.317              -2.948 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-    Info (332119):    27.536               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.094
+    Info (332119):   -43.778            -917.959 CLOCK_50 
+    Info (332119):    -4.409             -63.584 audio_interface:A1|BPM_counter:B1|Step 
+    Info (332119):    -2.276            -131.172 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
+    Info (332119):    -1.129              -4.145 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):    25.867               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.130
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.094               0.000 CLOCK_50 
-    Info (332119):     0.378               0.000 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
-    Info (332119):     0.429               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.568               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-    Info (332119):     0.581               0.000 audio_interface:A1|BPM_counter:B1|Step 
-Info (332146): Worst-case recovery slack is -2.869
+    Info (332119):     0.130               0.000 CLOCK_50 
+    Info (332119):     0.256               0.000 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
+    Info (332119):     0.391               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.774               0.000 audio_interface:A1|BPM_counter:B1|Step 
+    Info (332119):     0.796               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+Info (332146): Worst-case recovery slack is -3.010
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.869              -8.597 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-    Info (332119):    15.879               0.000 CLOCK_50 
-Info (332146): Worst-case removal slack is 1.067
+    Info (332119):    -3.010             -12.027 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):    15.722               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 1.177
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.067               0.000 CLOCK_50 
-    Info (332119):     2.361               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):     1.177               0.000 CLOCK_50 
+    Info (332119):     2.513               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -37.708 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
-    Info (332119):    -0.394              -9.802 audio_interface:A1|BPM_counter:B1|Step 
-    Info (332119):    -0.394              -1.698 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):    -0.394             -36.652 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
+    Info (332119):    -0.394             -10.127 audio_interface:A1|BPM_counter:B1|Step 
+    Info (332119):    -0.394              -2.104 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
     Info (332119):     1.666               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     8.858               0.000 CLOCK_50 
     Info (332119):    18.757               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
@@ -1362,7 +1374,7 @@ Info (332114): Report Metastability: Found 33 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 33
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 32.958 ns
+    Info (332114): Worst Case Available Settling Time: 33.099 ns
     Info (332114): 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
@@ -1375,47 +1387,47 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -43.526
+Info (332146): Worst-case setup slack is -44.519
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -43.526            -936.539 CLOCK_50 
-    Info (332119):    -4.188             -61.152 audio_interface:A1|BPM_counter:B1|Step 
-    Info (332119):    -2.181            -116.147 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
-    Info (332119):    -1.257              -2.878 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-    Info (332119):    28.043               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -0.262
+    Info (332119):   -44.519            -928.903 CLOCK_50 
+    Info (332119):    -4.521             -65.847 audio_interface:A1|BPM_counter:B1|Step 
+    Info (332119):    -2.242            -128.270 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
+    Info (332119):    -1.132              -4.156 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):    26.420               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -0.210
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.262              -0.764 CLOCK_50 
-    Info (332119):     0.379               0.000 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
-    Info (332119):     0.397               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.527               0.000 audio_interface:A1|BPM_counter:B1|Step 
-    Info (332119):     0.552               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-Info (332146): Worst-case recovery slack is -2.943
+    Info (332119):    -0.210              -0.210 CLOCK_50 
+    Info (332119):     0.240               0.000 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
+    Info (332119):     0.358               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.717               0.000 audio_interface:A1|BPM_counter:B1|Step 
+    Info (332119):     0.758               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+Info (332146): Worst-case recovery slack is -3.133
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.943              -8.819 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-    Info (332119):    16.050               0.000 CLOCK_50 
-Info (332146): Worst-case removal slack is 1.001
+    Info (332119):    -3.133             -12.519 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):    15.831               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 1.122
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.001               0.000 CLOCK_50 
-    Info (332119):     2.449               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):     1.122               0.000 CLOCK_50 
+    Info (332119):     2.641               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -36.711 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
-    Info (332119):    -0.394              -9.470 audio_interface:A1|BPM_counter:B1|Step 
-    Info (332119):    -0.394              -1.689 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):    -0.394             -36.259 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
+    Info (332119):    -0.394              -9.874 audio_interface:A1|BPM_counter:B1|Step 
+    Info (332119):    -0.394              -2.076 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
     Info (332119):     1.666               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     8.807               0.000 CLOCK_50 
-    Info (332119):    18.735               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    18.730               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 33 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 33
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 33.051 ns
+    Info (332114): Worst Case Available Settling Time: 33.330 ns
     Info (332114): 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
@@ -1428,38 +1440,38 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -14.696
+Info (332146): Worst-case setup slack is -15.953
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.696            -354.521 CLOCK_50 
-    Info (332119):    -1.937             -28.396 audio_interface:A1|BPM_counter:B1|Step 
-    Info (332119):    -1.038             -51.087 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
-    Info (332119):    -0.479              -0.878 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-    Info (332119):    31.071               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.104
+    Info (332119):   -15.953            -360.323 CLOCK_50 
+    Info (332119):    -2.273             -31.755 audio_interface:A1|BPM_counter:B1|Step 
+    Info (332119):    -1.134             -55.425 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
+    Info (332119):    -0.374              -1.238 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):    29.925               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.084
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.104               0.000 CLOCK_50 
-    Info (332119):     0.136               0.000 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
-    Info (332119):     0.239               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.272               0.000 audio_interface:A1|BPM_counter:B1|Step 
-    Info (332119):     0.288               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-Info (332146): Worst-case recovery slack is -1.304
+    Info (332119):     0.084               0.000 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
+    Info (332119):     0.131               0.000 CLOCK_50 
+    Info (332119):     0.242               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.316               0.000 audio_interface:A1|BPM_counter:B1|Step 
+    Info (332119):     0.426               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+Info (332146): Worst-case recovery slack is -1.368
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.304              -3.908 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-    Info (332119):    17.073               0.000 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.599
+    Info (332119):    -1.368              -5.468 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):    17.212               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.656
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.599               0.000 CLOCK_50 
-    Info (332119):     1.212               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-Info (332146): Worst-case minimum pulse width slack is -0.048
+    Info (332119):     0.656               0.000 CLOCK_50 
+    Info (332119):     1.265               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+Info (332146): Worst-case minimum pulse width slack is -0.082
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.048              -0.108 audio_interface:A1|BPM_counter:B1|Step 
-    Info (332119):    -0.004              -0.039 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
-    Info (332119):     0.133               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):    -0.082              -0.476 audio_interface:A1|BPM_counter:B1|Step 
+    Info (332119):     0.048               0.000 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
+    Info (332119):     0.108               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
     Info (332119):     1.666               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     8.789               0.000 CLOCK_50 
     Info (332119):    18.876               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
@@ -1468,7 +1480,7 @@ Info (332114): Report Metastability: Found 33 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 33
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 35.359 ns
+    Info (332114): Worst Case Available Settling Time: 35.245 ns
     Info (332114): 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
@@ -1479,54 +1491,54 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -12.631
+Info (332146): Worst-case setup slack is -13.689
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -12.631            -301.624 CLOCK_50 
-    Info (332119):    -1.899             -27.789 audio_interface:A1|BPM_counter:B1|Step 
-    Info (332119):    -0.903             -42.837 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
-    Info (332119):    -0.374              -0.680 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-    Info (332119):    32.216               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -0.090
+    Info (332119):   -13.689            -306.485 CLOCK_50 
+    Info (332119):    -2.176             -30.715 audio_interface:A1|BPM_counter:B1|Step 
+    Info (332119):    -0.986             -47.999 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
+    Info (332119):    -0.286              -0.946 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):    31.244               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -0.052
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.090              -0.809 CLOCK_50 
-    Info (332119):     0.126               0.000 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
+    Info (332119):    -0.052              -0.197 CLOCK_50 
+    Info (332119):     0.064               0.000 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
     Info (332119):     0.220               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.230               0.000 audio_interface:A1|BPM_counter:B1|Step 
-    Info (332119):     0.258               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-Info (332146): Worst-case recovery slack is -1.276
+    Info (332119):     0.288               0.000 audio_interface:A1|BPM_counter:B1|Step 
+    Info (332119):     0.377               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+Info (332146): Worst-case recovery slack is -1.351
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.276              -3.824 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-    Info (332119):    17.417               0.000 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.543
+    Info (332119):    -1.351              -5.400 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):    17.468               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.584
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.543               0.000 CLOCK_50 
-    Info (332119):     1.197               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
-Info (332146): Worst-case minimum pulse width slack is 0.001
+    Info (332119):     0.584               0.000 CLOCK_50 
+    Info (332119):     1.264               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+Info (332146): Worst-case minimum pulse width slack is -0.021
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.001               0.000 audio_interface:A1|BPM_counter:B1|Step 
-    Info (332119):     0.037               0.000 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
-    Info (332119):     0.135               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
+    Info (332119):    -0.021              -0.059 audio_interface:A1|BPM_counter:B1|Step 
+    Info (332119):     0.073               0.000 audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK 
+    Info (332119):     0.123               0.000 audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK 
     Info (332119):     1.666               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.781               0.000 CLOCK_50 
+    Info (332119):     8.783               0.000 CLOCK_50 
     Info (332119):    18.880               0.000 D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 33 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 33
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 35.818 ns
+    Info (332114): Worst Case Available Settling Time: 35.723 ns
     Info (332114): 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 5540 megabytes
-    Info: Processing ended: Thu Nov 20 11:57:18 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Processing ended: Thu Nov 20 18:49:33 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:25
 
 

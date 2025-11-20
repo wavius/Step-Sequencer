@@ -55,11 +55,27 @@ module step_sequencer(
 	 
 	// Combinational logic
 	assign nReset = KEY[0];
+
+	// Start pulse
+	reg start_prev;
+   	always@(posedge CLOCK_50, negedge nReset)
+   	begin   
+    	if (!nReset)
+    	begin
+        	start_prev <= 0;
+    	end
+    	else
+    	begin
+        	start_prev <= start_playback;
+    	end
+   	end
+
+   wire start_pulse = (start_playback && start_prev != 1);
 	
 	audio_interface A1 (
 		// Inputs
 		.CLOCK_50      (CLOCK_50),
-		.nStart        (~start_playback), // Start playback
+		.nStart        (~start_pulse), // Start playback
 		.nReset        (nReset),          // Reset
 		.Select        (select_val),	  // Tone select
 		.Loops         (loops_val),       // Number of playback loops

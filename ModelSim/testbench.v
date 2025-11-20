@@ -70,17 +70,6 @@ module testbench;
         // b 9 9 9 Enter   l 1 Enter   m Space —— long wait —— Enter Space
         // -----------------------------------------------------
 
-        // b
-        send_scancode(8'h32);
-
-        // 9 9 9
-        send_scancode(8'h46);
-        send_scancode(8'h46);
-        send_scancode(8'h46);
-
-        // Enter
-        send_scancode(8'h5A);
-
         // l
         send_scancode(8'h4B);
 
@@ -90,14 +79,13 @@ module testbench;
         // Enter
         send_scancode(8'h5A);
 
-        // m
-        send_scancode(8'h3A);
+        // b
+        send_scancode(8'h32);
 
-        // Space
-        send_scancode(8'h29);
-
-        // >>> Long delay here <<<
-        #20000;    // adjust as needed
+        // 999
+        send_scancode(8'h46);
+        send_scancode(8'h46);
+        send_scancode(8'h46);
 
         // Enter
         send_scancode(8'h5A);
@@ -105,6 +93,10 @@ module testbench;
         // Space
         send_scancode(8'h29);
 
+         send_scancode(8'hF0);
+
+        // >>> Long delay here <<<
+        //#20000;    // adjust as needed
         #50000;
         $stop;
     end

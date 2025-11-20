@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Nov 20 11:57:00 2025
+Fitter Status : Successful - Thu Nov 20 18:49:15 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : step_sequencer
 Top-level Entity Name : step_sequencer
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1,918 / 32,070 ( 6 % )
-Total registers : 1273
+Logic utilization (in ALMs) : 1,926 / 32,070 ( 6 % )
+Total registers : 1279
 Total pins : 98 / 457 ( 21 % )
 Total virtual pins : 0
 Total block memory bits : 2,908,160 / 4,065,280 ( 72 % )

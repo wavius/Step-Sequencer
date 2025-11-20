@@ -60,7 +60,7 @@ module loop_counter (
         else if (start_fall) 
 		begin
             Loops_latched <= Loops;
-            total_steps   <= Loops * 12'd16;
+            total_steps   <= Loops * 12'd12;
             Q             <= 0;
             done          <= 0;
             Play          <= 1;

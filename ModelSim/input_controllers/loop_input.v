@@ -95,6 +95,7 @@ module loop_input (
         end
         else if (data_en && !break_code) 
         begin
+            Loops <= (num2 * 10) + num1;
             case (current_state)
                 IDLE: 
                 begin
@@ -102,10 +103,6 @@ module loop_input (
                     begin 
                         num2 <= 0;
                         num1 <= decodeDigit(data);
-                    end
-                    else if (data == ENTER)
-                    begin
-                        Loops <= (num2 * 10) + num1;
                     end
                 end
 
