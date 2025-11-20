@@ -1,0 +1,146 @@
+module vga_display (
+    input  wire        CLOCK_50,
+    input  wire        nReset,
+    input  wire        state,        // 1 = white, 0 = blue
+    input  wire        draw_enable,  // 1-cycle start pulse
+
+    input  wire [9:0]  X,            // center or reference point
+    input  wire [8:0]  Y,
+
+    output reg         drawing,      // 1 while drawing 30x30 block
+
+    output wire [7:0] VGA_R,
+    output wire [7:0] VGA_G,
+    output wire [7:0] VGA_B,
+    output wire       VGA_HS,
+    output wire       VGA_VS,
+    output wire       VGA_BLANK_N,
+    output wire       VGA_SYNC_N,
+    output wire       VGA_CLK   
+);
+
+    // Internal registers
+    reg [9:0] current_x;
+    reg [8:0] current_y;
+    reg       write;
+
+    reg [1:0] current_state, next_state;
+
+    reg [4:0] dx; 
+    reg [4:0] dy;  
+
+    reg [8:0] color;  
+    wire      VGA_SYNC = VGA_SYNC_N;
+
+    // State parameters
+    localparam IDLE = 2'b01,
+               DRAW = 2'b10;
+
+    always @(posedge CLOCK_50 or negedge nReset) begin
+        if (!nReset) 
+        begin
+            color <= 9'd0;
+        end 
+        else if (draw_enable) 
+        begin
+            color <= state ? 9'h1FF : 9'd7;
+        end
+    end
+
+    // State logic
+    always @(*) begin
+        next_state = current_state; 
+        if (!VGA_SYNC)
+            next_state = IDLE;
+        else begin
+            case (current_state)
+                IDLE:
+                    next_state = draw_enable ? DRAW : IDLE;
+                DRAW:
+                    next_state = (!drawing) ? IDLE : DRAW;
+
+                default:
+                    next_state = IDLE;
+            endcase
+        end
+    end
+    
+    // Drawing logic
+    always @(posedge CLOCK_50 or negedge nReset) begin
+        if (!nReset) 
+        begin
+            current_state <= IDLE;
+            drawing       <= 0;
+            write         <= 0;
+            current_x     <= 0;
+            current_y     <= 0;
+            dx            <= 0;
+            dy            <= 0;
+        end 
+        else if (!VGA_SYNC) 
+        begin
+            current_state <= IDLE;
+            drawing       <= 0;
+            write         <= 0;
+            dx            <= 0;
+            dy            <= 0;
+        end 
+        else 
+        begin
+            current_state <= next_state;
+            case (next_state)
+                IDLE: 
+                begin
+                    drawing   <= 0;
+                    write     <= 0;
+                    dx        <= 0;
+                    dy        <= 0;
+                   
+                    current_x <= X;
+                    current_y <= Y;
+                end
+                DRAW: 
+                begin
+                    drawing <= 1;
+                    write   <= 1;
+
+                    current_x <= X + dx;
+                    current_y <= Y + dy;
+
+                    if (dx < 30) begin
+                        dx <= dx + 1;
+                    end else begin
+                        dx <= 0;
+                        if (dy < 30)
+                            dy <= dy + 1;
+                        else
+                            drawing <= 0; 
+                    end
+                end
+            endcase
+        end
+    end
+
+    // VGA adapter
+    `define VGA_MEMORY
+    vga_adapter VGA (
+        .resetn      (nReset),
+        .clock       (CLOCK_50),
+        .color       (color),
+        .x           (current_x),
+        .y           (current_y),
+        .write       (write),
+        .VGA_R       (VGA_R),
+        .VGA_G       (VGA_G),
+        .VGA_B       (VGA_B),
+        .VGA_HS      (VGA_HS),
+        .VGA_VS      (VGA_VS),
+        .VGA_BLANK_N (VGA_BLANK_N),
+        .VGA_SYNC_N  (VGA_SYNC_N),
+        .VGA_CLK     (VGA_CLK)
+    );
+    defparam VGA.RESOLUTION       = "640x480";
+    defparam VGA.BACKGROUND_IMAGE = "./MIF/grid.mif";
+    defparam VGA.COLOR_DEPTH      = 9;
+
+endmodule

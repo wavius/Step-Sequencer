@@ -1,3 +1,0 @@
-Warning (10268): Verilog HDL information at audio_generator_16b_signed.v(36): always construct contains both blocking and non-blocking assignments File: D:/GitHub/ECE241-Project/audio_interface/modules/audio_generators/audio_generator_16b_signed.v Line: 36
-Warning (10268): Verilog HDL information at audio_generator_12b_unsigned.v(36): always construct contains both blocking and non-blocking assignments File: D:/GitHub/ECE241-Project/audio_interface/modules/audio_generators/audio_generator_12b_unsigned.v Line: 36
-Warning (10268): Verilog HDL information at BPM_counter.v(8): always construct contains both blocking and non-blocking assignments File: D:/GitHub/ECE241-Project/audio_interface/modules/BPM_counter/BPM_counter.v Line: 8

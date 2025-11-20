@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Wed Nov 19 20:10:29 2025
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : step_sequencer
+Top-level Entity Name : step_sequencer
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 1182
+Total pins : 98
+Total virtual pins : 0
+Total block memory bits : 2,908,160
+Total DSP Blocks : 2
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 2
+Total DLLs : 0

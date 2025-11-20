@@ -1,0 +1,883 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/david/Downloads/ModelSim
+vAltera_UP_Audio_Bit_Counter
+Z1 !s110 1763600448
+!i10b 1
+!s100 [`V_MP:J8Che`kgja9LkR2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IHN9N>h?j@foi0RHA5QY4G3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1762820932
+8audio_controller/Altera_UP_Audio_Bit_Counter.v
+Faudio_controller/Altera_UP_Audio_Bit_Counter.v
+!i122 51
+L0 11 99
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1763600448.000000
+!s107 vga_adapter/vga_display.v|vga_adapter/vga_controller.v|vga_adapter/vga_address_translator.v|vga_adapter/vga_adapter.v|vga_adapter/sevenseg.v|rom/rom512x16.v|rom/rom256x12.v|ps2_controller/PS2_Controller.v|ps2_controller/Altera_UP_PS2_Data_In.v|ps2_controller/Altera_UP_PS2_Command_Out.v|input_controllers/move_input.v|input_controllers/loop_input.v|input_controllers/bpm_input.v|dac_controller/DAC_controller.v|avconf/avconf.v|avconf/I2C_Controller.v|audio_generators/loop_counter.v|audio_generators/audio_generator_16b_signed.v|audio_generators/audio_generator_12b_unsigned.v|audio_generators/BPM_counter.v|audio_controller/Audio_Controller.v|audio_controller/Audio_Clock.v|audio_controller/Altera_UP_SYNC_FIFO.v|audio_controller/Altera_UP_Clock_Edge.v|audio_controller/Altera_UP_Audio_Out_Serializer.v|audio_controller/Altera_UP_Audio_In_Deserializer.v|audio_controller/Altera_UP_Audio_Bit_Counter.v|
+Z6 !s90 -reportprogress|300|audio_controller/Altera_UP_Audio_Bit_Counter.v|audio_controller/Altera_UP_Audio_In_Deserializer.v|audio_controller/Altera_UP_Audio_Out_Serializer.v|audio_controller/Altera_UP_Clock_Edge.v|audio_controller/Altera_UP_SYNC_FIFO.v|audio_controller/Audio_Clock.v|audio_controller/Audio_Controller.v|audio_generators/BPM_counter.v|audio_generators/audio_generator_12b_unsigned.v|audio_generators/audio_generator_16b_signed.v|audio_generators/loop_counter.v|avconf/I2C_Controller.v|avconf/avconf.v|dac_controller/DAC_controller.v|input_controllers/bpm_input.v|input_controllers/loop_input.v|input_controllers/move_input.v|ps2_controller/Altera_UP_PS2_Command_Out.v|ps2_controller/Altera_UP_PS2_Data_In.v|ps2_controller/PS2_Controller.v|rom/rom256x12.v|rom/rom512x16.v|vga_adapter/sevenseg.v|vga_adapter/vga_adapter.v|vga_adapter/vga_address_translator.v|vga_adapter/vga_controller.v|vga_adapter/vga_display.v|
+!i113 1
+Z7 tCvgOpt 0
+n@altera_@u@p_@audio_@bit_@counter
+vAltera_UP_Audio_In_Deserializer
+R1
+!i10b 1
+!s100 ;97d@o4L8JageM:4eJONa2
+R2
+In`>4U@Y]_LCGNE9GB43e82
+R3
+R0
+Z8 w1762820934
+8audio_controller/Altera_UP_Audio_In_Deserializer.v
+Faudio_controller/Altera_UP_Audio_In_Deserializer.v
+!i122 51
+L0 9 203
+R4
+r1
+!s85 0
+31
+R5
+Z9 !s107 vga_adapter/vga_display.v|vga_adapter/vga_controller.v|vga_adapter/vga_address_translator.v|vga_adapter/vga_adapter.v|vga_adapter/sevenseg.v|rom/rom512x16.v|rom/rom256x12.v|ps2_controller/PS2_Controller.v|ps2_controller/Altera_UP_PS2_Data_In.v|ps2_controller/Altera_UP_PS2_Command_Out.v|input_controllers/move_input.v|input_controllers/loop_input.v|input_controllers/bpm_input.v|dac_controller/DAC_controller.v|avconf/avconf.v|avconf/I2C_Controller.v|audio_generators/loop_counter.v|audio_generators/audio_generator_16b_signed.v|audio_generators/audio_generator_12b_unsigned.v|audio_generators/BPM_counter.v|audio_controller/Audio_Controller.v|audio_controller/Audio_Clock.v|audio_controller/Altera_UP_SYNC_FIFO.v|audio_controller/Altera_UP_Clock_Edge.v|audio_controller/Altera_UP_Audio_Out_Serializer.v|audio_controller/Altera_UP_Audio_In_Deserializer.v|audio_controller/Altera_UP_Audio_Bit_Counter.v|
+R6
+!i113 1
+R7
+n@altera_@u@p_@audio_@in_@deserializer
+vAltera_UP_Audio_Out_Serializer
+R1
+!i10b 1
+!s100 VC>^Lbj7=;5P:FzH6mEQ>1
+R2
+IPV;;_I<_9gKYYz7f9;<H82
+R3
+R0
+R8
+8audio_controller/Altera_UP_Audio_Out_Serializer.v
+Faudio_controller/Altera_UP_Audio_Out_Serializer.v
+!i122 51
+L0 9 208
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@altera_@u@p_@audio_@out_@serializer
+vAltera_UP_Clock_Edge
+R1
+!i10b 1
+!s100 1@XNR3Jza7P54O^5M9abU3
+R2
+Ijz31;mdBFll3ON1dXRBM^3
+R3
+R0
+R8
+8audio_controller/Altera_UP_Clock_Edge.v
+Faudio_controller/Altera_UP_Clock_Edge.v
+!i122 51
+L0 10 83
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@altera_@u@p_@clock_@edge
+vAltera_UP_PS2_Command_Out
+R1
+!i10b 1
+!s100 d>Akn9Y2HkO>oIQJO=;Sb2
+R2
+Ik9zY_zI4P@THFT4L5?mXg0
+R3
+R0
+Z10 w1763184676
+8ps2_controller/Altera_UP_PS2_Command_Out.v
+Fps2_controller/Altera_UP_PS2_Command_Out.v
+!i122 51
+L0 10 293
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@altera_@u@p_@p@s2_@command_@out
+vAltera_UP_PS2_Data_In
+R1
+!i10b 1
+!s100 =EIkd^_lhjz3?3EC^ifWC3
+R2
+IzX9f=1ThPWHKOhSN;1U7:1
+R3
+R0
+R10
+8ps2_controller/Altera_UP_PS2_Data_In.v
+Fps2_controller/Altera_UP_PS2_Data_In.v
+!i122 51
+L0 10 188
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@altera_@u@p_@p@s2_@data_@in
+vAltera_UP_SYNC_FIFO
+R1
+!i10b 1
+!s100 `R?2A?ZWVLnQXKcU4EKGF2
+R2
+I`UEbDf^55;l2n4]C_Ll5H3
+R3
+R0
+R8
+8audio_controller/Altera_UP_SYNC_FIFO.v
+Faudio_controller/Altera_UP_SYNC_FIFO.v
+!i122 51
+L0 9 120
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@altera_@u@p_@s@y@n@c_@f@i@f@o
+vAudio_Clock
+R1
+!i10b 1
+!s100 CfQCi>X2^mG[5F^HCNkHm1
+R2
+I35MU;aNAF0>UbT2cTD]aE2
+R3
+R0
+Z11 w1762820938
+8audio_controller/Audio_Clock.v
+Faudio_controller/Audio_Clock.v
+!i122 51
+L0 39 114
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@audio_@clock
+vAudio_Controller
+R1
+!i10b 1
+!s100 WPTKh6PlKI5?m?=CbHAa_3
+R2
+IPen8_]hokO44Nzk>zDadf0
+R3
+R0
+R11
+8audio_controller/Audio_Controller.v
+Faudio_controller/Audio_Controller.v
+!i122 51
+L0 11 269
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@audio_@controller
+vaudio_generator_12b_unsigned
+R1
+!i10b 1
+!s100 NJ8o@J:EAzYl<al75g9S31
+R2
+IgS7Pn0df1KH6gAY[5aIBA0
+R3
+R0
+Z12 w1763596704
+Z13 8audio_generators/audio_generator_12b_unsigned.v
+Z14 Faudio_generators/audio_generator_12b_unsigned.v
+!i122 51
+Z15 L0 1 46
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vaudio_generator_16b_signed
+R1
+!i10b 1
+!s100 9o?lFUoSYJW;Lde]7KD433
+R2
+IX545mT4[AkO3CY5[Mn6IZ3
+R3
+R0
+Z16 w1763538827
+Z17 8audio_generators/audio_generator_16b_signed.v
+Z18 Faudio_generators/audio_generator_16b_signed.v
+!i122 51
+R15
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vaudio_interface
+Z19 !s110 1763600446
+!i10b 1
+!s100 FOBQG7dlU2RI@49mM[>XM3
+R2
+IbW_Y]U8H8DXYg3FYBX:J50
+R3
+R0
+w1763600431
+8audio_interface.v
+Faudio_interface.v
+!i122 50
+L0 1 197
+R4
+r1
+!s85 0
+31
+Z20 !s108 1763600446.000000
+Z21 !s107 testbench.v|step_sequencer.v|input_interface.v|display_interface.v|audio_interface.v|
+Z22 !s90 -reportprogress|300|audio_interface.v|display_interface.v|input_interface.v|step_sequencer.v|testbench.v|
+!i113 1
+R7
+vavconf
+R1
+!i10b 1
+!s100 ^zKzQJGK`?>0a>fbBW7eA0
+R2
+I[HdD4>iF?S49lfOH<CL0n3
+R3
+R0
+w1762894944
+8avconf/avconf.v
+Favconf/avconf.v
+!i122 51
+L0 1 187
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vBPM_counter
+R1
+!i10b 1
+!s100 :TnIWMjU_E^V37jGJQ3z[3
+R2
+IBnOb035H3zL;Z0mXcbHCO3
+R3
+R0
+w1763599944
+8audio_generators/BPM_counter.v
+Faudio_generators/BPM_counter.v
+!i122 51
+L0 1 38
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@b@p@m_counter
+vbpm_input
+R1
+!i10b 1
+!s100 RJePO;z9Yfjn4TKh14@Bj0
+R2
+I>;0Kg]SX=_;C^XS@eVH?61
+R3
+R0
+w1763576455
+8input_controllers/bpm_input.v
+Finput_controllers/bpm_input.v
+!i122 51
+L0 1 220
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vclkGen50MHz_781kHz
+R1
+!i10b 1
+!s100 4;6OT1d^SANR[3AEdQZV_3
+R2
+I_Rk3[i9VamI<jj]eQYfeU0
+R3
+R0
+Z23 w1763595845
+Z24 8dac_controller/DAC_controller.v
+Z25 Fdac_controller/DAC_controller.v
+!i122 51
+L0 285 23
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+nclk@gen50@m@hz_781k@hz
+vDAC_controller
+R1
+!i10b 1
+!s100 ^hz7_37bRnijb`j@G<^cz0
+R2
+I0]zK]S68kfk;93dcMe5g`1
+R3
+R0
+R23
+R24
+R25
+!i122 51
+L0 18 265
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@d@a@c_controller
+vdisplay_interface
+R19
+!i10b 1
+!s100 3AWAm4Um2ZS`2ZRRSH?k33
+R2
+IU>9c[cFPBNFbTnNS6eH^81
+R3
+R0
+w1763594540
+8display_interface.v
+Fdisplay_interface.v
+!i122 50
+L0 1 194
+R4
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R7
+vI2C_Controller
+R1
+!i10b 1
+!s100 LeHfgzQF>8V>JRWal]l?c1
+R2
+IIAVFNk[fekXhWe4e^OV<c1
+R3
+R0
+w1762843502
+8avconf/I2C_Controller.v
+Favconf/I2C_Controller.v
+!i122 51
+L0 43 106
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@i2@c_@controller
+vinput_interface
+R19
+!i10b 1
+!s100 M:9:BMCYHl5gGW@LEhU8f3
+R2
+I6DnZ?;1dhhUHbOYZlEfJH0
+R3
+R0
+w1763600142
+8input_interface.v
+Finput_interface.v
+!i122 50
+L0 1 267
+R4
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R7
+vloop_counter
+R1
+!i10b 1
+!s100 S[71cc_UOh[:kQFfTPham2
+R2
+IzlWTMgdn]^2SV9:X1n7JU3
+R3
+R0
+w1763537072
+8audio_generators/loop_counter.v
+Faudio_generators/loop_counter.v
+!i122 51
+L0 1 87
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vloop_input
+R1
+!i10b 1
+!s100 ^5@K0]?PiV=Wz@YlcBk5:1
+R2
+IBo2`?l]<5W6K;m1ZSa23;3
+R3
+R0
+w1763576466
+8input_controllers/loop_input.v
+Finput_controllers/loop_input.v
+!i122 51
+L0 1 186
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vmove_input
+R1
+!i10b 1
+!s100 2Y>H79PiI92k@=2E2_jL;3
+R2
+ID_kn1D97n1GjOFe0XoA8W3
+R3
+R0
+w1763587837
+8input_controllers/move_input.v
+Finput_controllers/move_input.v
+!i122 51
+L0 1 72
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vnumerically_controlled_oscillator_12b
+R1
+!i10b 1
+!s100 >Q?Ecb64CMIQ@0N1TC_eE0
+R2
+I>1oz[[J5iJ>?cN7[o:bhd1
+R3
+R0
+R12
+R13
+R14
+!i122 51
+Z26 L0 60 11
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vnumerically_controlled_oscillator_16b
+R1
+!i10b 1
+!s100 ]KVK^8I4h_S<`EiYJ4Y[^3
+R2
+I1;?CcIf<In?7L?DbC00320
+R3
+R0
+R16
+R17
+R18
+!i122 51
+R26
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vPS2_Controller
+R1
+!i10b 1
+!s100 D]4z^7MnA]2AfMdchz7^@0
+R2
+I7D_enfXMm]dOddRgTSKNI0
+R3
+R0
+w1763595708
+8ps2_controller/PS2_Controller.v
+Fps2_controller/PS2_Controller.v
+!i122 51
+L0 9 261
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+n@p@s2_@controller
+vrom256x12
+R1
+!i10b 1
+!s100 E]MMMomEjTZm<n[`1DzZ30
+R2
+IIVmcgnd:e@HkBlP<n:fSW3
+R3
+R0
+w1763596305
+8rom/rom256x12.v
+From/rom256x12.v
+!i122 51
+Z27 L0 4 20
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vrom512x16
+R1
+!i10b 1
+!s100 aB]?BQS]7:e1MJZn@j0ma1
+R2
+Iz6k28YbkE1ALAZIjnGha=1
+R3
+R0
+w1763596295
+8rom/rom512x16.v
+From/rom512x16.v
+!i122 51
+R27
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vsevenseg
+R1
+!i10b 1
+!s100 ]i7X1o4RF8S3@a]1A>3H90
+R2
+I?clB5FLJRcZ:jnW93R2Gg2
+R3
+R0
+w1763457444
+8vga_adapter/sevenseg.v
+Fvga_adapter/sevenseg.v
+!i122 51
+L0 2 20
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vstep_sequencer
+R19
+!i10b 1
+!s100 ZA[]gHi3iBd48`WiRELdk2
+R2
+Ij8U00=j<oEG^KaQZQV?cn1
+R3
+R0
+w1763600097
+8step_sequencer.v
+Fstep_sequencer.v
+!i122 50
+L0 1 126
+R4
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R7
+vtestbench
+R19
+!i10b 1
+!s100 87DVf162;LWaOJF_bQ3@^3
+R2
+I<CaDSmIjYF^@H4n9[kCn=2
+R3
+R0
+w1763599068
+8testbench.v
+Ftestbench.v
+!i122 50
+L0 4 109
+R4
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R7
+vvga_adapter
+R1
+!i10b 1
+!s100 jJQ`[V]jFYJidB68JU^7A1
+R2
+ICEU42b7KHzlL^lZJRd]iW1
+R3
+R0
+Z28 w1763486960
+Z29 8vga_adapter/vga_adapter.v
+Z30 Fvga_adapter/vga_adapter.v
+!i122 51
+L0 13 139
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vvga_address_translator
+R1
+!i10b 1
+!s100 JI4ea:e>=PMczhanIGH2E0
+R2
+IDG<Pd>Ro9Ob:^zc0n8zih1
+R3
+R0
+Z31 w1762813163
+8vga_adapter/vga_address_translator.v
+Fvga_adapter/vga_address_translator.v
+!i122 51
+L0 4 21
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vvga_controller
+R1
+!i10b 1
+!s100 `nWLV:No8mO6ldFdZjNlz1
+R2
+I2@oIPiR4njO>fF_^zL]1:2
+R3
+R0
+R31
+8vga_adapter/vga_controller.v
+Fvga_adapter/vga_controller.v
+!i122 51
+L0 5 116
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vvga_convert
+R1
+!i10b 1
+!s100 d;Sa[AbZA9_LlGn5b>:Q`3
+R2
+IlVd?jF4DjY7OP^5czW?oa0
+R3
+R0
+R28
+R29
+R30
+!i122 51
+L0 170 28
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vvga_display
+R1
+!i10b 1
+!s100 ??K?4Zg?=h7kj3PIIBnn<1
+R2
+I:<6hJ::zEaP`M>mRnmdiA0
+R3
+R0
+w1763594630
+8vga_adapter/vga_display.v
+Fvga_adapter/vga_display.v
+!i122 51
+L0 2 139
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vvga_ff
+R1
+!i10b 1
+!s100 `V6g1NF=mMMbYV<1K:>j81
+R2
+I849L6j^Ec132YNJHho<hh3
+R3
+R0
+R28
+R29
+R30
+!i122 51
+L0 154 11
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vwaveform_generator_12b
+R1
+!i10b 1
+!s100 _[KC7l@IaLz^W[X6CYA@J0
+R2
+I;e>gPU4fDhAng1o=iW6_13
+R3
+R0
+R12
+R13
+R14
+!i122 51
+Z32 L0 48 11
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+vwaveform_generator_16b
+R1
+!i10b 1
+!s100 RdD_P6LShg3^ni4XFzF9M2
+R2
+IPKh2hIEUj]h8NgJ57bogo1
+R3
+R0
+R16
+R17
+R18
+!i122 51
+R32
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7

@@ -1,1 +1,0 @@
-Warning (10268): Verilog HDL information at BPM_counter.v(8): always construct contains both blocking and non-blocking assignments File: D:/UofT/Y2/S1/ece241/final project/audio generator/BPM_counter.v Line: 8
