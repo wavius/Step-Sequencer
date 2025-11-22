@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/Users/david/Downloads/ModelSim
 vAltera_UP_Audio_Bit_Counter
-Z0 !s110 1763682024
+Z0 !s110 1763783866
 !i10b 1
 !s100 [`V_MP:J8Che`kgja9LkR2
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ Z3 dD:/GitHub/ECE241-Project/ModelSim
 w1762820932
 8audio_controller/Altera_UP_Audio_Bit_Counter.v
 Faudio_controller/Altera_UP_Audio_Bit_Counter.v
-!i122 77
+!i122 137
 L0 11 99
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1763682023.000000
+Z5 !s108 1763783865.000000
 Z6 !s107 vga_adapter/vga_display.v|vga_adapter/vga_controller.v|vga_adapter/vga_address_translator.v|vga_adapter/vga_adapter.v|vga_adapter/sevenseg.v|rom/rom512x16.v|rom/rom256x12.v|ps2_controller/PS2_Controller.v|ps2_controller/Altera_UP_PS2_Data_In.v|ps2_controller/Altera_UP_PS2_Command_Out.v|input_controllers/move_input.v|input_controllers/loop_input.v|input_controllers/bpm_input.v|dac_controller/DAC_controller.v|avconf/avconf.v|avconf/I2C_Controller.v|audio_generators/loop_counter.v|audio_generators/audio_generator_16b_signed.v|audio_generators/audio_generator_12b_unsigned.v|audio_generators/BPM_counter.v|audio_controller/Audio_Controller.v|audio_controller/Audio_Clock.v|audio_controller/Altera_UP_SYNC_FIFO.v|audio_controller/Altera_UP_Clock_Edge.v|audio_controller/Altera_UP_Audio_Out_Serializer.v|audio_controller/Altera_UP_Audio_In_Deserializer.v|audio_controller/Altera_UP_Audio_Bit_Counter.v|
 Z7 !s90 -reportprogress|300|audio_controller/Altera_UP_Audio_Bit_Counter.v|audio_controller/Altera_UP_Audio_In_Deserializer.v|audio_controller/Altera_UP_Audio_Out_Serializer.v|audio_controller/Altera_UP_Clock_Edge.v|audio_controller/Altera_UP_SYNC_FIFO.v|audio_controller/Audio_Clock.v|audio_controller/Audio_Controller.v|audio_generators/BPM_counter.v|audio_generators/audio_generator_12b_unsigned.v|audio_generators/audio_generator_16b_signed.v|audio_generators/loop_counter.v|avconf/I2C_Controller.v|avconf/avconf.v|dac_controller/DAC_controller.v|input_controllers/bpm_input.v|input_controllers/loop_input.v|input_controllers/move_input.v|ps2_controller/Altera_UP_PS2_Command_Out.v|ps2_controller/Altera_UP_PS2_Data_In.v|ps2_controller/PS2_Controller.v|rom/rom256x12.v|rom/rom512x16.v|vga_adapter/sevenseg.v|vga_adapter/vga_adapter.v|vga_adapter/vga_address_translator.v|vga_adapter/vga_controller.v|vga_adapter/vga_display.v|
 !i113 1
@@ -43,7 +43,7 @@ R3
 Z9 w1762820934
 8audio_controller/Altera_UP_Audio_In_Deserializer.v
 Faudio_controller/Altera_UP_Audio_In_Deserializer.v
-!i122 77
+!i122 137
 L0 9 203
 R4
 r1
@@ -66,7 +66,7 @@ R3
 R9
 8audio_controller/Altera_UP_Audio_Out_Serializer.v
 Faudio_controller/Altera_UP_Audio_Out_Serializer.v
-!i122 77
+!i122 137
 L0 9 208
 R4
 r1
@@ -89,7 +89,7 @@ R3
 R9
 8audio_controller/Altera_UP_Clock_Edge.v
 Faudio_controller/Altera_UP_Clock_Edge.v
-!i122 77
+!i122 137
 L0 10 83
 R4
 r1
@@ -112,7 +112,7 @@ R3
 Z10 w1763184676
 8ps2_controller/Altera_UP_PS2_Command_Out.v
 Fps2_controller/Altera_UP_PS2_Command_Out.v
-!i122 77
+!i122 137
 L0 10 293
 R4
 r1
@@ -135,7 +135,7 @@ R3
 R10
 8ps2_controller/Altera_UP_PS2_Data_In.v
 Fps2_controller/Altera_UP_PS2_Data_In.v
-!i122 77
+!i122 137
 L0 10 188
 R4
 r1
@@ -158,7 +158,7 @@ R3
 R9
 8audio_controller/Altera_UP_SYNC_FIFO.v
 Faudio_controller/Altera_UP_SYNC_FIFO.v
-!i122 77
+!i122 137
 L0 9 120
 R4
 r1
@@ -181,7 +181,7 @@ R3
 Z11 w1762820938
 8audio_controller/Audio_Clock.v
 Faudio_controller/Audio_Clock.v
-!i122 77
+!i122 137
 L0 39 114
 R4
 r1
@@ -204,7 +204,7 @@ R3
 R11
 8audio_controller/Audio_Controller.v
 Faudio_controller/Audio_Controller.v
-!i122 77
+!i122 137
 L0 11 269
 R4
 r1
@@ -227,7 +227,7 @@ R3
 Z12 w1763596704
 Z13 8audio_generators/audio_generator_12b_unsigned.v
 Z14 Faudio_generators/audio_generator_12b_unsigned.v
-!i122 77
+!i122 137
 Z15 L0 1 46
 R4
 r1
@@ -249,7 +249,7 @@ R3
 Z16 w1763538827
 Z17 8audio_generators/audio_generator_16b_signed.v
 Z18 Faudio_generators/audio_generator_16b_signed.v
-!i122 77
+!i122 137
 R15
 R4
 r1
@@ -261,7 +261,7 @@ R7
 !i113 1
 R8
 vaudio_interface
-Z19 !s110 1763689129
+Z19 !s110 1763783909
 !i10b 1
 !s100 FOBQG7dlU2RI@49mM[>XM3
 R1
@@ -271,13 +271,13 @@ R3
 w1763600431
 8audio_interface.v
 Faudio_interface.v
-!i122 88
+!i122 139
 L0 1 197
 R4
 r1
 !s85 0
 31
-Z20 !s108 1763689129.000000
+Z20 !s108 1763783909.000000
 !s107 testbench.v|step_sequencer.v|input_interface.v|display_interface.v|audio_interface.v|
 Z21 !s90 -reportprogress|300|audio_interface.v|display_interface.v|input_interface.v|step_sequencer.v|testbench.v|
 !i113 1
@@ -293,7 +293,7 @@ R3
 w1762894944
 8avconf/avconf.v
 Favconf/avconf.v
-!i122 77
+!i122 137
 L0 1 187
 R4
 r1
@@ -315,7 +315,7 @@ R3
 w1763681979
 8audio_generators/BPM_counter.v
 Faudio_generators/BPM_counter.v
-!i122 77
+!i122 137
 L0 1 39
 R4
 r1
@@ -338,7 +338,7 @@ R3
 w1763678562
 8input_controllers/bpm_input.v
 Finput_controllers/bpm_input.v
-!i122 77
+!i122 137
 L0 1 217
 R4
 r1
@@ -360,7 +360,7 @@ R3
 Z22 w1763595845
 Z23 8dac_controller/DAC_controller.v
 Z24 Fdac_controller/DAC_controller.v
-!i122 77
+!i122 137
 L0 285 23
 R4
 r1
@@ -383,7 +383,7 @@ R3
 R22
 R23
 R24
-!i122 77
+!i122 137
 L0 18 265
 R4
 r1
@@ -406,7 +406,7 @@ R3
 w1763600579
 8display_interface.v
 Fdisplay_interface.v
-!i122 88
+!i122 139
 L0 1 194
 R4
 r1
@@ -428,7 +428,7 @@ R3
 w1762843502
 8avconf/I2C_Controller.v
 Favconf/I2C_Controller.v
-!i122 77
+!i122 137
 L0 43 106
 R4
 r1
@@ -443,16 +443,16 @@ n@i2@c_@controller
 vinput_interface
 R19
 !i10b 1
-!s100 <Bmc[HV>fPAMTV7QCCa@d0
+!s100 ?EATI2_eK4@2XPbi;cbQ=0
 R1
-I>DCeCJnFa^J[X3LMUi]FE1
+IA4@HWa:c6e?L=1ajVRGPj3
 R2
 R3
-w1763680121
+w1763783905
 8input_interface.v
 Finput_interface.v
-!i122 88
-L0 1 282
+!i122 139
+L0 1 313
 R4
 r1
 !s85 0
@@ -465,16 +465,16 @@ R8
 vloop_counter
 R0
 !i10b 1
-!s100 S[71cc_UOh[:kQFfTPham2
+!s100 OCU6VKhQ6D@I;@:OQle300
 R1
-IzlWTMgdn]^2SV9:X1n7JU3
+I6SF^3VnP=n8j5>0C@PlS@3
 R2
 R3
-w1763537072
+w1763783367
 8audio_generators/loop_counter.v
 Faudio_generators/loop_counter.v
-!i122 77
-L0 1 87
+!i122 137
+L0 1 67
 R4
 r1
 !s85 0
@@ -495,7 +495,7 @@ R3
 w1763678574
 8input_controllers/loop_input.v
 Finput_controllers/loop_input.v
-!i122 77
+!i122 137
 L0 1 183
 R4
 r1
@@ -517,7 +517,7 @@ R3
 w1763587837
 8input_controllers/move_input.v
 Finput_controllers/move_input.v
-!i122 77
+!i122 137
 L0 1 72
 R4
 r1
@@ -539,7 +539,7 @@ R3
 R12
 R13
 R14
-!i122 77
+!i122 137
 Z26 L0 60 11
 R4
 r1
@@ -561,7 +561,7 @@ R3
 R16
 R17
 R18
-!i122 77
+!i122 137
 R26
 R4
 r1
@@ -583,7 +583,7 @@ R3
 w1763595708
 8ps2_controller/PS2_Controller.v
 Fps2_controller/PS2_Controller.v
-!i122 77
+!i122 137
 L0 9 261
 R4
 r1
@@ -606,7 +606,7 @@ R3
 w1763596305
 8rom/rom256x12.v
 From/rom256x12.v
-!i122 77
+!i122 137
 Z27 L0 4 20
 R4
 r1
@@ -628,7 +628,7 @@ R3
 w1763596295
 8rom/rom512x16.v
 From/rom512x16.v
-!i122 77
+!i122 137
 R27
 R4
 r1
@@ -650,7 +650,7 @@ R3
 w1763457444
 8vga_adapter/sevenseg.v
 Fvga_adapter/sevenseg.v
-!i122 77
+!i122 137
 L0 2 20
 R4
 r1
@@ -664,15 +664,15 @@ R8
 vstep_sequencer
 R19
 !i10b 1
-!s100 ?L62ZdDKHW;W_9`@XkNnU1
+!s100 BgC>zIXTYFP;KbQ:2Fn;j2
 R1
-I_CSk<:1RPSbUj7[R5OJ_o0
+IFL?G150]KR=UN4=A57iWH1
 R2
 R3
-w1763681592
+w1763777663
 8step_sequencer.v
 Fstep_sequencer.v
-!i122 88
+!i122 139
 L0 1 141
 R4
 r1
@@ -686,16 +686,16 @@ R8
 vtestbench
 R19
 !i10b 1
-!s100 S:7^>MiO;5eH56c:kSPX?1
+!s100 9?PVAQ`jLDZ`5UjL[LMV20
 R1
-IgnKioB<9CKVY?zGKEdCdY2
+IW^6BQk[@b;L;>8O_iHLD[3
 R2
 R3
-w1763689113
+w1763766344
 8testbench.v
 Ftestbench.v
-!i122 88
-L0 4 107
+!i122 139
+L0 4 110
 R4
 r1
 !s85 0
@@ -716,7 +716,7 @@ R3
 Z28 w1763486960
 Z29 8vga_adapter/vga_adapter.v
 Z30 Fvga_adapter/vga_adapter.v
-!i122 77
+!i122 137
 L0 13 139
 R4
 r1
@@ -738,7 +738,7 @@ R3
 Z31 w1762813163
 8vga_adapter/vga_address_translator.v
 Fvga_adapter/vga_address_translator.v
-!i122 77
+!i122 137
 L0 4 21
 R4
 r1
@@ -760,7 +760,7 @@ R3
 R31
 8vga_adapter/vga_controller.v
 Fvga_adapter/vga_controller.v
-!i122 77
+!i122 137
 L0 5 116
 R4
 r1
@@ -782,7 +782,7 @@ R3
 R28
 R29
 R30
-!i122 77
+!i122 137
 L0 170 28
 R4
 r1
@@ -796,16 +796,16 @@ R8
 vvga_display
 R0
 !i10b 1
-!s100 mjHSDJRfR0F<_]@Pn1l0T1
+!s100 :OJ;2kI_EEN3b]_W0eW9^2
 R1
-ID[R;T9XkGN_l^a`DZ5P5R2
+IR;bWO3`a@42lPV@5UFz2g2
 R2
 R3
-w1763657563
+w1763759484
 8vga_adapter/vga_display.v
 Fvga_adapter/vga_display.v
-!i122 77
-L0 2 187
+!i122 137
+L0 2 188
 R4
 r1
 !s85 0
@@ -826,7 +826,7 @@ R3
 R28
 R29
 R30
-!i122 77
+!i122 137
 L0 154 11
 R4
 r1
@@ -848,7 +848,7 @@ R3
 R12
 R13
 R14
-!i122 77
+!i122 137
 Z32 L0 48 11
 R4
 r1
@@ -870,7 +870,7 @@ R3
 R16
 R17
 R18
-!i122 77
+!i122 137
 R32
 R4
 r1

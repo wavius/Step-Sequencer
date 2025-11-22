@@ -48,6 +48,21 @@ module input_interface (
     // Internal registers
     reg [4:0] current_state, next_state;
     reg       break_code;
+    reg       play_started;
+
+    // Input decoder
+    always @(posedge CLOCK_50, negedge nReset) 
+    begin
+        if (!nReset)
+            break_code <= 0;
+        else if (data_en) 
+        begin
+            if (data == RELEASE)
+                break_code <= 1;
+            else
+                break_code <= 0;  
+        end
+    end
 
     // State logic
     always @(*) 
@@ -58,7 +73,7 @@ module input_interface (
                 if      (data == L)                     next_state = MODE_LOOP;
                 else if (data == B)                     next_state = MODE_BPM;
                 else if (data == M)                     next_state = MODE_MOVE;
-                else if (data == SPACE && BPM != 10'b0) next_state = MODE_PLAY;
+                else if (data_en && !break_code && data == SPACE && BPM != 0)     next_state = MODE_PLAY;
                 else                                    next_state = IDLE;
 
             MODE_LOOP:
@@ -71,97 +86,112 @@ module input_interface (
                 next_state = (data == ENTER) ? IDLE : MODE_MOVE;
 
             MODE_PLAY:
-                next_state = (!play_en) ? IDLE : MODE_PLAY;
-
+            begin
+                if (!play_started)
+                    next_state = MODE_PLAY;    
+                else if (!play_en)
+                    next_state = IDLE;          
+                else
+                    next_state = MODE_PLAY;   
+            end
             default:
                 next_state = IDLE;
         endcase
     end
 
     // State register
-    always @(posedge CLOCK_50) 
-    begin
+    always @(posedge CLOCK_50) begin
         if (!nReset)
             current_state <= IDLE;
         else
             current_state <= next_state;
     end
 
-    // Output registers
-    always @(posedge CLOCK_50) 
+    // Start pulse
+    always @(posedge CLOCK_50 or negedge nReset) begin
+        if (!nReset)
+            Start <= 0;
+        else 
+        begin
+            Start <= (next_state == MODE_PLAY && current_state != MODE_PLAY);
+        end
+    end
+
+    // Play detection
+    always @(posedge CLOCK_50 or negedge nReset) 
     begin
+        if (!nReset)
+            play_started <= 0;
+        else if (play_en)
+            play_started <= 1;
+        else if (current_state == IDLE)
+            play_started <= 0;
+    end
+
+    // Output registers
+    always @(posedge CLOCK_50) begin
         if (!nReset) 
         begin
             Direction <= 0;
             Command   <= 0;
-            Start     <= 0;
         end
-        else /*if (data_en)*/ 
+        else
         begin
             case (current_state)
                 IDLE:
                 begin
                     Direction <= 0;
                     Command   <= 0;
-                    if (next_state == MODE_PLAY)
-                        Start     <= 1;
-                    else
-                        Start     <= 0; 
                 end
                 MODE_LOOP:
                 begin
                     Direction <= 0;
                     Command   <= 0;
-                    Start     <= 0;
                 end
 
                 MODE_BPM:
                 begin
                     Direction <= 0;
                     Command   <= 0;
-                    Start     <= 0;
                 end
 
                 MODE_MOVE:
                 begin
                     Direction <= dir_val;
                     Command   <= cmd_val;
-                    Start     <= 0;
                 end
 
                 MODE_PLAY:
                 begin
                     Direction <= 0;
                     Command   <= 0;
-                    Start     <= 1;
                 end
 
                 default:
                 begin
                     Direction <= 0;
                     Command   <= 0;
-                    Start     <= 0;
                 end
             endcase
         end
     end
-
+    
     // Internal modules
     PS2_Controller P1 (
-        .CLOCK_50                      (CLOCK_50),
-        .reset                         (~nReset),
+        .CLOCK_50   (CLOCK_50),
+        .reset      (~nReset),
 
-        .the_command                   (),
-        .send_command                  (),
+        .the_command(),
+        .send_command(),
 
-        .PS2_CLK                       (PS2_CLK),
-        .PS2_DAT                       (PS2_DAT),
+        .PS2_CLK    (PS2_CLK),
+        .PS2_DAT    (PS2_DAT),
 
-        .command_was_sent              (),
-        .error_communication_timed_out (),
+        .command_was_sent(),
+        .error_communication_timed_out(),
 
-        .received_data                 (data),
-        .received_data_en              (data_en)
+        .received_data    (data),
+        .received_data_en (data_en)
     );
 
     loop_input LOOP_IN (
@@ -225,14 +255,14 @@ module input_interface (
     assign LEDR[0] = led_loop;
     assign LEDR[5:4] = {led_move, led_move};
     assign LEDR[8:6] = led_play;
-	assign LEDR[3:1] = led_play;
+    assign LEDR[3:1] = led_play;
 
     always @(posedge CLOCK_50) begin
         if (!nReset) begin
             led_loop <= 0;
             led_bpm  <= 0;
             led_move <= 0;
-            led_play <= 0;
+            led_play <= 3'b000;
         end
         else begin
             case (current_state)
@@ -241,28 +271,28 @@ module input_interface (
                     led_loop <= 1;
                     led_bpm  <= 1;
                     led_move <= 1;
-                    led_play <= 0;
+                    led_play <= 3'b000;
                 end
                 MODE_LOOP:
                 begin
                     led_loop <= led_pulse;
                     led_bpm  <= 1;
                     led_move <= 1;
-                    led_play <= 0;
+                    led_play <= 3'b000;
                 end
                 MODE_BPM:
                 begin
                     led_loop <= 1;
                     led_bpm  <= led_pulse;
                     led_move <= 1;
-                    led_play <= 0;
+                    led_play <= 3'b000;
                 end
                 MODE_MOVE:
                 begin
                     led_loop <= 1;
                     led_bpm  <= 1;
                     led_move <= led_pulse;
-                    led_play <= 0;
+                    led_play <= 3'b000;
                 end
 
                 MODE_PLAY:
@@ -272,6 +302,7 @@ module input_interface (
                     led_move <= 1;
                     led_play <= 3'b111;
                 end
+                
             endcase
         end
     end

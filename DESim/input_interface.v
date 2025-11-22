@@ -48,6 +48,21 @@ module input_interface (
     // Internal registers
     reg [4:0] current_state, next_state;
     reg       break_code;
+    reg       play_started;
+
+    // Input decoder
+    always @(posedge CLOCK_50, negedge nReset) 
+    begin
+        if (!nReset)
+            break_code <= 0;
+        else if (data_en) 
+        begin
+            if (data == RELEASE)
+                break_code <= 1;
+            else
+                break_code <= 0;  
+        end
+    end
 
     // State logic
     always @(*) 
@@ -58,7 +73,7 @@ module input_interface (
                 if      (data == L)                     next_state = MODE_LOOP;
                 else if (data == B)                     next_state = MODE_BPM;
                 else if (data == M)                     next_state = MODE_MOVE;
-                else if (data == SPACE && BPM != 0)     next_state = MODE_PLAY;
+                else if (data_en && !break_code && data == SPACE && BPM != 0)     next_state = MODE_PLAY;
                 else                                    next_state = IDLE;
 
             MODE_LOOP:
@@ -71,8 +86,14 @@ module input_interface (
                 next_state = (data == ENTER) ? IDLE : MODE_MOVE;
 
             MODE_PLAY:
-                next_state = (!play_en) ? IDLE : MODE_PLAY;
-
+            begin
+                if (!play_started)
+                    next_state = MODE_PLAY;    
+                else if (!play_en)
+                    next_state = IDLE;          
+                else
+                    next_state = MODE_PLAY;   
+            end
             default:
                 next_state = IDLE;
         endcase
@@ -86,56 +107,70 @@ module input_interface (
             current_state <= next_state;
     end
 
+    // Start pulse
+    always @(posedge CLOCK_50 or negedge nReset) begin
+        if (!nReset)
+            Start <= 0;
+        else 
+        begin
+            Start <= (next_state == MODE_PLAY && current_state != MODE_PLAY);
+        end
+    end
+
+    // Play detection
+    always @(posedge CLOCK_50 or negedge nReset) 
+    begin
+        if (!nReset)
+            play_started <= 0;
+        else if (play_en)
+            play_started <= 1;
+        else if (current_state == IDLE)
+            play_started <= 0;
+    end
+
     // Output registers
     always @(posedge CLOCK_50) begin
         if (!nReset) 
         begin
             Direction <= 0;
             Command   <= 0;
-            Start     <= 0;
         end
-        else /*if (data_en)*/ 
+        else
         begin
             case (current_state)
                 IDLE:
                 begin
                     Direction <= 0;
                     Command   <= 0;
-                    Start     <= 0;
                 end
                 MODE_LOOP:
                 begin
                     Direction <= 0;
                     Command   <= 0;
-                    Start     <= 0;
                 end
 
                 MODE_BPM:
                 begin
                     Direction <= 0;
                     Command   <= 0;
-                    Start     <= 0;
                 end
 
                 MODE_MOVE:
                 begin
                     Direction <= dir_val;
                     Command   <= cmd_val;
-                    Start     <= 0;
                 end
 
                 MODE_PLAY:
                 begin
                     Direction <= 0;
                     Command   <= 0;
-                    Start     <= 1;
                 end
 
                 default:
                 begin
                     Direction <= 0;
                     Command   <= 0;
-                    Start     <= 0;
                 end
             endcase
         end

@@ -5,7 +5,7 @@ module BPM_counter (Clock, nReset, nStart, BPM, Step);
 
    reg [31:0] Q;
    reg [63:0] target; 
-   wire [63:0] BPMs = 64'd50_000_000;
+   wire [63:0] BPMs = BPM * 63'd10_000;
    always@(posedge Clock)
    begin
 		// target = freq_clock * 60/BPM

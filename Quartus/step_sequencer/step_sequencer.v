@@ -70,7 +70,7 @@ module step_sequencer(
     	end
    	end
 
-   wire start_pulse = (start_playback && start_prev != 1);
+   wire start_pulse = (start_playback && start_prev != start_playback);
 	
 	audio_interface A1 (
 		// Inputs

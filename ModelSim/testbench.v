@@ -69,7 +69,6 @@ module testbench;
         // -----------------------------------------------------
         // b 9 9 9 Enter   l 1 Enter   m Space —— long wait —— Enter Space
         // -----------------------------------------------------
-
         // l
         send_scancode(8'h4B);
 
@@ -89,7 +88,7 @@ module testbench;
 
         // Enter
         send_scancode(8'h5A);
-        #1000000;
+        #10000;
 
         // m
         send_scancode(8'h3A);
@@ -101,11 +100,14 @@ module testbench;
         #10000;
         send_scancode(8'h29);
 
+        send_scancode(8'h5A);
+
+        send_scancode(8'h29);
 
         // >>> Long delay here <<<
         //#20000;    // adjust as needed
         #50000;
-        $stop;
+
     end
 
 endmodule

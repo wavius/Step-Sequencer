@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("D:/GitHub/ECE241-Project/step_sequencer/output_files/") File("step_sequencer.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("D:/GitHub/ECE241-Project/Quartus/step_sequencer/output_files/") File("step_sequencer.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -1,5 +1,5 @@
 # vsim -pli "D:\Documents\FPGA_EDAs\DESim\modelsim.vpi" -Lf 220model -Lf altera_mf_ver -Lf verilog -t 1ns -c -do "run -all" tb 
-# Start time: 18:44:07 on Nov 20,2025
+# Start time: 23:10:23 on Nov 21,2025
 # Loading work.tb
 # Loading work.top
 # Loading work.step_sequencer
@@ -112,10 +112,3 @@
 # ** Warning: (vsim-7) Failed to open readmem file "sine256.hex" in read mode.
 # No such file or directory. (errno = ENOENT)    : ../rom256x12.v(15)
 #    Time: 0 ns  Iteration: 0  Instance: /tb/DUT/S1/A1/A2/W12/U1
-# Could not send VGA signal to GUI
-# ** Note: $finish    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
-#    Time: 14853830 ns  Iteration: 2  Instance: /tb
-# 
-# Quitting...
-# End time: 18:45:10 on Nov 20,2025, Elapsed time: 0:01:03
-# Errors: 0, Warnings: 24

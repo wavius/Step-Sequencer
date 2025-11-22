@@ -6,26 +6,6 @@ module loop_counter (
     input wire [6:0] Loops,
     output reg       Play
 );
-
-    // nStart synchronizer
-    reg s0, s1;
-    wire start_fall;
-
-    always @(posedge Clock, negedge nReset) begin
-        if (!nReset) 
-		begin
-            s0 <= 1;
-            s1 <= 1;
-        end 
-		else 
-		begin
-            s0 <= nStart;
-            s1 <= s0;
-        end
-    end
-
-    assign start_fall = (s1 == 1 && s0 == 0);   // falling edge
-
     // Step synchronizer
     reg t0, t1;
     wire step_rise;
@@ -57,10 +37,10 @@ module loop_counter (
             total_steps   <= 0;
             Loops_latched <= 0;
         end
-        else if (start_fall) 
+        else if (!nStart) 
 		begin
             Loops_latched <= Loops;
-            total_steps   <= Loops * 12'd16;
+            total_steps   <= Loops * 12'd12;
             Q             <= 0;
             done          <= 0;
             Play          <= 1;

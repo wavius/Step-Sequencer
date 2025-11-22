@@ -81,7 +81,7 @@ module vga_display (
             current_x <= X0;
             current_y <= Y0;
             
-            color <= 9'h1FF;
+            color <= WHITE;
         end 
         else 
         begin
@@ -102,8 +102,9 @@ module vga_display (
                 begin
                     drawing <= 1;
                     write   <= 1;
-                    color   <= WHITE;
+                    color   <= BLUE;
 
+                    current_x <= X0 + grid_x * 33 + dx;
                     current_y <= Y0 + grid_y * 33 + dy;
 
                     if (dx < 30)
