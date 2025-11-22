@@ -1,5 +1,5 @@
 Flow report for step_sequencer
-Fri Nov 21 23:26:31 2025
+Sat Nov 22 17:04:48 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -41,15 +41,15 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Fri Nov 21 23:26:31 2025           ;
+; Flow Status                     ; Successful - Sat Nov 22 17:04:48 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; step_sequencer                                  ;
 ; Top-level Entity Name           ; step_sequencer                                  ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 1,928 / 32,070 ( 6 % )                          ;
-; Total registers                 ; 1276                                            ;
+; Logic utilization (in ALMs)     ; 1,938 / 32,070 ( 6 % )                          ;
+; Total registers                 ; 1296                                            ;
 ; Total pins                      ; 98 / 457 ( 21 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 2,908,160 / 4,065,280 ( 72 % )                  ;
@@ -68,7 +68,7 @@ on the Quartus Prime software download page.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/21/2025 23:12:08 ;
+; Start date & time ; 11/22/2025 16:56:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; step_sequencer      ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ on the Quartus Prime software download page.
 +-------------------------------------+----------------------------------------+---------------+-----------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name     ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-----------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 216011627446611.176378472805024        ; --            ; --              ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 209234169053523.176384861523268        ; --            ; --              ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --              ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --              ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --              ; eda_board_design_signal_integrity ;
@@ -106,12 +106,12 @@ on the Quartus Prime software download page.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:15     ; 1.0                     ; 5060 MB             ; 00:00:36                           ;
-; Fitter               ; 00:12:42     ; 1.0                     ; 7386 MB             ; 00:16:07                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 5288 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:09     ; 3.5                     ; 5540 MB             ; 00:00:27                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4937 MB             ; 00:00:02                           ;
-; Total                ; 00:14:15     ; --                      ; --                  ; 00:17:19                           ;
+; Analysis & Synthesis ; 00:00:34     ; 1.0                     ; 5023 MB             ; 00:00:54                           ;
+; Fitter               ; 00:06:31     ; 1.1                     ; 7355 MB             ; 00:23:26                           ;
+; Assembler            ; 00:00:15     ; 1.0                     ; 5288 MB             ; 00:00:15                           ;
+; Timing Analyzer      ; 00:00:19     ; 3.2                     ; 5540 MB             ; 00:00:46                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4937 MB             ; 00:00:03                           ;
+; Total                ; 00:07:42     ; --                      ; --                  ; 00:25:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

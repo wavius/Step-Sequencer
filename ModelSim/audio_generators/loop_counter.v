@@ -40,7 +40,7 @@ module loop_counter (
         else if (!nStart) 
 		begin
             Loops_latched <= Loops;
-            total_steps   <= Loops * 12'd12;
+            total_steps   <= Loops * 7'd12 + 7'd1;
             Q             <= 0;
             done          <= 0;
             Play          <= 1;
