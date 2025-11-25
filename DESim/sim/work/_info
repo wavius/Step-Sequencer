@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dD:/GitHub/ECE241-Project/DESim/sim
 vAltera_UP_Audio_Bit_Counter
-Z1 !s110 1763784621
+Z1 !s110 1764030104
 !i10b 1
 !s100 [`V_MP:J8Che`kgja9LkR2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1763784621.000000
+Z5 !s108 1764030104.000000
 !s107 ../vga_adapter/vga_controller.v|../vga_adapter/vga_address_translator.v|../vga_adapter/vga_adapter.v|../vga_display.v|../top.v|../testbench.v|../step_sequencer.v|../sevenseg.v|../rom512x16.v|../rom256x12.v|../move_input.v|../loop_input.v|../loop_counter.v|../input_interface.v|../I2C_Controller.v|../display_interface.v|../DAC_controller.v|../bpm_input.v|../BPM_counter.v|../avconf.v|../audio_interface.v|../audio_generator_16b_signed.v|../audio_generator_12b_unsigned.v|../Audio_Controller.v|../Audio_Clock.v|../Altera_UP_SYNC_FIFO.v|../Altera_UP_Clock_Edge.v|../Altera_UP_Audio_Out_Serializer.v|../Altera_UP_Audio_In_Deserializer.v|../Altera_UP_Audio_Bit_Counter.v|
 Z6 !s90 ../Altera_UP_Audio_Bit_Counter.v|../Altera_UP_Audio_In_Deserializer.v|../Altera_UP_Audio_Out_Serializer.v|../Altera_UP_Clock_Edge.v|../Altera_UP_SYNC_FIFO.v|../Audio_Clock.v|../Audio_Controller.v|../audio_generator_12b_unsigned.v|../audio_generator_16b_signed.v|../audio_interface.v|../avconf.v|../BPM_counter.v|../bpm_input.v|../DAC_controller.v|../display_interface.v|../I2C_Controller.v|../input_interface.v|../loop_counter.v|../loop_input.v|../move_input.v|../rom256x12.v|../rom512x16.v|../sevenseg.v|../step_sequencer.v|../testbench.v|../top.v|../vga_display.v|../vga_adapter/vga_adapter.v|../vga_adapter/vga_address_translator.v|../vga_adapter/vga_controller.v|
 !i113 1
@@ -266,7 +266,7 @@ R2
 I^61gJT;<<I4@V85kS4J_N3
 R3
 R0
-w1763784616
+w1763784675
 8../BPM_counter.v
 F../BPM_counter.v
 !i122 1
@@ -352,16 +352,16 @@ n@d@a@c_controller
 vdisplay_interface
 R1
 !i10b 1
-!s100 Xdd;hA`d2A:jCgDME7kQh3
+!s100 E?QBC^0KDX6i1WVHnK0iE2
 R2
-IQ@>ZJJC8agW?=VR6bA2KW0
+IP[h?gE0]LUTOYZ^R2]UaO3
 R3
 R0
-w1763600579
+w1764029818
 8../display_interface.v
 F../display_interface.v
 !i122 1
-L0 1 194
+L0 1 230
 R4
 r1
 !s85 0
@@ -419,12 +419,12 @@ R7
 vloop_counter
 R1
 !i10b 1
-!s100 OCU6VKhQ6D@I;@:OQle300
+!s100 0UYRg[B4ZO60KhU1oUX=l3
 R2
-I;`FVZ3;Oj;>eNDLiOiig70
+Ioi7Qc`PSAD?g9n9hBg:Fj0
 R3
 R0
-w1763784194
+w1763849363
 8../loop_counter.v
 F../loop_counter.v
 !i122 1
@@ -816,16 +816,16 @@ R7
 vvga_display
 R1
 !i10b 1
-!s100 :OJ;2kI_EEN3b]_W0eW9^2
+!s100 5hcSV7PX]:AX]g3KV;iO>0
 R2
-I1]Pi;j>NHaDbTF9`IBIE60
+Ij5O2GoLjUIF5[m4[l60S10
 R3
 R0
-w1763759479
+w1764030085
 8../vga_display.v
 F../vga_display.v
 !i122 1
-L0 2 188
+L0 2 246
 R4
 r1
 !s85 0
