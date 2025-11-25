@@ -19,12 +19,11 @@ module vga_display (
 );
 
     // States
-    localparam RESET_WAIT        = 6'b000001,
-               RESET_DRAW        = 6'b000010,
-               IDLE              = 6'b000100,
-               DRAW_CURSOR_RESET = 6'b001000,
-               DRAW_CURSOR       = 6'b010000,
-               DRAW_BOX          = 6'b100000;
+    localparam RESET_WAIT        = 5'b00001,
+               RESET_DRAW        = 5'b00010,
+               IDLE              = 5'b00100,
+               DRAW_CURSOR       = 5'b01000,
+               DRAW_BOX          = 5'b10000;
                
 
     localparam WHITE = 9'h1FF,
@@ -39,7 +38,7 @@ module vga_display (
     wire VGA_SYNC;
 
     // Internal registers
-    reg [5:0] current_state, next_state;
+    reg [4:0] current_state, next_state;
     reg [5:0] dx, dy;         
     reg [3:0] grid_x, grid_y;  
     reg [9:0] current_x;
@@ -53,11 +52,10 @@ module vga_display (
     always @(*) begin
         case (current_state)
             RESET_WAIT:        next_state = VGA_SYNC    ? RESET_DRAW        : RESET_WAIT;
-            RESET_DRAW:        next_state = reset_grid  ? DRAW_CURSOR_RESET : RESET_DRAW;
-            DRAW_CURSOR_RESET: next_state = (!drawing)  ? IDLE              : DRAW_CURSOR_RESET;
-            DRAW_CURSOR:       next_state = (!drawing)  ? DRAW_BOX          : DRAW_CURSOR;
-            DRAW_BOX:          next_state = (!drawing)  ? IDLE              : DRAW_BOX;
-            IDLE:              next_state = draw_enable ? DRAW_CURSOR       : IDLE;
+            RESET_DRAW:        next_state = reset_grid  ? DRAW_BOX          : RESET_DRAW;
+            DRAW_BOX:          next_state = (!drawing)  ? DRAW_CURSOR       : DRAW_BOX;
+            DRAW_CURSOR:       next_state = (!drawing)  ? IDLE              : DRAW_CURSOR;
+            IDLE:              next_state = draw_enable ? DRAW_BOX          : IDLE;
             default:           next_state =               RESET_WAIT;
         endcase
     end
@@ -137,14 +135,15 @@ module vga_display (
                     end
                 end
 
-                DRAW_CURSOR_RESET:
+                DRAW_BOX:
                 begin
+                    begin
                     drawing <= 1;
                     write   <= 1;
-                    color   <= RED;
+                    color   <= state ? BLUE : WHITE;
 
-                    current_x <= X + dx;
-                    current_y <= Y + dy;
+                    current_x <= OLD_X + dx;
+                    current_y <= OLD_Y + dy;
 
                     if (dx < 30)
                         dx <= dx + 1;
@@ -158,6 +157,7 @@ module vga_display (
                             dy <= 0;
                             drawing <= 0;
                         end
+                    end
                     end
                 end
 
@@ -169,30 +169,6 @@ module vga_display (
 
                     current_x <= X + dx;
                     current_y <= Y + dy;
-
-                    if (dx < 30)
-                        dx <= dx + 1;
-                    else 
-                    begin
-                        dx <= 0;
-                        if (dy < 30)
-                            dy <= dy + 1;
-                        else 
-                        begin
-                            dy <= 0;
-                            drawing <= 0;
-                        end
-                    end
-                end
-
-                DRAW_BOX:
-                begin
-                    drawing <= 1;
-                    write   <= 1;
-                    color   <= state ? BLUE : WHITE;
-
-                    current_x <= OLD_X + dx;
-                    current_y <= OLD_Y + dy;
 
                     if (dx < 30)
                         dx <= dx + 1;

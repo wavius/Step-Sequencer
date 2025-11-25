@@ -3,72 +3,72 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -43.648
-TNS   : -905.833
+Slack : -42.803
+TNS   : -902.175
 
 Type  : Slow 1100mV 85C Model Setup 'audio_interface:A1|BPM_counter:B1|Step'
-Slack : -4.189
-TNS   : -61.137
+Slack : -4.354
+TNS   : -60.828
 
 Type  : Slow 1100mV 85C Model Setup 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
-Slack : -2.367
-TNS   : -129.207
+Slack : -2.437
+TNS   : -133.015
 
 Type  : Slow 1100mV 85C Model Setup 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : -1.120
-TNS   : -2.901
+Slack : -1.201
+TNS   : -4.299
 
 Type  : Slow 1100mV 85C Model Setup 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 26.318
+Slack : 28.408
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.089
+Slack : 0.026
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
-Slack : 0.376
+Slack : 0.380
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.424
+Slack : 0.404
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'audio_interface:A1|BPM_counter:B1|Step'
-Slack : 0.621
+Slack : 0.728
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : 0.741
+Slack : 0.797
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : -3.087
-TNS   : -9.251
+Slack : -3.089
+TNS   : -12.343
 
 Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : 14.792
+Slack : 13.551
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.978
+Slack : 1.465
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : 2.605
+Slack : 2.604
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
 Slack : -0.394
-TNS   : -35.823
+TNS   : -38.500
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'audio_interface:A1|BPM_counter:B1|Step'
 Slack : -0.394
-TNS   : -9.509
+TNS   : -9.993
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
 Slack : -0.394
-TNS   : -1.539
+TNS   : -2.049
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
@@ -79,76 +79,76 @@ Slack : 8.858
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.758
+Slack : 18.757
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -44.529
-TNS   : -920.683
+Slack : -43.502
+TNS   : -911.432
 
 Type  : Slow 1100mV 0C Model Setup 'audio_interface:A1|BPM_counter:B1|Step'
-Slack : -4.299
-TNS   : -63.594
+Slack : -4.483
+TNS   : -63.425
 
 Type  : Slow 1100mV 0C Model Setup 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
-Slack : -2.290
-TNS   : -123.840
+Slack : -2.446
+TNS   : -128.497
 
 Type  : Slow 1100mV 0C Model Setup 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : -1.132
-TNS   : -2.883
+Slack : -1.214
+TNS   : -4.248
 
 Type  : Slow 1100mV 0C Model Setup 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 26.892
+Slack : 28.859
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.252
-TNS   : -0.732
-
-Type  : Slow 1100mV 0C Model Hold 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
-Slack : 0.386
-TNS   : 0.000
+Slack : -0.312
+TNS   : -0.896
 
 Type  : Slow 1100mV 0C Model Hold 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.398
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
+Slack : 0.387
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'audio_interface:A1|BPM_counter:B1|Step'
-Slack : 0.583
+Slack : 0.719
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : 0.710
+Slack : 0.768
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : -3.163
-TNS   : -9.479
+Slack : -3.170
+TNS   : -12.666
 
 Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : 14.954
+Slack : 13.827
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.888
+Slack : 1.388
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : 2.706
+Slack : 2.704
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
 Slack : -0.394
-TNS   : -35.461
+TNS   : -37.056
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'audio_interface:A1|BPM_counter:B1|Step'
 Slack : -0.394
-TNS   : -9.371
+TNS   : -9.851
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
 Slack : -0.394
-TNS   : -1.615
+TNS   : -2.160
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
@@ -159,75 +159,75 @@ Slack : 8.807
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.731
+Slack : 18.730
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -15.553
-TNS   : -344.175
+Slack : -15.072
+TNS   : -346.687
 
 Type  : Fast 1100mV 85C Model Setup 'audio_interface:A1|BPM_counter:B1|Step'
-Slack : -2.112
-TNS   : -29.808
+Slack : -2.223
+TNS   : -29.712
 
 Type  : Fast 1100mV 85C Model Setup 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
-Slack : -1.155
-TNS   : -55.285
+Slack : -1.273
+TNS   : -59.651
 
 Type  : Fast 1100mV 85C Model Setup 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : -0.377
-TNS   : -0.826
+Slack : -0.402
+TNS   : -1.358
 
 Type  : Fast 1100mV 85C Model Setup 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 30.169
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.048
+Slack : 31.792
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
 Slack : 0.137
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'audio_interface:A1|BPM_counter:B1|Step'
-Slack : 0.232
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.139
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.252
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'audio_interface:A1|BPM_counter:B1|Step'
+Slack : 0.347
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : 0.368
+Slack : 0.438
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : -1.405
-TNS   : -4.211
+Slack : -1.397
+TNS   : -5.583
 
 Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : 16.563
+Slack : 15.510
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.575
+Slack : 0.869
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : 1.315
+Slack : 1.306
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'audio_interface:A1|BPM_counter:B1|Step'
-Slack : -0.064
-TNS   : -0.155
+Slack : -0.034
+TNS   : -0.181
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
-Slack : 0.088
+Slack : 0.024
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : 0.147
+Slack : 0.148
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -235,79 +235,79 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.790
+Slack : 8.785
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.877
+Slack : 18.876
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -13.390
-TNS   : -293.948
+Slack : -12.867
+TNS   : -294.716
 
 Type  : Fast 1100mV 0C Model Setup 'audio_interface:A1|BPM_counter:B1|Step'
-Slack : -2.029
-TNS   : -29.070
+Slack : -2.134
+TNS   : -28.947
 
 Type  : Fast 1100mV 0C Model Setup 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
-Slack : -0.997
-TNS   : -46.907
+Slack : -1.101
+TNS   : -50.775
 
 Type  : Fast 1100mV 0C Model Setup 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : -0.287
-TNS   : -0.606
+Slack : -0.308
+TNS   : -1.014
 
 Type  : Fast 1100mV 0C Model Setup 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 31.466
+Slack : 32.829
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.134
-TNS   : -0.542
+Slack : -0.067
+TNS   : -0.175
 
 Type  : Fast 1100mV 0C Model Hold 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
 Slack : 0.124
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'audio_interface:A1|BPM_counter:B1|Step'
-Slack : 0.225
+Type  : Fast 1100mV 0C Model Hold 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.215
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.227
+Type  : Fast 1100mV 0C Model Hold 'audio_interface:A1|BPM_counter:B1|Step'
+Slack : 0.321
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : 0.330
+Slack : 0.393
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : -1.372
-TNS   : -4.112
+Slack : -1.365
+TNS   : -5.455
 
 Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : 16.919
+Slack : 16.044
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.498
+Slack : 0.774
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : 1.302
+Slack : 1.291
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'audio_interface:A1|BPM_counter:B1|Step'
-Slack : -0.014
-TNS   : -0.014
+Slack : 0.013
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'audio_interface:A1|avconf:AVC1|mI2C_CTRL_CLK'
-Slack : 0.105
+Slack : 0.062
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'audio_interface:A1|DAC_controller:DC1|i2cState.I2CREAD_ACK'
-Slack : 0.144
+Slack : 0.141
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'D1|V1|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'

@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dD:/GitHub/ECE241-Project/DESim/sim
 vAltera_UP_Audio_Bit_Counter
-Z1 !s110 1764030104
+Z1 !s110 1764098835
 !i10b 1
 !s100 [`V_MP:J8Che`kgja9LkR2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1764030104.000000
+Z5 !s108 1764098835.000000
 !s107 ../vga_adapter/vga_controller.v|../vga_adapter/vga_address_translator.v|../vga_adapter/vga_adapter.v|../vga_display.v|../top.v|../testbench.v|../step_sequencer.v|../sevenseg.v|../rom512x16.v|../rom256x12.v|../move_input.v|../loop_input.v|../loop_counter.v|../input_interface.v|../I2C_Controller.v|../display_interface.v|../DAC_controller.v|../bpm_input.v|../BPM_counter.v|../avconf.v|../audio_interface.v|../audio_generator_16b_signed.v|../audio_generator_12b_unsigned.v|../Audio_Controller.v|../Audio_Clock.v|../Altera_UP_SYNC_FIFO.v|../Altera_UP_Clock_Edge.v|../Altera_UP_Audio_Out_Serializer.v|../Altera_UP_Audio_In_Deserializer.v|../Altera_UP_Audio_Bit_Counter.v|
 Z6 !s90 ../Altera_UP_Audio_Bit_Counter.v|../Altera_UP_Audio_In_Deserializer.v|../Altera_UP_Audio_Out_Serializer.v|../Altera_UP_Clock_Edge.v|../Altera_UP_SYNC_FIFO.v|../Audio_Clock.v|../Audio_Controller.v|../audio_generator_12b_unsigned.v|../audio_generator_16b_signed.v|../audio_interface.v|../avconf.v|../BPM_counter.v|../bpm_input.v|../DAC_controller.v|../display_interface.v|../I2C_Controller.v|../input_interface.v|../loop_counter.v|../loop_input.v|../move_input.v|../rom256x12.v|../rom512x16.v|../sevenseg.v|../step_sequencer.v|../testbench.v|../top.v|../vga_display.v|../vga_adapter/vga_adapter.v|../vga_adapter/vga_address_translator.v|../vga_adapter/vga_controller.v|
 !i113 1
@@ -215,7 +215,7 @@ R6
 !i113 1
 R7
 vaudio_interface
-R1
+Z18 !s110 1764098836
 !i10b 1
 !s100 GJb4S_BZ2j?nU>[I8V;MQ0
 R2
@@ -237,7 +237,7 @@ R6
 !i113 1
 R7
 vavconf
-R1
+R18
 !i10b 1
 !s100 ^zKzQJGK`?>0a>fbBW7eA0
 R2
@@ -259,7 +259,7 @@ R6
 !i113 1
 R7
 vBPM_counter
-R1
+R18
 !i10b 1
 !s100 2o_8KooPdQD8IBWDN<YWB0
 R2
@@ -282,7 +282,7 @@ R6
 R7
 n@b@p@m_counter
 vbpm_input
-R1
+R18
 !i10b 1
 !s100 <mQMGRUi9hjEK]8CfWWQ@0
 R2
@@ -304,16 +304,16 @@ R6
 !i113 1
 R7
 vclkGen50MHz_781kHz
-R1
+R18
 !i10b 1
 !s100 4;6OT1d^SANR[3AEdQZV_3
 R2
 IGZE>U_];nTz2>m=WR9L@C0
 R3
 R0
-Z18 w1763595845
-Z19 8../DAC_controller.v
-Z20 F../DAC_controller.v
+Z19 w1763595845
+Z20 8../DAC_controller.v
+Z21 F../DAC_controller.v
 !i122 1
 L0 285 23
 R4
@@ -327,16 +327,16 @@ R6
 R7
 nclk@gen50@m@hz_781k@hz
 vDAC_controller
-R1
+R18
 !i10b 1
 !s100 ^hz7_37bRnijb`j@G<^cz0
 R2
 I;L@ZX_aSHHh0Hb^SKWce42
 R3
 R0
-R18
 R19
 R20
+R21
 !i122 1
 L0 18 265
 R4
@@ -350,14 +350,14 @@ R6
 R7
 n@d@a@c_controller
 vdisplay_interface
-R1
+R18
 !i10b 1
 !s100 E?QBC^0KDX6i1WVHnK0iE2
 R2
 IP[h?gE0]LUTOYZ^R2]UaO3
 R3
 R0
-w1764029818
+w1764030281
 8../display_interface.v
 F../display_interface.v
 !i122 1
@@ -372,7 +372,7 @@ R6
 !i113 1
 R7
 vI2C_Controller
-R1
+R18
 !i10b 1
 !s100 LeHfgzQF>8V>JRWal]l?c1
 R2
@@ -395,7 +395,7 @@ R6
 R7
 n@i2@c_@controller
 vinput_interface
-R1
+R18
 !i10b 1
 !s100 DLz]QZJXg5FY7MO<;2FAe0
 R2
@@ -417,7 +417,7 @@ R6
 !i113 1
 R7
 vloop_counter
-R1
+R18
 !i10b 1
 !s100 0UYRg[B4ZO60KhU1oUX=l3
 R2
@@ -439,7 +439,7 @@ R6
 !i113 1
 R7
 vloop_input
-R1
+R18
 !i10b 1
 !s100 o[zI8Q?AGAb]S2hkUVIo52
 R2
@@ -461,7 +461,7 @@ R6
 !i113 1
 R7
 vmove_input
-R1
+R18
 !i10b 1
 !s100 bDkkH:<SF_OZZPJ0eoWCg1
 R2
@@ -494,7 +494,7 @@ R11
 R12
 R13
 !i122 1
-Z21 L0 60 11
+Z22 L0 60 11
 R4
 r1
 !s85 0
@@ -505,7 +505,7 @@ R6
 !i113 1
 R7
 vnumerically_controlled_oscillator_16b
-R1
+R18
 !i10b 1
 !s100 ]KVK^8I4h_S<`EiYJ4Y[^3
 R2
@@ -516,7 +516,7 @@ R15
 R16
 R17
 !i122 1
-R21
+R22
 R4
 r1
 !s85 0
@@ -534,9 +534,9 @@ R2
 I<fM6UNLoWoXZncN>USHa_3
 R3
 R0
-Z22 w1758058621
-Z23 8../tb/PS2_keyboard.v
-Z24 F../tb/PS2_keyboard.v
+Z23 w1758058621
+Z24 8../tb/PS2_keyboard.v
+Z25 F../tb/PS2_keyboard.v
 !i122 0
 L0 125 93
 R4
@@ -544,8 +544,8 @@ r1
 !s85 0
 31
 R5
-Z25 !s107 ../tb/tb.v|../tb/PS2_keyboard.v|
-Z26 !s90 ../tb/PS2_keyboard.v|../tb/tb.v|
+Z26 !s107 ../tb/tb.v|../tb/PS2_keyboard.v|
+Z27 !s90 ../tb/PS2_keyboard.v|../tb/tb.v|
 !i113 1
 R7
 vPS2_keyboard
@@ -556,9 +556,9 @@ R2
 Iz;OAE4kW^f[zkB98OX5FT1
 R3
 R0
-R22
 R23
 R24
+R25
 !i122 0
 L0 16 101
 R4
@@ -566,13 +566,13 @@ r1
 !s85 0
 31
 R5
-R25
 R26
+R27
 !i113 1
 R7
 n@p@s2_keyboard
 vrom256x12
-R1
+R18
 !i10b 1
 !s100 E]MMMomEjTZm<n[`1DzZ30
 R2
@@ -583,7 +583,7 @@ w1763596305
 8../rom256x12.v
 F../rom256x12.v
 !i122 1
-Z27 L0 4 20
+Z28 L0 4 20
 R4
 r1
 !s85 0
@@ -594,7 +594,7 @@ R6
 !i113 1
 R7
 vrom512x16
-R1
+R18
 !i10b 1
 !s100 aB]?BQS]7:e1MJZn@j0ma1
 R2
@@ -605,7 +605,7 @@ w1763596295
 8../rom512x16.v
 F../rom512x16.v
 !i122 1
-R27
+R28
 R4
 r1
 !s85 0
@@ -616,7 +616,7 @@ R6
 !i113 1
 R7
 vsevenseg
-R1
+R18
 !i10b 1
 !s100 ]i7X1o4RF8S3@a]1A>3H90
 R2
@@ -638,7 +638,7 @@ R6
 !i113 1
 R7
 vstep_sequencer
-R1
+R18
 !i10b 1
 !s100 W;Lgl:mR^U^]@V[=Xj;nF1
 R2
@@ -677,12 +677,12 @@ r1
 !s85 0
 31
 R5
-R25
 R26
+R27
 !i113 1
 R7
 vtestbench
-R1
+R18
 !i10b 1
 !s100 87DVf162;LWaOJF_bQ3@^3
 R2
@@ -704,7 +704,7 @@ R6
 !i113 1
 R7
 vtop
-R1
+R18
 !i10b 1
 !s100 f;1zzLZQ9_a;W41bR@fB13
 R2
@@ -726,16 +726,16 @@ R6
 !i113 1
 R7
 vvga_adapter
-R1
+R18
 !i10b 1
 !s100 l8cJegF9g]UTce3>dlj:40
 R2
 If8F62PT^mJk2`I3[Y`e_z3
 R3
 R0
-Z28 w1763486960
-Z29 8../vga_adapter/vga_adapter.v
-Z30 F../vga_adapter/vga_adapter.v
+Z29 w1763486960
+Z30 8../vga_adapter/vga_adapter.v
+Z31 F../vga_adapter/vga_adapter.v
 !i122 1
 L0 13 139
 R4
@@ -748,14 +748,14 @@ R6
 !i113 1
 R7
 vvga_address_translator
-R1
+R18
 !i10b 1
 !s100 JI4ea:e>=PMczhanIGH2E0
 R2
 Ic^LEbgS8>i>Wo_;LA5?4V1
 R3
 R0
-Z31 w1762813163
+Z32 w1762813163
 8../vga_adapter/vga_address_translator.v
 F../vga_adapter/vga_address_translator.v
 !i122 1
@@ -770,14 +770,14 @@ R6
 !i113 1
 R7
 vvga_controller
-R1
+R18
 !i10b 1
 !s100 `nWLV:No8mO6ldFdZjNlz1
 R2
 Ia56gIR747T7>QV;ZmG=RQ0
 R3
 R0
-R31
+R32
 8../vga_adapter/vga_controller.v
 F../vga_adapter/vga_controller.v
 !i122 1
@@ -792,16 +792,16 @@ R6
 !i113 1
 R7
 vvga_convert
-R1
+R18
 !i10b 1
 !s100 d;Sa[AbZA9_LlGn5b>:Q`3
 R2
 IVPWLz1Z5BkWAHNnETYRg^2
 R3
 R0
-R28
 R29
 R30
+R31
 !i122 1
 L0 170 28
 R4
@@ -814,18 +814,18 @@ R6
 !i113 1
 R7
 vvga_display
-R1
+R18
 !i10b 1
-!s100 5hcSV7PX]:AX]g3KV;iO>0
+!s100 db?WVL1gjkV3Vn0]Yg7N=1
 R2
-Ij5O2GoLjUIF5[m4[l60S10
+I@LS9XQ2g_LaJ`E2_a3Ddf3
 R3
 R0
-w1764030085
+w1764098831
 8../vga_display.v
 F../vga_display.v
 !i122 1
-L0 2 246
+L0 2 220
 R4
 r1
 !s85 0
@@ -836,16 +836,16 @@ R6
 !i113 1
 R7
 vvga_ff
-R1
+R18
 !i10b 1
 !s100 `V6g1NF=mMMbYV<1K:>j81
 R2
 IUX;gNUKTK@:QmXEROZ_ko0
 R3
 R0
-R28
 R29
 R30
+R31
 !i122 1
 L0 154 11
 R4
@@ -869,7 +869,7 @@ R11
 R12
 R13
 !i122 1
-Z32 L0 48 11
+Z33 L0 48 11
 R4
 r1
 !s85 0
@@ -891,7 +891,7 @@ R15
 R16
 R17
 !i122 1
-R32
+R33
 R4
 r1
 !s85 0
