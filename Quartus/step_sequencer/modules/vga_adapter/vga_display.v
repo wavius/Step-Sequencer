@@ -28,7 +28,6 @@ module vga_display (
                DRAW_CURSOR_RESET = 6'b001000,
                DRAW_CURSOR       = 6'b010000,
                DRAW_BOX          = 6'b100000;
-               
 
     localparam WHITE = 9'h1FF,
                BLUE  = 9'd7,
@@ -39,7 +38,6 @@ module vga_display (
 
     // Internal wires
     wire reset_grid; 
-    wire VGA_SYNC;
 
     // Internal registers
     reg [5:0] current_state, next_state;
@@ -55,7 +53,7 @@ module vga_display (
 
     always @(*) begin
         case (current_state)
-            RESET_WAIT:        next_state = VGA_SYNC    ? RESET_DRAW        : RESET_WAIT;
+            RESET_WAIT:        next_state = VGA_SYNC_N    ? RESET_DRAW        : RESET_WAIT;
             RESET_DRAW:        next_state = reset_grid  ? DRAW_CURSOR_RESET : RESET_DRAW;
             DRAW_CURSOR_RESET: next_state = (!drawing)  ? IDLE              : DRAW_CURSOR_RESET;
             DRAW_CURSOR:       next_state = (!drawing)  ? DRAW_BOX          : DRAW_CURSOR;
