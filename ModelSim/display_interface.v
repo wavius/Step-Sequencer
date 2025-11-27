@@ -14,7 +14,7 @@ module display_interface (
     output wire [23:0] VGA_COLOR, 
     output wire        plot    
 );
-    // Internal parameters
+        // Internal parameters
     // Grid
     localparam GRID_SIZE = 12;
     localparam SPACING   = 33;
@@ -32,8 +32,8 @@ module display_interface (
     reg draw_enable;
 
     // Position
-    reg [3:0] grid_x;
-    reg [3:0] grid_y;
+    reg [3:0] grid_x, old_grid_x;
+    reg [3:0] grid_y, old_grid_y;
 
     // Grid
     reg [11:0] cols [11:0];
@@ -41,8 +41,12 @@ module display_interface (
     // Internal wires
     wire drawing;
 
+    wire [9:0] old_x_pos = X0 + old_grid_x * SPACING;
+    wire [8:0] old_y_pos = Y0 + old_grid_y * SPACING;
+
     wire [9:0] x_pos = X0 + grid_x * SPACING;
     wire [8:0] y_pos = Y0 + grid_y * SPACING;
+
 
     reg [3:0] dir_sync0, dir_sync1;
     reg       cmd_sync0, cmd_sync1;
@@ -97,16 +101,45 @@ module display_interface (
     begin
         if (!nReset) 
         begin
-            grid_x <= 0;
-            grid_y <= 0;
+            grid_x     <= 0;
+            grid_y     <= 0;
+            old_grid_x <= 0;
+            old_grid_y <= 0;
         end
         else if (dir_pulse && !drawing) 
         begin
+            old_grid_y <= grid_y;
+            old_grid_x <= grid_x;
             case (DIR)
-                UP:    if (grid_y > 0)              grid_y <= grid_y - 1;
-                DOWN:  if (grid_y < GRID_SIZE - 1)  grid_y <= grid_y + 1;
-                LEFT:  if (grid_x > 0)              grid_x <= grid_x - 1;
-                RIGHT: if (grid_x < GRID_SIZE - 1)  grid_x <= grid_x + 1;
+                UP: 
+                begin
+                    if (grid_y > 0) 
+                    begin
+                        grid_y <= grid_y - 1;
+                    end
+                end
+                DOWN: 
+                begin
+                    if (grid_y < GRID_SIZE - 1)
+                    begin
+                        grid_y <= grid_y + 1;
+                    end
+                end
+                LEFT: 
+                begin
+                    if (grid_x > 0)
+                    begin
+                        grid_x <= grid_x - 1;
+                        
+                    end
+                end
+                RIGHT: 
+                begin
+                    if (grid_x < GRID_SIZE - 1) 
+                    begin
+                        grid_x <= grid_x + 1;
+                    end
+                end
             endcase
         end
     end
@@ -124,14 +157,15 @@ module display_interface (
                 cols[i] <= 0;
             end
         end 
+        else if (dir_pulse != 4'b0)
+        begin
+            // begin draw
+            draw_enable <= 1;
+            grid_state  <= cols[grid_y][grid_x];
+        end
         else if (cmd_pulse) 
         begin 
             cols[grid_y][grid_x] <= ~cols[grid_y][grid_x];
-
-            grid_state <= cols[grid_y][grid_x];
-
-            // begin draw
-            draw_enable <= 1;
         end 
         else if (!drawing) 
         begin
@@ -184,6 +218,8 @@ module display_interface (
         .draw_enable (draw_enable),
         .X           (x_pos),
         .Y           (y_pos),
+        .OLD_X       (old_x_pos),
+        .OLD_X       (old_y_pos),
         .drawing     (drawing),
         .VGA_X       (VGA_X),
         .VGA_Y       (VGA_Y), 
